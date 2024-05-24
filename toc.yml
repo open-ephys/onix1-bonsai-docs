@@ -1,0 +1,4 @@
+- name: Software Guide
+  href: articles/
+- name: Technical Reference
+  href: api/
