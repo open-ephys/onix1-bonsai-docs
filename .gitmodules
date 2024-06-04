@@ -4,3 +4,6 @@
 [submodule "src/onix-refactor"]
 	path = src/onix-refactor
 	url = https://github.com/neurogears/onix-refactor.git
+[submodule "docs/bonsai"]
+	path = docs/bonsai
+	url = https://github.com/bonsai-rx/docfx-tools
