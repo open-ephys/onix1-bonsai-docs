@@ -8,10 +8,10 @@ title: ConfigureBno055
 
 ## Introduction
 
-The `ConfigureBno055` node represents a source operator that enables or disables the orientation datastream. 
+The [`ConfigureBno055`](xref:OpenEphys.Onix.ConfigureBno055) node represents a source operator that enables or disables the orientation datastream. 
 
 :::workflow 
-![CreateContext](~/workflows/create-context.bonsai)
+![ConfigureBno055](~/workflows/onix-configurebno055.bonsai)
 :::
 
 This is the minimal workflow to enable a headstage's orientation datastream. I know the above workflow doesn't actually do that - it's a placeholder.
