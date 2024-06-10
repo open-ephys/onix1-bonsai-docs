@@ -3,6 +3,9 @@ name: Build docs
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      main
 
 jobs:
   build:
@@ -33,6 +36,7 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+
       - name: Publish to github pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
