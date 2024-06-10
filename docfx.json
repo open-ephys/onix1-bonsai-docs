@@ -56,8 +56,8 @@
     "template": [
       "default",
       "modern",
-      "docfx-tools/template",
-      "template"
+      "template",
+      "docfx-tools/template"
     ],
     "globalMetadata": {
       "_enableNewTab": true,
