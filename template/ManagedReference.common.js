@@ -22,7 +22,6 @@ exports.transform = function (model) {
         if (model.children) groupChildren(model, namespaceCategory);
         break;
       case 'class':
-        console.log(JSON.stringify(model.children, null, 2))
       case 'interface':
       case 'struct':
       case 'delegate':
