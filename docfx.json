@@ -18,6 +18,12 @@
         "files": [
           "api/**.yml",
           "api/index.md"
+        ],
+        "template": [
+          "default",
+          "modern",
+          "template",
+          "docfx-tools/template"
         ]
       },
       {
@@ -52,12 +58,6 @@
           "_site/**"
         ]
       }
-    ],
-    "template": [
-      "default",
-      "modern",
-      "template",
-      "docfx-tools/template"
     ],
     "globalMetadata": {
       "_enableNewTab": true,

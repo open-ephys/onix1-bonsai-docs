@@ -10,7 +10,7 @@ title: ConfigureBno055
 
 The [`ConfigureBno055`](xref:OpenEphys.Onix.ConfigureBno055) node represents a sink operator that configures the BNO055 datastream. 
 --->
-This is the minimal workflow to enable a headstage's orientation datastream:
+This is the minimal workflow to configure a headstage's orientation datastream:
 
 :::workflow 
 ![CreateContext](~/workflows/create-context.bonsai)

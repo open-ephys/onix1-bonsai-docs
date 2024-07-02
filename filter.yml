@@ -1,6 +1,0 @@
-apiRules:
-- exclude:
-    hasAttribute:
-      uid: System.ObsoleteAttribute
-- exclude:
-    type: Enum

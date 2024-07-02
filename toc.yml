@@ -1,6 +1,4 @@
-- name: Software Guide
-  href: articles/
-- name: Technical Reference
-  href: api/
+- name: Node Guides
+  href: node-guides/
 - name: Tutorials
   href: tutorials/
