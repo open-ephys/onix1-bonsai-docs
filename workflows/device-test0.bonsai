@@ -7,14 +7,16 @@
     <Nodes>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="onix:CreateContext">
-          <onix:Driver>riffa</onix:Driver>
+          <onix:Driver>test</onix:Driver>
           <onix:Index>0</onix:Index>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureBno055">
+        <Combinator xsi:type="onix:ConfigureTest0">
+          <onix:DeviceName>Test</onix:DeviceName>
           <onix:DeviceAddress>0</onix:DeviceAddress>
           <onix:Enable>true</onix:Enable>
+          <onix:Message>0</onix:Message>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -23,10 +25,24 @@
           <onix:WriteSize>2048</onix:WriteSize>
         </Combinator>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:Test0Data">
+          <onix:DeviceName>Test</onix:DeviceName>
+          <onix:BufferSize>100</onix:BufferSize>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Message</Selector>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Dummy</Selector>
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="0" To="1" Label="Source1" />
       <Edge From="1" To="2" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="3" To="5" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

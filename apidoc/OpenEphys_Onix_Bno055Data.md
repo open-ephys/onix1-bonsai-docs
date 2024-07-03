@@ -2,4 +2,6 @@
 uid: OpenEphys.Onix.Bno055Data
 ---
 
-[!include[Bno055Data](~/articles/onix-bno055data.md)]
+:::workflow
+![Bno055Data](~/workflows/device-bno055_headstage64.bonsai)
+:::

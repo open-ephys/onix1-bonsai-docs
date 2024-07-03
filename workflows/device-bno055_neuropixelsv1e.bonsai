@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.8.1"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:viz="clr-namespace:Bonsai.Design.Visualizers;assembly=Bonsai.Design.Visualizers"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:CreateContext">
+          <onix:Driver>riffa</onix:Driver>
+          <onix:Index>0</onix:Index>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:ConfigureNeuropixelsV1eHeadstage">
+          <onix:Name>NeuropixelsV1eHeadstage</onix:Name>
+          <onix:NeuropixelsV1>
+            <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix:DeviceName>
+            <onix:DeviceAddress>256</onix:DeviceAddress>
+            <onix:Enable>true</onix:Enable>
+            <onix:EnableLed>true</onix:EnableLed>
+            <onix:SpikeAmplifierGain>Gain1000</onix:SpikeAmplifierGain>
+            <onix:LfpAmplifierGain>Gain50</onix:LfpAmplifierGain>
+            <onix:Reference>External</onix:Reference>
+            <onix:SpikeFilter>true</onix:SpikeFilter>
+          </onix:NeuropixelsV1>
+          <onix:Bno055>
+            <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1eBno055</onix:DeviceName>
+            <onix:DeviceAddress>257</onix:DeviceAddress>
+            <onix:Enable>true</onix:Enable>
+          </onix:Bno055>
+          <onix:Port>PortA</onix:Port>
+          <onix:PortVoltage xsi:nil="true" />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:StartAcquisition">
+          <onix:ReadSize>2048</onix:ReadSize>
+          <onix:WriteSize>2048</onix:WriteSize>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:NeuropixelsV1eBno055Data">
+          <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1eBno055</onix:DeviceName>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>EulerAngle</Selector>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
+        <viz:SymbolType>None</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Quaternion</Selector>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:ValueSelector>X,Y,Z,W</viz:ValueSelector>
+        <viz:SymbolType>None</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Acceleration</Selector>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
+        <viz:SymbolType>None</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Gravity</Selector>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
+        <viz:SymbolType>None</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Temperature</Selector>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="3" To="6" Label="Source1" />
+      <Edge From="3" To="8" Label="Source1" />
+      <Edge From="3" To="10" Label="Source1" />
+      <Edge From="3" To="12" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="6" To="7" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>
