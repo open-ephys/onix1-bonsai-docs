@@ -1,1 +1,5 @@
 @import "workflow.css";
+
+.quick-links > .table-responsive > table.table.table-bordered.table-condensed {
+  border: 0px hidden transparent;
+}
