@@ -1,34 +1,40 @@
 - name: Getting Started
-- href: getting_started.md
-- href: getting_started-install_and_download.md
-- href: getting_started-bonsai_usage.md
-- href: getting_started-node_types.md
-- href: getting_started-tips_and_tricks.md
-- href: getting_started-property_categories.md
-- href: getting_started-initialize_oni_context.md
-- href: getting_started-running_a_workflow.md
-- href: getting_started-visualizing_data.md
-- href: getting_started-next_steps.md
+  items:
+  - href: getting_started.md
+  - href: getting_started-install_and_download.md
+  - href: getting_started-bonsai_usage.md
+  - href: getting_started-node_types.md
+  - href: getting_started-tips_and_tricks.md
+  - href: getting_started-property_categories.md
+  - href: getting_started-initialize_oni_context.md
+  - href: getting_started-running_a_workflow.md
+  - href: getting_started-visualizing_data.md
+  - href: getting_started-next_steps.md
+
+- name: Hardware (Data Acquisition)
+  items:
+  - href: headstage-breakoutboard.md
 
 - name: Headstages
-- href: headstage-breakoutboard.md
-- href: headstage-headstage64.md
-- href: headstage-neuropixelsv1e.md
-- href: headstage-neuropixelsv2e.md
-- href: headstage-neuropixelsv2ebeta.md
+  items:
+  - href: headstage-headstage64.md
+  - href: headstage-neuropixelsv1e.md
+  - href: headstage-neuropixelsv2e.md
+  - href: headstage-neuropixelsv2ebeta.md
 
 - name: Devices
-- href: device-analogio.md
-- href: device-bno055.md
-- href: device-bno055_neuropixelsv1e.md
-- href: device-bno055_neuropixelsv2e.md
-- href: device-digitalio.md
-- href: device-electricalstimulator.md
-- href: device-heartbeat.md
-- href: device-memorymonitor.md
-- href: device-neuropixelsv1e.md
-- href: device-neuropixelsv2e.md
-- href: device-neuropixelsv2ebeta.md
-- href: device-rhd2164.md
-- href: device-test0.md
-- href: device-ts4231.md
+  items:
+  - href: device-analogio.md
+  - href: device-bno055.md
+  - href: device-bno055_neuropixelsv1e.md
+  - href: device-bno055_neuropixelsv2e.md
+  - href: device-digitalio.md
+  - href: device-electricalstimulator.md
+  - href: device-heartbeat.md
+  - href: device-memorymonitor.md
+  - href: device-neuropixelsv1e.md
+  - href: device-neuropixelsv2e.md
+  - href: device-neuropixelsv2ebeta.md
+  - href: device-rhd2164.md
+  - href: device-test0.md
+  - href: device-ts4231.md
