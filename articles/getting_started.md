@@ -1,5 +1,6 @@
 ---
 uid: GettingStarted
+title: Getting Started
 ---
 
 # Welcome

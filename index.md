@@ -21,7 +21,7 @@ Other major advantages include:
 
 <div class="quick-links">
 
-| Software Guide | Technical Reference | Tutorials |
+| <xref:GettingStarted> | <xref:OpenEphys.Onix> | <xref:TutorialsLandingPage> |
 |:--------------:|:-------------------:|:---------:|
 | [![User Guide](images/macbook.svg){width=200}](xref:GettingStarted) | [![Node Guide](images/books.svg){width=200}](xref:OpenEphys.Onix) | [![Tutorials](images/running.svg){width=200}](xref:TutorialsLandingPage) |
 | [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:GettingStarted) | [Node references here](xref:OpenEphys.Onix) | [Check out our tutorials <br>for useful workflows](xref:TutorialsLandingPage) |
