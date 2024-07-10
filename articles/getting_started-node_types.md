@@ -1,8 +1,7 @@
 ---
 uid: NodeTypes
+title: Node Types
 ---
-
-# Node Types
 
 In Bonsai, all objects are called "nodes", and have a specific function associated with them depending on what they do; this can be `Source`, `Sink`, `Combinator`, `Transform`, or `Condition`. For ONIX nodes, they are all classified as either `Source`, `Sink`, or `Combinator`. 
 

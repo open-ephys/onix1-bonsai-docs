@@ -1,8 +1,7 @@
 ---
 uid: BonsaiUsage
+title: Bonsai Usage
 ---
-
-# Bonsai Usage
 
 To begin, the first thing to do is to open up the Bonsai editor. This can be done by starting Bonsai and clicking on the **New File** button on the left side. Alternatively, if you have previously opened or saved a file in Bonsai, there will be a list of recently opened files on the right side; any of those can be chosen and they will be opened in the editor automatically.
 

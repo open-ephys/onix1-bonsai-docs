@@ -79,6 +79,11 @@
       <Expression xsi:type="MemberSelector">
         <Selector>Buttons</Selector>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:DigitalOutput">
+          <onix:DeviceName>BreakoutBoard/DigitalIO</onix:DeviceName>
+        </Combinator>
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="0" To="1" Label="Source1" />

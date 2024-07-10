@@ -1,8 +1,7 @@
 ---
 uid: PropertyCategories
+title: Property Categories
 ---
-
-# Property Categories
 
 There are specific categories of properties that define when a node's properties can be modified. 
 

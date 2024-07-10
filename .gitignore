@@ -6,8 +6,7 @@
 /**/packages/
 /**/bin/
 /**/obj/
-_exported_templates
-_site
+_*/
 .vscode
 
 ## bonsai environment

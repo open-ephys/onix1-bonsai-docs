@@ -1,16 +1,16 @@
 ---
 uid: headstage-breakoutboard
 title: BreakoutBoard
+isGuide: true
+isDevice: false
+isHeadstage: true
+headstage: BreakoutBoard
+devices: [ { id: MemoryMonitor, file: device-memorymonitor }, { id: Heartbeat, file: device-heartbeat }, { id: DigitalIO, file: device-digitalio } , { id: AnalogIO, file: device-analogio } ]
+workflow: true
+workflow_file: ~/workflows/headstage-breakoutboard.bonsai
+visualize: false
+visualize_rollinggraph: false
+visualize_timeseries: false
+visualize_mat: false
+visualize_text: false
 ---
-
-## Workflow
-
-This is a fully functional workflow to enable a Breakout Board, with all available devices shown that are available for output:
-
-:::workflow 
-![BreakoutBoard](~/workflows/headstage-breakoutboard.bonsai)
-:::
-
-## Visualize Data
-
-To see all options for visualization, including possible parameters to output, check out the device tabs on the left for specific parameters and the visualizers needed for each parameter.

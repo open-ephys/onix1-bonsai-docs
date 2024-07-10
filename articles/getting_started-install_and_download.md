@@ -1,8 +1,7 @@
 ---
 uid: InstallationAndDownload
+title: Installation and Download
 ---
-
-# Installation and Download
 
 * To install `OpenEphys.Onix`, first install Bonsai [here](https://bonsai-rx.org/docs/articles/installation.html)
 * Once Bonsai is installed, open Bonsai and download the necessary packages

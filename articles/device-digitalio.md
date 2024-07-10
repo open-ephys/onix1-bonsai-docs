@@ -1,20 +1,19 @@
 ---
 uid: device-digitalio
 title: DigitalIO
+isGuide: true
+isDevice: true
+isHeadstage: false
+device: DigitalIO
+headstage: Breakout Board
+workflow: true
+workflow_file: ~/workflows/device-digitalio_breakout-board.bonsai
+visualize: true
+visualize_rollinggraph: false
+visualize_timeseries: false
+visualize_mat: false
+visualize_text: true
 ---
 
-## Workflow
-
-This is a fully functional workflow that configures and streams DigitalIO data from a Breakout Board:
-
-:::workflow 
-![DigitalIO](~/workflows/device-digitalio_breakout-board.bonsai)
-:::
-
-## Workflow (Output)
-
-> [!Note]
-> Add workflow showing how to use AnalogOuput
-
-## Visualize Data
-
+> [!IMPORTANT]
+> Document how to use Digital Output

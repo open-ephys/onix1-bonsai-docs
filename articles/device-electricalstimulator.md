@@ -1,16 +1,22 @@
 ---
 uid: device-electricalstimulator
 title: Headstage64ElectricalStimulator
+isGuide: true
+isDevice: true
+isHeadstage: false
+device: ElectricalStimulator
+headstage: Headstage64
+workflow: true
+workflow_file: ~/workflows/device-electricalstimulator_headstage64.bonsai
+visualize: false
+visualize_rollinggraph: false
+visualize_timeseries: false
+visualize_mat: false
+visualize_text: false
 ---
 
-## Workflow
-
-This is a fully functional workflow to enable an Electrical Stimulator device from a Headstage64:
-
-:::workflow 
-![Headstage64ElectricalStimulator](~/workflows/device-electricalstimulator_headstage64.bonsai)
-:::
+<br>
 
 ## Send Trigger
 
-In the workflow, pressing the middle button on the mouse will send a True value to the Electrical Stimulator Trigger device, triggering the stimulation waveform that is configured to be delivered.
+In the workflow, pressing the middle button on the mouse will send a trigger, delivering the stimulation waveform that is configured. The `MouseButtonDown` node can be found in the `Bonsai.Windows.Input` package.

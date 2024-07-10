@@ -1,8 +1,7 @@
 ---
 uid: TipsAndTricks
+title: Tips and Tricks
 ---
-
-# Tips and Tricks
 
 ## Bonsai Node Actions
 

@@ -1,16 +1,16 @@
 ---
 uid: device-neuropixelsv1e
 title: NeuropixelsV1e
+isGuide: true
+isDevice: true
+isHeadstage: false
+device: NeuropixelsV1e
+headstage: NeuropixelsV1e
+workflow: true
+workflow_file: ~/workflows/device-neuropixelsv1e_neuropixelsv1eheadstage.bonsai
+visualize: true
+visualize_rollinggraph: false
+visualize_timeseries: false
+visualize_mat: true
+visualize_text: false
 ---
-
-## Workflow
-
-This is a fully functional workflow to enable a NeuropixelsV1e device from a NeuropixelsV1e Headstage:
-
-:::workflow 
-![NeuropixelsV1e](~/workflows/device-neuropixelsv1e_neuropixelsv1eheadstage.bonsai)
-:::
-
-## Visualize Data
-
-Right-click on `SpikeData` or `LfpData` and choose the `Bonsai.Dsp.Design.MatVisualizer`.

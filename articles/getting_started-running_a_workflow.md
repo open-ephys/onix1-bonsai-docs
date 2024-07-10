@@ -1,8 +1,7 @@
 ---
 uid: RunningAWorkflow
+title: Running a Workflow
 ---
-
-# Running a Workflow
 
 Once all nodes have been placed and linked correctly, and all **Configuration** properties have been set, it is now possible to run a workflow. Note that some aspects of Bonsai are only available in specific contexts; for instance, the GUIs mentioned above can only be opened when a workflow is not running. Once a workflow is running, these GUIs are not accessible, but visualizers for certain nodes can be opened to view the streaming data.
 

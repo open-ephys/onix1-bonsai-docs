@@ -1,12 +1,16 @@
 ---
 uid: device-ts4231
 title: TS4231
+isGuide: true
+isDevice: true
+isHeadstage: false
+device: TS4231
+headstage: Headstage64
+workflow: true
+workflow_file: ~/workflows/device-ts4231_headstage64.bonsai
+visualize: true
+visualize_rollinggraph: false
+visualize_timeseries: true
+visualize_mat: false
+visualize_text: true
 ---
-
-## Workflow
-
-This is a fully functional workflow to enable a TS4231 device from a Headstage64:
-
-:::workflow 
-![TS4231](~/workflows/device-ts4231_headstage64.bonsai)
-:::

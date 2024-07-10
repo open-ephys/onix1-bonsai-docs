@@ -1,0 +1,5 @@
+<h2 id="workflow">Workflow</h2>
+<p>This is a fully functional workflow that configures a {{device}} device from a {{headstage}} headstage.</p>
+<div class="workflow"> 
+    <p><img src="{{workflow_file}}" alt="{{title}}"></p>
+</div>

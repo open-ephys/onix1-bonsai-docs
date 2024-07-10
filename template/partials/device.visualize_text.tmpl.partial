@@ -1,0 +1,1 @@
+<p>The output of these nodes can be inspected using the <code>ObjectTextVisualizer</code>.To enable visualization of the node, double-click it while the workflow is running, or right-click on it while the workflow is not running and choose <strong>Show Visualizer => Bonsai.Design.ObjectTextVisualizer</strong>.</p>

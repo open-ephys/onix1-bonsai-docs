@@ -1,8 +1,7 @@
 ---
 uid: VisualizingData
+title: Visualizing Data
 ---
-
-# Visualizing Data
 
 To visualize data from any `*Data` node, typically the variable that needs to be visualized must first be output from the node. To do this, right-click on any `*Data` node and select the first option; this will be something similar to `Output (OpenEphys.Onix.*DataFrame)`. From the drop-down list, select the corresponding data variable to be visualized. Doing so will create a new node in the workflow.
 
