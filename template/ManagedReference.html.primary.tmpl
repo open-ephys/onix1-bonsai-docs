@@ -14,6 +14,16 @@
 <div class="markdown conceptual">{{{conceptual}}}</div>
 
 {{#children}}
+{{#inMethod}}
+{{#nodeMethod}}
+
+{{>partials/class.methods}}
+
+{{/nodeMethod}}
+{{/inMethod}}
+{{/children}}
+
+{{#children}}
 {{#inProperty}}
 
 <h2>Properties</h2>
@@ -27,22 +37,8 @@
 </table>
 
 {{/inProperty}}
-{{#inMethod}}
-{{#nodeMethod}}
-
-<h2>Node Input & Output</h2>
-<table style="border: 0px; table-layout: fixed;">
-  <tr style="border: 0px;">
-    <th style="text-align: right; border: 0px; width: 45%; padding-right: 120px;">Input</th>
-    <th style="text-align: center; border: 0px; width: 10%; margin: 0; padding: 0"></th>
-    <th style="text-align: left; border: 0px; width: 45%; padding-left: 120px;">Output</th>
-  </tr>
-  {{>partials/class.methods}}
-</table>
-
-{{/nodeMethod}}
-{{/inMethod}}
 {{/children}}
+
 {{/isClass}}
 
 {{#isEnum}}
@@ -59,7 +55,7 @@
 {{#children}}
 {{#inField}}
 
-<h2>Enum Fields</h2>
+<h2>Fields</h2>
 <table>
   <tr>
     <th>Value</th>
@@ -70,5 +66,7 @@
 
 {{/inField}}
 {{/children}}
+
 {{/isEnum}}
+
 {{/_splitReference}}

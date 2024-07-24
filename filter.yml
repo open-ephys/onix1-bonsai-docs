@@ -11,8 +11,6 @@ apiRules:
 - exclude:
       uidRegex: OpenEphys.Onix.SingleDeviceFactory
 - exclude:
-      uidRegex: OpenEphys.Onix.Rhd2164Config
-- exclude:
       uidRegex: OpenEphys.Onix.ManagedFrame
 - exclude:
       uidRegex: OpenEphys.Onix.DeviceContext

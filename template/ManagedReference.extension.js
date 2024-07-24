@@ -8,31 +8,41 @@ exports.preTransform = function (model) {
   // Define source or sink in documentation by whether it has a generate or process method.
   // Defining whether a class corresponds to a source node or sink node depending on if it inherits 
   // Bonsai.Source or Bonsai.Sink causes a problem because CreateContext is a source node that doesn't inherit the Bonsai.Source class.  
-  if (model.hasOwnProperty('children')){
-    childrenLength = model.children.length;
-    for (let i = 0; i < childrenLength; i++){
-      if (model.children[i].uid.includes('Process')){
-        model.sinkNode = true;
+  if (model.inheritance){
+    let operatorType = {"source": false, "sink": false, "combinator": false};
+    if (model.syntax){
+      if (model.syntax.content[0].value.includes("[WorkflowElementCategory(ElementCategory.Source)]")){
+        operatorType.source = true;
       }
-      else if (model.children[i].uid.includes('Generate')) {
-        model.sourceNode = true;
+      else if (model.syntax.content[0].value.includes("[WorkflowElementCategory(ElementCategory.Sink)]")){
+        operatorType.sink = true;
       }
-      else if (model.children[i].uid.includes('Combinator')) {
-        model.combinatorNode = true;
+      else if (model.syntax.content[0].value.includes("[WorkflowElementCategory(ElementCategory.Combinator)]")){
+        operatorType.combinator = true;
       }
-      // const re = new RegExp("(<p sourcefile=\".* sourcestartlinenumber=\"1\">)|(<\/p>\\n)", "g");
-      // if (model.children[i].hasOwnProperty('summary')){
-      //   if (model.children[i].summary != null){
-      //     model.children[i].summary = model.children[i].summary.replaceAll(re,"");
-      //     console.log(model.children[i].summary);
-      //   }
-      // }
-      // if (model.children[i].hasOwnProperty('remarks')){
-      //   if (model.children[i].remarks != null){
-      //     model.children[i].remarks = model.children[i].remarks.replaceAll(re,"");
-      //     console.log(model.children[i].remarks);
-      //   }
-      // }
+    } 
+    if (!(operatorType.source || operatorType.sink || operatorType.combinator)){
+      inheritanceLength = model.inheritance.length;
+      for (let i = 0; i < inheritanceLength; i++){
+        if (model.inheritance[i].uid.includes('Bonsai.Source')){
+          operatorType.source = true;
+        }
+        else if (model.inheritance[i].uid.includes('Bonsai.Sink')){
+          operatorType.sink = true;
+        }
+        else if (model.inheritance[i].uid.includes('Bonsai.Combinator')){
+          operatorType.combinator = true;
+        }
+      }
+    }
+    if (operatorType.source){
+      model.sourceNode = true;
+    }
+    else if (operatorType.sink){
+      model.sinkNode = true;
+    }
+    else if (operatorType.combinator){
+      model.combinatorNode = true;
     }
   }
   return model;
@@ -49,18 +59,18 @@ exports.postTransform = function (model) {
     if (model.children[i].inMethod){
       childrenChildrenLength = model.children[i].children.length;
       for (let j = 0; j < childrenChildrenLength; j++){
-        if (model.children[i].children[j].hasOwnProperty('syntax')){
+        if (model.children[i].children[j].syntax){
           if (model.children[i].children[j].syntax.content[0].value.includes('Generate') || model.children[i].children[j].syntax.content[0].value.includes('Process')){
             model.children[i].nodeMethod = //model.oe.public[i]
               true;
             const re = new RegExp("(<a class=\"xref\" href=\"https:\/\/learn\.microsoft\.com\/dotnet\/api\/system\.iobservable-1\">IObservable<\/a>&lt;)|(&gt;)", "g");
-            if (model.children[i].children[j].syntax.hasOwnProperty('parameters')){
+            if (model.children[i].children[j].syntax.parameters){
               model.children[i].children[j].syntax.parameters[0].type.specName[0].value = //model.oe.input[i]
                 model.children[i].children[j].syntax.parameters[0].type.specName[0].value.replaceAll(re, "");
               model.children[i].children[j].syntax.parameters[0].type.specName[0].value = //model.oe.input[i]
-                model.children[i].children[j].syntax.parameters[0].type.specName[0].value.replace("TSource", "Any");
+                model.children[i].children[j].syntax.parameters[0].type.specName[0].value.replace("TSource", "Anything");
             }
-            if (model.children[i].children[j].syntax.hasOwnProperty('return')){
+            if (model.children[i].children[j].syntax.return){
               model.children[i].children[j].syntax.return.type.specName[0].value = //model.oe.output[i]
                 model.children[i].children[j].syntax.return.type.specName[0].value.replaceAll(re, "");
             }

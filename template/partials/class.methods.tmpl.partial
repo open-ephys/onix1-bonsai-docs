@@ -1,21 +1,46 @@
 {{#children}}
-{{#syntax}}
 
-<tr style="border: 0px;">
-  <td style="border: 0px; text-align: right; vertical-align: middle; margin: 0; padding: 0;">
-    {{#parameters}}
-    {{{parameters.0.type.specName.0.value}}} <img src="../images/right-arrow.svg" alt="right-arrow">
-    {{/parameters}}
-  </td>
-  <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0;">
-    {{#sourceNode}} <img src="../images/source-node.svg" alt="source node"> {{/sourceNode}} 
-    {{#sinkNode}} <img src="../images/sink-node.svg" alt="sink node"> {{/sinkNode}} 
-    <!--- {{#combinatorNode}} <img src="../images/combinator-node.svg" alt="combinator node"> {{/combinatorNode}} --->
-  </td>
-  <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0;">
-    <img src="../images/right-arrow.svg" alt="right-arrow"> {{{return.type.specName.0.value}}}
-  </td>
-</tr>
+<h2>Inputs & Outputs</h2>
 
-{{/syntax}}
+{{{summary}}} 
+{{{remarks}}}
+
+<table style="border: 0px; table-layout: fixed;">
+  <tr style="border: 0px;">
+    <td style="border: 0px; text-align: right; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
+      <table style="border: 0px; table-layout: fixed;">
+        <tr style="border: 0px;">
+          {{#syntax.parameters}}
+          <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 80%;">
+            <div style="text-align: center;">{{{syntax.parameters.0.type.specName.0.value}}}</div> 
+            <div>{{{syntax.parameters.0.description}}}</div>
+          </td>
+          <td style="border: 0px; text-align: right; vertical-align: middle; margin: 0; padding: 0; width: 20%;">
+            <img src="../images/right-arrow.svg" alt="right-arrow">
+          </td>
+          {{/syntax.parameters}}
+        </tr>
+      </table>
+    </td>
+    <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0; width: 10%;">
+      {{#sourceNode}} <img src="../images/source-node.svg" alt="source node"> {{/sourceNode}} 
+      {{#sinkNode}} <img src="../images/sink-node.svg" alt="sink node"> {{/sinkNode}} 
+      {{#combinatorNode}} <img src="../images/combinator-node.svg" alt="combinator node"> {{/combinatorNode}}
+    </td>
+    <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
+      <table style="border: 0px; table-layout: fixed;">
+        <tr style="border: 0px;">
+          <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 20%;">
+            <img src="../images/right-arrow.svg" alt="right-arrow">
+          </td>
+          <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 80%;">
+            <div style="text-align: center;">{{{syntax.return.type.specName.0.value}}}</div>
+            <div>{{{syntax.return.description}}}</div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
 {{/children}}
