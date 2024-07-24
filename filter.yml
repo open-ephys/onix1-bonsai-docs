@@ -3,4 +3,16 @@ apiRules:
     hasAttribute:
       uid: System.ObsoleteAttribute
 - exclude:
-    type: Enum
+      uidRegex: OpenEphys.Onix.DeviceFactory
+- exclude:
+      uidRegex: OpenEphys.Onix.DeviceNameConverter
+- exclude:
+      uidRegex: OpenEphys.Onix.HubDeviceFactory
+- exclude:
+      uidRegex: OpenEphys.Onix.SingleDeviceFactory
+- exclude:
+      uidRegex: OpenEphys.Onix.Rhd2164Config
+- exclude:
+      uidRegex: OpenEphys.Onix.ManagedFrame
+- exclude:
+      uidRegex: OpenEphys.Onix.DeviceContext

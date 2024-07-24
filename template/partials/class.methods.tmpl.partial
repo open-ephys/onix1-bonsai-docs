@@ -1,25 +1,21 @@
 {{#children}}
 {{#syntax}}
 
-{{#syntax.parameters}}
-
-<tr>
-  <td>Input</td>
-  <td>{{{type.specName.0.value}}}</td>
-  <td>{{{description}}}</td>
+<tr style="border: 0px;">
+  <td style="border: 0px; text-align: right; vertical-align: middle; margin: 0; padding: 0;">
+    {{#parameters}}
+    {{{parameters.0.type.specName.0.value}}} <img src="../images/right-arrow.svg" alt="right-arrow">
+    {{/parameters}}
+  </td>
+  <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0;">
+    {{#sourceNode}} <img src="../images/source-node.svg" alt="source node"> {{/sourceNode}} 
+    {{#sinkNode}} <img src="../images/sink-node.svg" alt="sink node"> {{/sinkNode}} 
+    <!--- {{#combinatorNode}} <img src="../images/combinator-node.svg" alt="combinator node"> {{/combinatorNode}} --->
+  </td>
+  <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0;">
+    <img src="../images/right-arrow.svg" alt="right-arrow"> {{{return.type.specName.0.value}}}
+  </td>
 </tr>
-
-{{/syntax.parameters}}
-
-{{#syntax.return}}
-
-<tr>
-  <td>Output</td>
-  <td>{{{type.specName.0.value}}}</td>
-  <td>{{{description}}}</td>
-</tr>
-
-{{/syntax.return}}
 
 {{/syntax}}
 {{/children}}
