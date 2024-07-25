@@ -7,7 +7,7 @@ isHeadstage: true
 headstage: NeuropixelsV2eBeta
 devices: [ { id: NeuropixelsV2eBeta, file: device-neuropixelsv2ebeta }, { id: BNO055, file: device-bno055_neuropixelsv2ebeta } ]
 workflow: true
-workflow_file: ~/workflows/headstage-neuropixelsv2ebeta.bonsai
+workflow_file: ~/workflows/hubs/NeuropixelsV2eBeta.bonsai
 visualize: false
 visualize_rollinggraph: false
 visualize_timeseries: false

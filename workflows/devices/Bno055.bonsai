@@ -39,7 +39,6 @@
             <onix:DeviceAddress>259</onix:DeviceAddress>
           </onix:ElectricalStimulator>
           <onix:Port>PortA</onix:Port>
-          <onix:PortVoltage xsi:nil="true" />
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

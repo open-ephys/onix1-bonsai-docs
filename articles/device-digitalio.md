@@ -7,7 +7,7 @@ isHeadstage: false
 device: DigitalIO
 headstage: Breakout Board
 workflow: true
-workflow_file: ~/workflows/device-digitalio_breakout-board.bonsai
+workflow_file: ~/workflows/devices/DigitalIO.bonsai
 visualize: true
 visualize_rollinggraph: false
 visualize_timeseries: false

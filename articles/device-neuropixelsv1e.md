@@ -7,7 +7,7 @@ isHeadstage: false
 device: NeuropixelsV1e
 headstage: NeuropixelsV1e
 workflow: true
-workflow_file: ~/workflows/device-neuropixelsv1e_neuropixelsv1eheadstage.bonsai
+workflow_file: ~/workflows/devices/NeuropixelsV1e.bonsai
 visualize: true
 visualize_rollinggraph: false
 visualize_timeseries: false

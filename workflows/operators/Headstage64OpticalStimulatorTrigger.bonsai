@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.8.1"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:Headstage64OpticalStimulatorTrigger">
+          <onix:Enable>true</onix:Enable>
+          <onix:Delay>0</onix:Delay>
+          <onix:MaxCurrent>100</onix:MaxCurrent>
+          <onix:ChannelOneCurrent>100</onix:ChannelOneCurrent>
+          <onix:ChannelTwoCurrent>0</onix:ChannelTwoCurrent>
+          <onix:PulseDuration>5</onix:PulseDuration>
+          <onix:PulsesPerSecond>50</onix:PulsesPerSecond>
+          <onix:PulsesPerBurst>20</onix:PulsesPerBurst>
+          <onix:InterBurstInterval>0</onix:InterBurstInterval>
+          <onix:BurstsPerTrain>1</onix:BurstsPerTrain>
+        </Combinator>
+      </Expression>
+    </Nodes>
+    <Edges />
+  </Workflow>
+</WorkflowBuilder>

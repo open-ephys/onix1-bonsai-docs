@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.8.1"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:Headstage64ElectricalStimulatorTrigger">
+          <onix:Enable>true</onix:Enable>
+          <onix:PowerEnable>false</onix:PowerEnable>
+          <onix:TriggerDelay>0</onix:TriggerDelay>
+          <onix:PhaseOneCurrent>0</onix:PhaseOneCurrent>
+          <onix:InterPhaseCurrent>0</onix:InterPhaseCurrent>
+          <onix:PhaseTwoCurrent>0</onix:PhaseTwoCurrent>
+          <onix:PhaseOneDuration>0</onix:PhaseOneDuration>
+          <onix:InterPhaseInterval>0</onix:InterPhaseInterval>
+          <onix:PhaseTwoDuration>0</onix:PhaseTwoDuration>
+          <onix:InterPulseInterval>0</onix:InterPulseInterval>
+          <onix:InterBurstInterval>0</onix:InterBurstInterval>
+          <onix:BurstPulseCount>0</onix:BurstPulseCount>
+          <onix:TrainBurstCount>0</onix:TrainBurstCount>
+        </Combinator>
+      </Expression>
+    </Nodes>
+    <Edges />
+  </Workflow>
+</WorkflowBuilder>

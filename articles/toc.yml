@@ -12,12 +12,9 @@
   - href: getting_started-visualizing_data.md
   - href: getting_started-next_steps.md
 
-- name: Hardware (Data Acquisition)
+- name: Hubs
   items:
   - href: headstage-breakoutboard.md
-
-- name: Headstages
-  items:
   - href: headstage-headstage64.md
   - href: headstage-neuropixelsv1e.md
   - href: headstage-neuropixelsv2e.md

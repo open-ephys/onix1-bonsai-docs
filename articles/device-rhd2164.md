@@ -7,7 +7,7 @@ isHeadstage: false
 device: Rhd2164
 headstage: Headstage64
 workflow: true
-workflow_file: ~/workflows/device-rhd2164_headstage64.bonsai
+workflow_file: ~/workflows/devices/Rhd2164.bonsai
 visualize: true
 visualize_rollinggraph: false
 visualize_timeseries: false

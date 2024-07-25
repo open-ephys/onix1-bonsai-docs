@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.8.1"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix:NeuropixelsV1eData">
+          <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix:DeviceName>
+          <onix:BufferSize>36</onix:BufferSize>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>SpikeData</Selector>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>LfpData</Selector>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="0" To="2" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>

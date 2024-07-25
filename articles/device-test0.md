@@ -7,7 +7,7 @@ isHeadstage: false
 device: Test0
 headstage: test
 workflow: true
-workflow_file: ~/workflows/device-test0.bonsai
+workflow_file: ~/workflows/devices/Test0.bonsai
 visualize: true
 visualize_rollinggraph: false
 visualize_timeseries: false

@@ -7,7 +7,7 @@ isHeadstage: false
 device: ElectricalStimulator
 headstage: Headstage64
 workflow: true
-workflow_file: ~/workflows/device-electricalstimulator_headstage64.bonsai
+workflow_file: ~/workflows/devices/ElectricalStimulator.bonsai
 visualize: false
 visualize_rollinggraph: false
 visualize_timeseries: false
