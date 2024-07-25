@@ -4,23 +4,30 @@
 {{^_splitReference}}
 {{#isClass}}
 
-<h1 id="{{id}}" data-uid="{{uid}}" class="text-break">
-  {{#inClass}}{{name.0.value}}{{/inClass}}
-  {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
-</h1>
+<div>
+  <h1 id="{{id}}" data-uid="{{uid}}" class="text-break" style="display:inline-block;">
+    {{#inClass}}{{name.0.value}}{{/inClass}}
+    {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
+  </h1>
+  <p style="display:inline;"> 
+      {{#sourceNode}} Source Operator {{/sourceNode}} 
+      {{#sinkNode}} Sink Operator {{/sinkNode}} 
+      {{#combinatorNode}} Combinator Operator {{/combinatorNode}}
+  </p>
+</div>
 
 <div class="markdown summary">{{{summary}}}</div>
 <div class="markdown level0 remarks">{{{remarks}}}</div>
 <div class="markdown conceptual">{{{conceptual}}}</div>
 
 {{#children}}
-{{#inMethod}}
 {{#nodeMethod}}
+
+<h2>Inputs & Outputs</h2>
 
 {{>partials/class.methods}}
 
 {{/nodeMethod}}
-{{/inMethod}}
 {{/children}}
 
 {{#children}}

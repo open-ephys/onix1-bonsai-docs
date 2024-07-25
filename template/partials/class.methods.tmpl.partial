@@ -1,17 +1,18 @@
 {{#children}}
 
-<h2>Inputs & Outputs</h2>
-
 {{{summary}}} 
 {{{remarks}}}
 
 <table style="border: 0px; table-layout: fixed;">
   <tr style="border: 0px;">
+
+    <!--- input --->
+
     <td style="border: 0px; text-align: right; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
       <table style="border: 0px; table-layout: fixed;">
         <tr style="border: 0px;">
           {{#syntax.parameters}}
-          <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 80%;">
+          <td style="border: 0px; text-align: left; vertical-align: middle; width: 80%;">
             <div style="text-align: center;">{{{syntax.parameters.0.type.specName.0.value}}}</div> 
             <div>{{{syntax.parameters.0.description}}}</div>
           </td>
@@ -22,13 +23,19 @@
         </tr>
       </table>
     </td>
+
+    <!--- node --->
+
     <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0; width: 10%;">
       {{#sourceNode}} <img src="../images/source-node.svg" alt="source node"> {{/sourceNode}} 
       {{#sinkNode}} <img src="../images/sink-node.svg" alt="sink node"> {{/sinkNode}} 
       {{#combinatorNode}} <img src="../images/combinator-node.svg" alt="combinator node"> {{/combinatorNode}}
     </td>
+
+    <!--- output --->
+
     <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
-      <table style="border: 0px; table-layout: fixed;">
+      <table style="table-layout: fixed;">
         <tr style="border: 0px;">
           <td style="border: 0px; text-align: left; vertical-align: middle; margin: 0; padding: 0; width: 20%;">
             <img src="../images/right-arrow.svg" alt="right-arrow">
@@ -40,6 +47,7 @@
         </tr>
       </table>
     </td>
+
   </tr>
 </table>
 
