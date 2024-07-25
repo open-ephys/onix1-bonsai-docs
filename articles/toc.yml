@@ -1,6 +1,7 @@
 - name: Getting Started
   items:
   - href: getting_started.md
+  - href: getting_started-what_is_onix.md
   - href: getting_started-install_and_download.md
   - href: getting_started-bonsai_usage.md
   - href: getting_started-node_types.md

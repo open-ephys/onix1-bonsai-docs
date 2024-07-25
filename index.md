@@ -1,7 +1,10 @@
+---
+uid: index
+title: OpenEphys.Onix
+---
+
 > [!Warning]
 > These docs are under active development, feel free to contribute by either [raising an issue](https://github.com/bonsai-rx/docs/issues) or following the links saying **Edit this page**.
-
-# OpenEphys.Onix
 
 `OpenEphys.Onix` is a library that can be used in [Bonsai](https://bonsai-rx.org/) to acquire data from ONIX devices, such as the [Open Ephys Acquisition Board](https://open-ephys.github.io/acq-board-docs/). For more details on the ONI specification, check out [this link](https://open-ephys.github.io/ONI/), and to learn more about ONIX devices and their implemention of ONI, click [here](https://open-ephys.github.io/onix-docs/).
 
@@ -22,8 +25,8 @@ Other major advantages include:
 <div class="quick-links">
 
 | <xref:GettingStarted> | <xref:OpenEphys.Onix> | <xref:TutorialsLandingPage> |
-|:--------------:|:-------------------:|:---------:|
-| [![User Guide](images/macbook.svg){width=200}](xref:GettingStarted) | [![Node Guide](images/books.svg){width=200}](xref:OpenEphys.Onix) | [![Tutorials](images/running.svg){width=200}](xref:TutorialsLandingPage) |
-| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:GettingStarted) | [Node references here](xref:OpenEphys.Onix) | [Check out our tutorials <br>for useful workflows](xref:TutorialsLandingPage) |
+|:--------------:|:-------------------:|:---------:|:---:|
+| [![User Guide](images/macbook.svg){width=200}](xref:GettingStarted) | [![Operator Guide](images/books.svg){width=200}](xref:OpenEphys.Onix) | [![Tutorials](images/running.svg){width=200}](xref:TutorialsLandingPage) |
+| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:GettingStarted) | [Operator references here](xref:OpenEphys.Onix) | [Check out our tutorials <br>for useful workflows](xref:TutorialsLandingPage) |
 
 </div>
