@@ -13,12 +13,12 @@ The [`CreateContext`](xref:OpenEphys.Onix.CreateContext) operator initializes th
 
     ![Search for CreateContext node from textbox](~/images/bonsai-editor-place-create-context-search.png){width=700px}
 
-3. Hover over the image of the [`CreateContext`](xref:OpenEphys.Onix.CreateContext) node below, and click on the clipboard icon in the top-right corner of the workflow image to copy the workflow to the clipboard. Navigate back to Bonsai, and paste the copied workflow into the active editor. Pasting can be done via Ctrl + V, or right-clicking in the editor and choosing **Paste**.
+3. Hover over the image of the [`CreateContext`](xref:OpenEphys.Onix.CreateContext) workflow below, and click on the clipboard icon in the top-right corner of the workflow image to copy the workflow to the clipboard. Navigate back to Bonsai, and paste the copied workflow into the active editor. Pasting can be done via Ctrl + V, or right-clicking in the editor and choosing **Paste**.
 
 ## CreateContext Workflow
 
-This is a nominally functional workflow that provides access to the ONI context, from which all nodes can then be linked to and configured:
+This is a nominally functional workflow that provides access to the ONI context, from which all nodes can then be linked to and configured, while also demonstrating how a Breakout Board can be configured before finishing the configuration chain by placing a [`StartAcquisition`](xref:OpenEphys.Onix.StartAcquisition) node:
 
 :::workflow 
-![CreateContext](~/workflows/single/CreateContext.bonsai)
+![CreateContext](~/workflows/operators/ConfigureBreakoutBoard.bonsai)
 :::

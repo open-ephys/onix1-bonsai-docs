@@ -1,20 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.8.1"
+<WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:TS4231Data">
-          <onix:DeviceName>Headstage64/TS4231</onix:DeviceName>
+        <Combinator xsi:type="onix:TS4231V1PositionData">
+          <onix:P>
+            <onix:X>0</onix:X>
+            <onix:Y>0</onix:Y>
+            <onix:Z>0</onix:Z>
+          </onix:P>
+          <onix:Q>
+            <onix:X>1</onix:X>
+            <onix:Y>0</onix:Y>
+            <onix:Z>0</onix:Z>
+          </onix:Q>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>EnvelopeWidth</Selector>
+        <Selector>SensorIndex</Selector>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>EnvelopeType</Selector>
+        <Selector>Position</Selector>
       </Expression>
     </Nodes>
     <Edges>

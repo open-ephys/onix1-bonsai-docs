@@ -12,25 +12,15 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureNeuropixelsV1eHeadstage">
-          <onix:Name>NeuropixelsV1eHeadstage</onix:Name>
-          <onix:NeuropixelsV1>
-            <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix:DeviceName>
-            <onix:DeviceAddress>256</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-            <onix:EnableLed>true</onix:EnableLed>
-            <onix:SpikeAmplifierGain>Gain1000</onix:SpikeAmplifierGain>
-            <onix:LfpAmplifierGain>Gain50</onix:LfpAmplifierGain>
-            <onix:Reference>External</onix:Reference>
-            <onix:SpikeFilter>true</onix:SpikeFilter>
-          </onix:NeuropixelsV1>
-          <onix:Bno055>
-            <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1eBno055</onix:DeviceName>
-            <onix:DeviceAddress>257</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-          </onix:Bno055>
-          <onix:Port>PortA</onix:Port>
-          <onix:PortVoltage xsi:nil="true" />
+        <Combinator xsi:type="onix:ConfigureNeuropixelsV1e">
+          <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix:DeviceName>
+          <onix:DeviceAddress>256</onix:DeviceAddress>
+          <onix:Enable>true</onix:Enable>
+          <onix:EnableLed>true</onix:EnableLed>
+          <onix:SpikeAmplifierGain>Gain1000</onix:SpikeAmplifierGain>
+          <onix:LfpAmplifierGain>Gain50</onix:LfpAmplifierGain>
+          <onix:Reference>External</onix:Reference>
+          <onix:SpikeFilter>true</onix:SpikeFilter>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

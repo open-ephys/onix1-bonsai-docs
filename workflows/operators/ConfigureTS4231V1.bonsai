@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.8.1"
+<WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
                  xmlns="https://bonsai-rx.org/2018/workflow">
@@ -12,11 +12,10 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureHeartbeat">
-          <onix:DeviceName>BreakoutBoard/Heartbeat</onix:DeviceName>
+        <Combinator xsi:type="onix:ConfigureTS4231V1">
+          <onix:DeviceName>TS4231</onix:DeviceName>
           <onix:DeviceAddress>0</onix:DeviceAddress>
           <onix:Enable>true</onix:Enable>
-          <onix:BeatsPerSecond>10</onix:BeatsPerSecond>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

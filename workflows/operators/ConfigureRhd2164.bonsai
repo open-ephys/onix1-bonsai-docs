@@ -12,11 +12,13 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureHeartbeat">
-          <onix:DeviceName>BreakoutBoard/Heartbeat</onix:DeviceName>
-          <onix:DeviceAddress>0</onix:DeviceAddress>
+        <Combinator xsi:type="onix:ConfigureRhd2164">
+          <onix:DeviceName>Headstage64/Rhd2164</onix:DeviceName>
+          <onix:DeviceAddress>256</onix:DeviceAddress>
           <onix:Enable>true</onix:Enable>
-          <onix:BeatsPerSecond>10</onix:BeatsPerSecond>
+          <onix:DspCutoff>Dsp146mHz</onix:DspCutoff>
+          <onix:AnalogLowCutoff>Low100mHz</onix:AnalogLowCutoff>
+          <onix:AnalogHighCutoff>High10000Hz</onix:AnalogHighCutoff>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

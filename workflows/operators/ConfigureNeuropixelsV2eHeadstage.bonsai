@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.8.1"
+<WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
                  xmlns="https://bonsai-rx.org/2018/workflow">
@@ -12,34 +12,18 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureHeadstage64">
-          <onix:Name>Headstage64</onix:Name>
-          <onix:Rhd2164>
-            <onix:DeviceName>Headstage64/Rhd2164</onix:DeviceName>
+        <Combinator xsi:type="onix:ConfigureNeuropixelsV2eHeadstage">
+          <onix:Name>NeuropixelsV2eHeadstage</onix:Name>
+          <onix:NeuropixelsV2>
+            <onix:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2e</onix:DeviceName>
             <onix:DeviceAddress>256</onix:DeviceAddress>
             <onix:Enable>true</onix:Enable>
-            <onix:DspCutoff>Dsp146mHz</onix:DspCutoff>
-            <onix:AnalogLowCutoff>Low100mHz</onix:AnalogLowCutoff>
-            <onix:AnalogHighCutoff>High10000Hz</onix:AnalogHighCutoff>
-          </onix:Rhd2164>
+          </onix:NeuropixelsV2>
           <onix:Bno055>
-            <onix:DeviceName>Headstage64/Bno055</onix:DeviceName>
+            <onix:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2eBno055</onix:DeviceName>
             <onix:DeviceAddress>257</onix:DeviceAddress>
             <onix:Enable>true</onix:Enable>
           </onix:Bno055>
-          <onix:TS4231>
-            <onix:DeviceName>Headstage64/TS4231</onix:DeviceName>
-            <onix:DeviceAddress>258</onix:DeviceAddress>
-            <onix:Enable>false</onix:Enable>
-          </onix:TS4231>
-          <onix:ElectricalStimulator>
-            <onix:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix:DeviceName>
-            <onix:DeviceAddress>259</onix:DeviceAddress>
-          </onix:ElectricalStimulator>
-          <onix:OpticalStimulator>
-            <onix:DeviceName>Headstage64/Headstage64OpticalStimulator</onix:DeviceName>
-            <onix:DeviceAddress>260</onix:DeviceAddress>
-          </onix:OpticalStimulator>
           <onix:Port>PortA</onix:Port>
           <onix:PortVoltage xsi:nil="true" />
         </Combinator>

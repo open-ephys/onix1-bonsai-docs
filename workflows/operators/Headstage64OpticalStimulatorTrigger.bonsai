@@ -7,6 +7,7 @@
     <Nodes>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="onix:Headstage64OpticalStimulatorTrigger">
+          <onix:DeviceName>Headstage64/Headstage64OpticalStimulator</onix:DeviceName>
           <onix:Enable>true</onix:Enable>
           <onix:Delay>0</onix:Delay>
           <onix:MaxCurrent>100</onix:MaxCurrent>

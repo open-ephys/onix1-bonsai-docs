@@ -12,20 +12,10 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureNeuropixelsV2eHeadstage">
-          <onix:Name>NeuropixelsV2eHeadstage</onix:Name>
-          <onix:NeuropixelsV2>
-            <onix:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2e</onix:DeviceName>
-            <onix:DeviceAddress>256</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-          </onix:NeuropixelsV2>
-          <onix:Bno055>
-            <onix:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2eBno055</onix:DeviceName>
-            <onix:DeviceAddress>257</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-          </onix:Bno055>
-          <onix:Port>PortA</onix:Port>
-          <onix:PortVoltage xsi:nil="true" />
+        <Combinator xsi:type="onix:ConfigureNeuropixelsV2eBno055">
+          <onix:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2eBno055</onix:DeviceName>
+          <onix:DeviceAddress>257</onix:DeviceAddress>
+          <onix:Enable>true</onix:Enable>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

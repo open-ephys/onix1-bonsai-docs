@@ -12,32 +12,10 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureHeadstage64">
-          <onix:Name>Headstage64</onix:Name>
-          <onix:Rhd2164>
-            <onix:DeviceName>Headstage64/Rhd2164</onix:DeviceName>
-            <onix:DeviceAddress>256</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-            <onix:AmplifierDataFormat>Unsigned</onix:AmplifierDataFormat>
-            <onix:DspCutoff>Dsp146mHz</onix:DspCutoff>
-            <onix:AnalogLowCutoff>Low100mHz</onix:AnalogLowCutoff>
-            <onix:AnalogHighCutoff>High10000Hz</onix:AnalogHighCutoff>
-          </onix:Rhd2164>
-          <onix:Bno055>
-            <onix:DeviceName>Headstage64/Bno055</onix:DeviceName>
-            <onix:DeviceAddress>257</onix:DeviceAddress>
-            <onix:Enable>true</onix:Enable>
-          </onix:Bno055>
-          <onix:TS4231>
-            <onix:DeviceName>Headstage64/TS4231</onix:DeviceName>
-            <onix:DeviceAddress>258</onix:DeviceAddress>
-            <onix:Enable>false</onix:Enable>
-          </onix:TS4231>
-          <onix:ElectricalStimulator>
-            <onix:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix:DeviceName>
-            <onix:DeviceAddress>259</onix:DeviceAddress>
-          </onix:ElectricalStimulator>
-          <onix:Port>PortA</onix:Port>
+        <Combinator xsi:type="onix:ConfigureBno055">
+          <onix:DeviceName>Headstage64/Bno055</onix:DeviceName>
+          <onix:DeviceAddress>257</onix:DeviceAddress>
+          <onix:Enable>true</onix:Enable>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

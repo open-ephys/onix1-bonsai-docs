@@ -6,20 +6,16 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:DigitalInput">
-          <onix:DeviceName>BreakoutBoard/DigitalIO</onix:DeviceName>
+        <Combinator xsi:type="onix:HarpSyncInputData">
+          <onix:DeviceName>HarpSyncInput</onix:DeviceName>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>DigitalInputs</Selector>
-      </Expression>
-      <Expression xsi:type="MemberSelector">
-        <Selector>Buttons</Selector>
+        <Selector>HarpTime</Selector>
       </Expression>
     </Nodes>
     <Edges>
       <Edge From="0" To="1" Label="Source1" />
-      <Edge From="0" To="2" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
