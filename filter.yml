@@ -14,3 +14,11 @@ apiRules:
       uidRegex: OpenEphys.Onix.ManagedFrame
 - exclude:
       uidRegex: OpenEphys.Onix.DeviceContext
+- exclude:
+      uidRegex: OpenEphys.Onix.ConfigureFmcLinkController
+- exclude:
+      uidRegex: OpenEphys.Onix.DataFrame
+- exclude:
+      uidRegex: OpenEphys.Onix.BufferedDataFrame
+- exclude:
+      uidRegex: OpenEphys.Onix.ConfigureDS90UB9x
