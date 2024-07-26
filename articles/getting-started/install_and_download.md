@@ -7,17 +7,17 @@ title: Installation and Download
 * Once Bonsai is installed, open Bonsai and download the necessary packages
     * Open the Bonsai package manager
         
-        ![Package manager from splash page](../images/bonsai-splash-page-package-manager-highlight.png){width=350px} or ![Package manager from editor](../images/bonsai-editor-package-manager-highlight.png){width=425px}
+        ![Package manager from splash page](../../images/bonsai-splash-page-package-manager-highlight.png){width=350px} or ![Package manager from editor](../../images/bonsai-editor-package-manager-highlight.png){width=425px}
     * Go to **Browse**
         
-        ![Browse the package manager](../images/bonsai-package-manager-browse.png){width=650px}
+        ![Browse the package manager](../../images/bonsai-package-manager-browse.png){width=650px}
     * Download the `Bonsai.StarterPack`, which contains several commonly used packages that will be useful for creating workflows and visualizing data. Search for `Bonsai.StarterPack` (1), select the package and click **Install** (2). Click `I Accept` to accept the licenses.
         
-        ![Search for Bonsai.StarterPack and install it](../images/bonsai-package-manager-starterpack.png){width=650px}
+        ![Search for Bonsai.StarterPack and install it](../../images/bonsai-package-manager-starterpack.png){width=650px}
 
     * Change the package source to **All** (1), then follow the same steps (2,3) to search for and install `OpenEphys.Onix`
 
-        ![Search for OpenEphys.Onix and install it](../images/bonsai-package-manager-openephys.onix.png){width=650px}
+        ![Search for OpenEphys.Onix and install it](../../images/bonsai-package-manager-openephys.onix.png){width=650px}
 
         > [!Warning]
         > Update this once the package has been published to NuGet

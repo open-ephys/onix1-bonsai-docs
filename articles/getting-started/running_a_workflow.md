@@ -7,4 +7,4 @@ Once all nodes have been placed and linked correctly, and all **Configuration** 
 
 Running a workflow can be done in one of two ways: (1) Press the **Start** button at the top of the Bonsai editor, and (2) Press F5. Upon starting a workflow, a context will be created, and all devices will be configured based on the **Configuration** properties. Any `*Data` nodes will then begin streaming data, and can be visualized. 
 
-![Start button in Bonsai editor](../images/bonsai-editor-start-button.png){width=700px}
+![Start button in Bonsai editor](../../images/bonsai-editor-start-button.png){width=700px}

@@ -3,16 +3,10 @@ uid: device-electricalstimulator
 title: Headstage64ElectricalStimulator
 isGuide: true
 isDevice: true
-isHeadstage: false
 device: ElectricalStimulator
 headstage: Headstage64
 workflow: true
 workflow_file: ~/workflows/devices/ElectricalStimulator.bonsai
-visualize: false
-visualize_rollinggraph: false
-visualize_timeseries: false
-visualize_mat: false
-visualize_text: false
 ---
 
 <br>

@@ -2,7 +2,6 @@
 <WorkflowBuilder Version="2.8.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
-                 xmlns:viz="clr-namespace:Bonsai.Design.Visualizers;assembly=Bonsai.Design.Visualizers"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -19,7 +18,6 @@
             <onix:DeviceName>Headstage64/Rhd2164</onix:DeviceName>
             <onix:DeviceAddress>256</onix:DeviceAddress>
             <onix:Enable>true</onix:Enable>
-            <onix:AmplifierDataFormat>Unsigned</onix:AmplifierDataFormat>
             <onix:DspCutoff>Dsp146mHz</onix:DspCutoff>
             <onix:AnalogLowCutoff>Low100mHz</onix:AnalogLowCutoff>
             <onix:AnalogHighCutoff>High10000Hz</onix:AnalogHighCutoff>
@@ -38,7 +36,12 @@
             <onix:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix:DeviceName>
             <onix:DeviceAddress>259</onix:DeviceAddress>
           </onix:ElectricalStimulator>
+          <onix:OpticalStimulator>
+            <onix:DeviceName>Headstage64/Headstage64OpticalStimulator</onix:DeviceName>
+            <onix:DeviceAddress>260</onix:DeviceAddress>
+          </onix:OpticalStimulator>
           <onix:Port>PortA</onix:Port>
+          <onix:PortVoltage xsi:nil="true" />
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -55,46 +58,14 @@
       <Expression xsi:type="MemberSelector">
         <Selector>EulerAngle</Selector>
       </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
-        <viz:SymbolType>None</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
-      </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Quaternion</Selector>
-      </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:ValueSelector>X,Y,Z,W</viz:ValueSelector>
-        <viz:SymbolType>None</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Acceleration</Selector>
       </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
-        <viz:SymbolType>None</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
-      </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Gravity</Selector>
-      </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:ValueSelector>X,Y,Z</viz:ValueSelector>
-        <viz:SymbolType>None</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Temperature</Selector>
@@ -104,14 +75,10 @@
       <Edge From="0" To="1" Label="Source1" />
       <Edge From="1" To="2" Label="Source1" />
       <Edge From="3" To="4" Label="Source1" />
+      <Edge From="3" To="5" Label="Source1" />
       <Edge From="3" To="6" Label="Source1" />
+      <Edge From="3" To="7" Label="Source1" />
       <Edge From="3" To="8" Label="Source1" />
-      <Edge From="3" To="10" Label="Source1" />
-      <Edge From="3" To="12" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
-      <Edge From="6" To="7" Label="Source1" />
-      <Edge From="8" To="9" Label="Source1" />
-      <Edge From="10" To="11" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
