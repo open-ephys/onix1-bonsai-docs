@@ -4,8 +4,8 @@
   <td id="{{id}}" data-uid="{{uid}}"><code>{{name.0.value}}</code></td>
   <td>{{{syntax.propertyValue.type.specName.0.value}}}</td>
   <td>
-    {{{summary}}}
-    {{{remarks}}}
+    {{{tableSummary}}}
+    {{{tableRemarks}}}
   </td>
 </tr>
 

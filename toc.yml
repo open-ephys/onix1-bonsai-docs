@@ -1,6 +1,6 @@
 - name: User Guide
   href: articles/
-- name: Node Guide
+- name: Operators Guide
   href: api/
 - name: Tutorials
   href: tutorials/

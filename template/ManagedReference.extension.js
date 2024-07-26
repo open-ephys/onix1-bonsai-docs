@@ -1,13 +1,36 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+
+
 /**
  * This method will be called at the start of exports.transform in ManagedReference.html.primary.js
  */
 exports.preTransform = function (model) {
-  // Define source or sink in documentation by whether it has a generate or process method.
-  // Defining whether a class corresponds to a source node or sink node depending on if it inherits 
-  // Bonsai.Source or Bonsai.Sink causes a problem because CreateContext is a source node that doesn't inherit the Bonsai.Source class.  
+  // Change css for html <p> elements that are used to populate tables. Specifically, remove the bottom margin. 
+  // This is so that tables can look better
+  if (model.children){
+    const childrenLength = model.children.length;
+    for (let i = 0; i < childrenLength; i++){
+      if (model.children[i].summary && model.children[i].remarks){
+        model.children[i].tableSummary = model.children[i].summary;
+        model.children[i].tableRemarks = model.children[i].remarks.replace('<p ', '<p style="margin-bottom:0;"');
+      }
+      else if (model.children[i].summary){
+        model.children[i].tableSummary = model.children[i].summary.replace('<p', '<p style="margin-bottom:0;"');
+      }
+      if (model.children[i].syntax && model.children[i].syntax.return && model.children[i].syntax.return.description){
+        model.children[i].syntax.return.tableDescription = model.children[i].syntax.return.description.replace('<p', '<p style="margin-bottom:0;"');
+      }
+      if (model.children[i].syntax && model.children[i].syntax.parameters && model.children[i].syntax.parameters[0] && model.children[i].syntax.parameters[0].description){
+        model.children[i].syntax.parameters[0].tableDescription = model.children[i].syntax.parameters[0].description.replace('<p', '<p style="margin-bottom:0;"');
+      }
+    }
+  }
+  // Define source or sink in documentation by checking for an explicit Category tag. If the class does not provide one,
+  // check the inheritance tree of the class. If the class inherits Bonsai.Sink and Bonsai.Combinator, ignore the Bonsai.Sink
+  // inheritance overrides the Bonsai.Combinator inheritance for determining whether a node is a source or a combinator. This 
+  // is because maybe sink nodes inherit Bonsai.Combinator in addition to Bonsai.Sink.  
   if (model.inheritance){
     let operatorType = {"source": false, "sink": false, "combinator": false};
     if (model.syntax){
@@ -22,7 +45,7 @@ exports.preTransform = function (model) {
       }
     } 
     if (!(operatorType.source || operatorType.sink || operatorType.combinator)){
-      inheritanceLength = model.inheritance.length;
+      const inheritanceLength = model.inheritance.length;
       for (let i = 0; i < inheritanceLength; i++){
         if (model.inheritance[i].uid.includes('Bonsai.Source')){
           operatorType.source = true;
@@ -52,12 +75,11 @@ exports.preTransform = function (model) {
  * This method will be called at the end of exports.transform in ManagedReference.html.primary.js
  */
 exports.postTransform = function (model) {
-  // Filter methods to include in documentation by name, specifically check if they are generate or process methods. 
-  // The public keyword isn't an effective filter because the CreateContext class has other public functions. 
-  childrenLength = model.children.length;
+  // Strip IObservable and add helpful flags to the view model
+  const childrenLength = model.children.length;
   for (let i = 0; i < childrenLength; i++){
     if (model.children[i].inMethod){
-      childrenChildrenLength = model.children[i].children.length;
+      const childrenChildrenLength = model.children[i].children.length;
       for (let j = 0; j < childrenChildrenLength; j++){
         if (model.children[i].children[j].syntax){
           if (model.children[i].children[j].syntax.content[0].value.includes('Generate') || model.children[i].children[j].syntax.content[0].value.includes('Process')){
