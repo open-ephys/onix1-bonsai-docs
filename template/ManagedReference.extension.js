@@ -32,7 +32,7 @@ exports.preTransform = function (model) {
   // inheritance overrides the Bonsai.Combinator inheritance for determining whether a node is a source or a combinator. This 
   // is because maybe sink nodes inherit Bonsai.Combinator in addition to Bonsai.Sink.  
   if (model.inheritance){
-    let operatorType = {"source": false, "sink": false, "combinator": false};
+    let operatorType = {"source": false, "sink": false, "combinator": false, "device": false, "hub": false};
     if (model.syntax){
       if (model.syntax.content[0].value.includes("[WorkflowElementCategory(ElementCategory.Source)]")){
         operatorType.source = true;
@@ -56,16 +56,32 @@ exports.preTransform = function (model) {
         else if (model.inheritance[i].uid.includes('Bonsai.Combinator')){
           operatorType.combinator = true;
         }
+        else if (model.inheritance[i].uid.includes('HubDeviceFactory')){
+          operatorType.hub = true;
+        }
+        else if (model.inheritance[i].uid.includes('DeviceFactory')){
+          operatorType.device = true;
+        }
       }
     }
     if (operatorType.source){
       model.sourceNode = true;
+      model.showWorkflow = true;
     }
     else if (operatorType.sink){
       model.sinkNode = true;
+      model.showWorkflow = true;
     }
     else if (operatorType.combinator){
       model.combinatorNode = true;
+    }
+    if (operatorType.hub){
+      model.isHub = true;
+      model.showWorkflow = true;
+    }
+    else if (operatorType.device){
+      model.isDevice = true;
+      model.showWorkflow = true;
     }
   }
   return model;

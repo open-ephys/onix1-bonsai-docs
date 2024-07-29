@@ -18,12 +18,15 @@
 
 <div class="markdown summary">{{{summary}}}</div>
 <div class="markdown level0 remarks">{{{remarks}}}</div>
+
+{{#showWorkflow}}
+<div class="workflow"><p><img src="../workflows/operators/{{name.0.value}}.bonsai" alt="{{name.0.value}} Workflow"></p></div>
+{{/showWorkflow}}
+
 <div class="markdown conceptual">{{{conceptual}}}</div>
 
 {{#children}}
 {{#nodeMethod}}
-
-<div class="workflow"><p><img src="../workflows/operators/{{name.0.value}}.bonsai" alt="{{name.0.value}} Workflow"></p></div>
 
 <h2>Inputs & Outputs</h2>
 
