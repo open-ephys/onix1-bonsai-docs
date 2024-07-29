@@ -1,6 +1,6 @@
 # RHS2116 Tutorial
 
-For more information on hardware, refer to the [Onix Hardware Documentation for RHS2116](https://open-ephys.github.io/onix-docs/Hardware%20Guide/Datasheets/rhs2116.html). 
+For more information on hardware, refer to the [Onix Hardware Documentation for RHS2116](https://open-ephys.github.io/onix-docs/Hardware%20Guide/Datasheets/rhs2116.html).
 
 ## Tutorial 1
 
