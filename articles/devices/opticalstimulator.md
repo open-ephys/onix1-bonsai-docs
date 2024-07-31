@@ -1,12 +1,12 @@
 ---
-uid: device-electricalstimulator
-title: Headstage64ElectricalStimulator
+uid: device-opticalstimulator
+title: Headstage64OpticalStimulator
 isGuide: true
 isDevice: true
-device: ElectricalStimulator
+device: OpticalStimulator
 headstage: Headstage64
 workflow: true
-workflow_file: ~/workflows/devices/ElectricalStimulator.bonsai
+workflow_file: ~/workflows/devices/OpticalStimulator.bonsai
 ---
 
 <br>

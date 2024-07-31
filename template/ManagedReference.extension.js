@@ -154,18 +154,23 @@ function defineOperatorType(model){
       for (let i = 0; i < inheritanceLength; i++){
         if (model.inheritance[i].uid.includes('Bonsai.Source')){
           operatorType.source = true;
+          operatorType.showWorkflow = true;
         }
         else if (model.inheritance[i].uid.includes('Bonsai.Sink')){
           operatorType.sink = true;
+          operatorType.showWorkflow = true;
         }
         else if (model.inheritance[i].uid.includes('Bonsai.Combinator')){
           operatorType.combinator = true;
+          operatorType.showWorkflow = true;
         }
         else if (model.inheritance[i].uid.includes('HubDeviceFactory')){
           operatorType.hub = true;
+          operatorType.showWorkflow = true;
         }
         else if (model.inheritance[i].uid.includes('DeviceFactory')){
           operatorType.device = true;
+          operatorType.showWorkflow = true;
         }
       }
     }
@@ -357,6 +362,10 @@ exports.preTransform = function (model) {
   }
   else if (operatorType.combinator){
     model.oe.operatorType = 'combinator';
+  }
+
+  if (operatorType.hasOwnProperty('showWorkflow')) {
+    model.showWorkflow = operatorType.showWorkflow;
   }
 
   properties = defineProperties(model);

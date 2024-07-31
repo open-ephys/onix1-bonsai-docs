@@ -62,21 +62,18 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:Headstage64ElectricalStimulatorTrigger">
-          <onix:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix:DeviceName>
+        <Combinator xsi:type="onix:Headstage64OpticalStimulatorTrigger">
+          <onix:DeviceName>Headstage64/Headstage64OpticalStimulator</onix:DeviceName>
           <onix:Enable>true</onix:Enable>
-          <onix:PowerEnable>false</onix:PowerEnable>
-          <onix:TriggerDelay>0</onix:TriggerDelay>
-          <onix:PhaseOneCurrent>0</onix:PhaseOneCurrent>
-          <onix:InterPhaseCurrent>0</onix:InterPhaseCurrent>
-          <onix:PhaseTwoCurrent>0</onix:PhaseTwoCurrent>
-          <onix:PhaseOneDuration>0</onix:PhaseOneDuration>
-          <onix:InterPhaseInterval>0</onix:InterPhaseInterval>
-          <onix:PhaseTwoDuration>0</onix:PhaseTwoDuration>
-          <onix:InterPulseInterval>0</onix:InterPulseInterval>
+          <onix:Delay>0</onix:Delay>
+          <onix:MaxCurrent>100</onix:MaxCurrent>
+          <onix:ChannelOneCurrent>100</onix:ChannelOneCurrent>
+          <onix:ChannelTwoCurrent>0</onix:ChannelTwoCurrent>
+          <onix:PulseDuration>5</onix:PulseDuration>
+          <onix:PulsesPerSecond>50</onix:PulsesPerSecond>
+          <onix:PulsesPerBurst>20</onix:PulsesPerBurst>
           <onix:InterBurstInterval>0</onix:InterBurstInterval>
-          <onix:BurstPulseCount>0</onix:BurstPulseCount>
-          <onix:TrainBurstCount>0</onix:TrainBurstCount>
+          <onix:BurstsPerTrain>1</onix:BurstsPerTrain>
         </Combinator>
       </Expression>
     </Nodes>

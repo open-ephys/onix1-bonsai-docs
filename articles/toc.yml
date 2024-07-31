@@ -28,6 +28,7 @@
   - href: devices/breakoutanalogio.md
   - href: devices/breakoutdigitalio.md
   - href: devices/electricalstimulator.md
+  - href: devices/opticalstimulator.md
   - href: devices/heartbeat.md
   - href: devices/memorymonitor.md
   - href: devices/neuropixelsv1e.md
