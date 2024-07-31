@@ -1,9 +1,6 @@
 [submodule "docfx-tools"]
 	path = docfx-tools
 	url = https://github.com/bonsai-rx/docfx-tools
-[submodule "docs/bonsai"]
-	path = docs/bonsai
-	url = https://github.com/bonsai-rx/docfx-tools
-[submodule "src/onix-refactor"]
-	path = src/onix-refactor
-	url = https://github.com/neurogears/onix-refactor.git
+[submodule "src/onix-bonsai-onix1"]
+	path = src/onix-bonsai-onix1
+	url = https://github.com/open-ephys/onix-bonsai-onix1.git
