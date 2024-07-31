@@ -1,6 +1,6 @@
 - name: User Guide
   href: articles/
-- name: Operators
-  href: api/
 - name: Tutorials
   href: tutorials/
+- name: Operators
+  href: api/

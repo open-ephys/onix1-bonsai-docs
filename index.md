@@ -6,7 +6,7 @@ title: OpenEphys.Onix
 > [!Warning]
 > These docs are under active development, feel free to contribute by either [raising an issue](https://github.com/bonsai-rx/docs/issues) or following the links saying **Edit this page**.
 
-`OpenEphys.Onix` is a library that can be used in [Bonsai](https://bonsai-rx.org/) to acquire data from ONIX devices, such as the [Open Ephys Acquisition Board](https://open-ephys.github.io/acq-board-docs/). For more details on the ONI specification, check out [this link](https://open-ephys.github.io/ONI/), and to learn more about ONIX devices and their implemention of ONI, click [here](https://open-ephys.github.io/onix-docs/).
+`OpenEphys.Onix` is a library that can be used in [Bonsai](https://bonsai-rx.org/) to acquire data from ONIX devices, such as the [ONIX PCIe Acquisition System](https://open-ephys.org/onix/oeps-9006). For more details on the ONI specification, check out [this link](https://open-ephys.github.io/ONI/), and to learn more about ONIX devices and their implementation of ONI, click [here](https://open-ephys.github.io/onix-docs/).
 
 ## Advantages
 
