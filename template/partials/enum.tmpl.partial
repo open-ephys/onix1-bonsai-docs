@@ -1,0 +1,38 @@
+{{#isEnum}}
+
+<h1 class="text-break">
+  {{name.0.value}}
+  {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
+</h1>
+
+{{{oe.description}}}
+
+{{#oe.hasFields}}
+
+<h2>Fields</h2>
+
+<table>
+
+  <tr>
+    <th>Value</th>
+    <th>Description</th>
+  </tr>
+
+  {{#oe.fields}}
+  <tr>
+    <td>
+      <code>
+        {{name}}
+      </code>
+    </td>
+    <td>
+      {{{description}}}
+    </td>
+  </tr>
+  {{/oe.fields}}
+
+</table>
+
+{{/oe.hasFields}}
+
+{{/isEnum}}

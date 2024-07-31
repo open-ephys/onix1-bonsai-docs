@@ -1,0 +1,129 @@
+{{#isClass}}
+
+<div>
+  <h1 id="{{id}}" data-uid="{{uid}}" class="text-break" style="display: inline-block;">
+    {{name.0.value}}
+    {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
+  </h1>
+  {{#oe.operatorType}}
+  <p style="display: inline; text-transform: capitalize"> 
+    {{oe.operatorType}} Operator
+  </p>
+  {{/oe.operatorType}}
+</div>
+
+{{{oe.description}}}
+
+{{#showWorkflow}}
+<div class="workflow"><p><img src="../workflows/operators/{{name.0.value}}.bonsai" alt="{{name.0.value}} Workflow"></p></div>
+{{/showWorkflow}}
+
+{{#oe.operatorType}}
+
+<h2>Inputs & Outputs</h2>
+
+{{>partials/class.methods}}
+
+{{/oe.operatorType}}
+
+{{#oe.hasSubOperators}}
+
+<h2>Properties</h2>
+
+{{#oe.subOperators}}
+
+<h3>{{{object}}}</h3>
+
+{{#hasSubProperties}}
+
+<table>
+
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+
+  {{#subProperties}}
+
+  <tr>
+    <td>
+      <code>
+        {{{name}}}
+      </code>
+    </td>
+    <td>
+      {{{description}}}
+      {{#hasEnum}}
+      <dl style="margin-top: 1rem; margin-bottom: 0rem; display: grid; grid-template-columns: max-content auto;">
+        {{#enum}}
+        <dt style="grid-column-start: 1;"><code>{{{field&value}}}</code></dt>
+        <dd style="grid-column-start: 2; margin-bottom: 0rem;">{{{description}}}</dd>
+        {{/enum}}
+      </dl>
+      {{/hasEnum}}
+    </td>
+  </tr>
+
+  {{/subProperties}}
+  
+</table>
+
+{{/hasSubProperties}}
+
+{{^hasSubProperties}}
+
+<div>This subclass has no public properties.</div>
+
+{{/hasSubProperties}}
+
+{{/oe.subOperators}}
+
+{{/oe.hasSubOperators}}
+
+{{^oe.hasSubOperators}}
+
+{{#oe.hasProperties}}
+
+<h2>Properties</h2>
+
+<table>
+
+  <tr>
+    <th>Property</th>
+    <th>Type</th> 
+    <th>Description</th>
+  </tr>
+
+  {{#oe.properties}}
+
+  <tr>
+    <td>
+      <code>
+        {{{name}}}
+      </code>
+    </td>
+    <td>
+      {{{type}}}
+    </td>
+    <td>
+      {{{description}}}
+      {{#hasEnum}}
+      <dl style="margin-top: 1rem; margin-bottom: 0rem; display: grid; grid-template-columns: max-content auto;">
+        {{#enum}}
+        <dt style="grid-column-start: 1;"><code>{{{field&value}}}</code></dt>
+        <dd style="grid-column-start: 2; margin-bottom: 0rem;">{{{description}}}</dd>
+        {{/enum}}
+      </dl>
+      {{/hasEnum}}
+    </td>
+  </tr>
+
+  {{/oe.properties}}
+  
+</table>
+
+{{/oe.hasProperties}}
+
+{{/oe.hasSubOperators}}
+
+{{/isClass}}

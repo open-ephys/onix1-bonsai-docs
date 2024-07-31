@@ -3,11 +3,7 @@ apiRules:
     hasAttribute:
       uid: System.ObsoleteAttribute
 - exclude:
-      uidRegex: OpenEphys.Onix.DeviceFactory
-- exclude:
       uidRegex: OpenEphys.Onix.DeviceNameConverter
-- exclude:
-      uidRegex: OpenEphys.Onix.HubDeviceFactory
 - exclude:
       uidRegex: OpenEphys.Onix.SingleDeviceFactory
 - exclude:
@@ -15,10 +11,12 @@ apiRules:
 - exclude:
       uidRegex: OpenEphys.Onix.DeviceContext
 - exclude:
+      uidRegex: ^.*DeviceFactory
+- exclude:
+      uidRegex: ^.*DataFrame
+- exclude:
+      type: Enum      
+- exclude:
       uidRegex: OpenEphys.Onix.ConfigureFmcLinkController
-- exclude:
-      uidRegex: OpenEphys.Onix.DataFrame
-- exclude:
-      uidRegex: OpenEphys.Onix.BufferedDataFrame
 - exclude:
       uidRegex: OpenEphys.Onix.ConfigureDS90UB9x
