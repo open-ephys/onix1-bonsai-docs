@@ -25,7 +25,7 @@ jobs:
         run: dotnet tool install DocLinkChecker
 
       - name: Check Documentation Links
-        run: dotnet DocLinkChecker -d articles -v
+        run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config
 
       - name: Setup DocFX
         run: dotnet tool restore
