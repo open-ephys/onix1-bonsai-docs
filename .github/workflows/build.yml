@@ -24,9 +24,11 @@ jobs:
       - name: Install DocLinkChecker
         run: dotnet tool install DocLinkChecker
 
+      # This checks for missing / broken links in the *.md files directly prior to building the website
       - name: Check Documentation Links in Articles
         run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config -d articles
 
+      # This checks for missing / broken links in the *.md files directly prior to building the website
       - name: Check Documentation Links in Tutorials
         run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config -d tutorials
 
@@ -39,6 +41,14 @@ jobs:
 
       - name: Build Documentation
         run: .\build.ps1
+
+      # This checks for missing / broken links in the *.html files after building the website.
+      # We need to run this step here to check that all auto-generated API pages have valid links too.
+      - name: Check HTML Links After Building
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --base . --verbose --no-progress './_site/**/*.html'
+          fail: true
           
       - name: Checkout gh-pages
         uses: actions/checkout@v4.1.1
