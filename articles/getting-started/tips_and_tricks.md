@@ -11,7 +11,7 @@ The order of nodes is also important for which actions can be taken. In the tabl
 
 | Goal | Clicks / Keystrokes | Description |
 | ---- | ------------------- | ----------- |
-| Link two nodes | Click and hold the first node, drag the cursor to the second node, and release | While dragging the cursor, it will temporarily change to a red symbol until there is a valid target (e.g., the second node), where it will change to an up arrow | 
+| Link two nodes | Click and hold the first node, drag the cursor to the second node, and release | While dragging the cursor, it will temporarily change to a red symbol until there is a valid target (e.g., the second node), where it will change to an up arrow |
 | Link two nodes | Right-click the first node, and select **Create Connection**. Select the second node | While moving the cursor, it will change to an up arrow. A valid node target will change color when hovering over it |
 | Link two nodes on placement | Click on a node in the editor to select it, then place a node using either method (1) or (2) above | If a node is currently selected in the editor when a new node is added, whether it is added by clicking and dragging, double-clicking, or pressing **Enter**, the newly placed node will be connected to the first node automatically |
 | Unlink two nodes | Click the first node to select it, hold **Shift**, click and hold the first node, drag to the second node, and release | While dragging the cursor, it will temporarily change to a red symbol until there is a valid target (e.g., the second node), where it will change to an up arrow |
