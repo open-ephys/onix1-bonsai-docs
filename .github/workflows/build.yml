@@ -27,6 +27,9 @@ jobs:
       - name: Check Documentation Links in Articles
         run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config -d articles
 
+      - name: Check Documentation Links in Tutorials
+        run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config -d tutorials
+
       - name: Setup DocFX
         run: dotnet tool restore
 
