@@ -29,17 +29,6 @@ function defineInputsAndOutputs(model){
     for (let i = 0; i < hubChildrenLength; i++){
       input = {};
       if (model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters && model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0]){
-      //   for (let j = 0; j < childrenLength; j++){
-      //     if(model.children[j]blablablabla){
-      //       input = {
-      //         'specName': replaceIObservableAndTSource(model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.specName[0].value),
-      //         'name': model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
-      //         'description': removeBottomMargin([ model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].description, 
-      //                                             model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].remarks].join(''))
-      //       };
-      //     }
-      //   }
-      // }
         input = {
           'specName': replaceIObservableAndTSource(model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.specName[0].value),
           'name': model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
