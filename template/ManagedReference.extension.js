@@ -454,6 +454,9 @@ exports.preTransform = function (model) {
   if (operatorType.showWorkflow) {
     model.showWorkflow = operatorType.showWorkflow;
   }
+  if (model.uid.includes('DeviceFactory')){
+    model.showWorkflow = false;
+  }
   if (operatorType.device) {
     model.oe.hubOrDevice = 'device';
     model.oe.device = true;
