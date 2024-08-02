@@ -2,17 +2,3 @@ apiRules:
 - exclude:
     hasAttribute:
       uid: System.ObsoleteAttribute
-- exclude:
-      uidRegex: OpenEphys.Onix.DeviceNameConverter
-- exclude:
-      uidRegex: OpenEphys.Onix.SingleDeviceFactory
-- exclude:
-      uidRegex: OpenEphys.Onix.ManagedFrame
-- exclude:
-      uidRegex: OpenEphys.Onix.DeviceContext
-- exclude:
-      uidRegex: ^.*DeviceFactory
-- exclude:
-      uidRegex: OpenEphys.Onix.ConfigureFmcLinkController
-- exclude:
-      uidRegex: OpenEphys.Onix.ConfigureDS90UB9x

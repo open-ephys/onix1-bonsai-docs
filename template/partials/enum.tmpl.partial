@@ -7,32 +7,32 @@
 
 {{{oe.description}}}
 
-{{#oe.hasFields}}
+{{#oe.hasEnumFields}}
 
 <h2>Fields</h2>
 
 <table>
 
   <tr>
-    <th>Value</th>
+    <th style = "white-space: no-wrap">Field & Value</th>
     <th>Description</th>
   </tr>
 
-  {{#oe.fields}}
+  {{#oe.enumFields}}
   <tr>
-    <td>
+    <td style = "white-space: no-wrap">
       <code>
-        {{name}}
+        {{{field&value}}}
       </code>
     </td>
     <td>
       {{{description}}}
     </td>
   </tr>
-  {{/oe.fields}}
+  {{/oe.enumFields}}
 
 </table>
 
-{{/oe.hasFields}}
+{{/oe.hasEnumFields}}
 
 {{/isEnum}}
