@@ -22,7 +22,85 @@ function replaceIObservableAndTSource(str){
 // compile list of data for input --> o --> output diagrams
 function defineInputsAndOutputs(model){
   operators = [];
-  if (model.children){
+  if (model.oe.hubOrDevice === 'hub'){
+    description = [ model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].summary, 
+                    model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].remarks].join('');
+    const hubChildrenLength = model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children.length;
+    for (let i = 0; i < hubChildrenLength; i++){
+      input = {};
+      if (model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters && model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0]){
+        input = {
+          'specName': replaceIObservableAndTSource(model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.specName[0].value),
+          'name': model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
+          'description': removeBottomMargin([ model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].description, 
+                                              model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.parameters[0].remarks].join(''))};
+      }
+      output = {};
+      dataFrame = [];
+      if (model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return){
+        output = {
+          'specName': replaceIObservableAndTSource(model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return.type.specName[0].value),
+          'name': model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return.type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
+          'description': removeBottomMargin([ model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return.description, 
+                                              model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return.remarks].join(''))};
+        outputYml = [ '~/api/', 
+                      model.__global._shared['~/api/OpenEphys.Onix1.MultiDeviceFactory.yml'].children[i].syntax.return.type.uid.replaceAll(/(\D*{)|(}$)/g, ''),  
+                      '.yml'].join('');
+        if (model['__global']['_shared'][outputYml] && model['__global']['_shared'][outputYml]['children'] && (model['__global']['_shared'][outputYml].type === 'class')){
+          const outputYmlChildrenLength = model['__global']['_shared'][outputYml]['children'].length;
+          for (let j = 0; j < outputYmlChildrenLength; j++){
+            if (model['__global']['_shared'][outputYml]['children'][j].type === 'property'){
+              potentialEnumYml = '~/api/' + model['__global']['_shared'][outputYml]['children'][j].syntax.return.type.uid + '.yml';
+              let enumFields = [];
+              if (model['__global']['_shared'][potentialEnumYml] && (model['__global']['_shared'][potentialEnumYml]['type'] === 'enum')){
+                enumChildrenLength = model['__global']['_shared'][potentialEnumYml]['children'].length;
+                for (let k = 0; k < enumChildrenLength; k++){
+                  if (model['__global']['_shared'][potentialEnumYml]['children'][k].type === 'field'){
+                    enumFields.push({
+                      'field&value': model['__global']['_shared'][potentialEnumYml]['children'][k].syntax.content[0].value,
+                      'description': removeBottomMargin([model['__global']['_shared'][potentialEnumYml]['children'][k].summary, 
+                                      model['__global']['_shared'][potentialEnumYml]['children'][k].remarks].join(''))
+                    });
+                  }
+                }
+              }
+              if (enumFields.length > 0){
+                dataFrame.push({
+                  'name': model['__global']['_shared'][outputYml]['children'][j].name[0].value, 
+                  'type': model['__global']['_shared'][outputYml]['children'][j].syntax.return.type.specName[0].value, 
+                  'description': removeBottomMargin([ model['__global']['_shared'][outputYml]['children'][j].summary, 
+                                                      model['__global']['_shared'][outputYml]['children'][j].remarks].join('')),
+                  'enumFields': enumFields,
+                  'hasEnum': true
+                });
+              }
+              else {
+                dataFrame.push({
+                  'name': model['__global']['_shared'][outputYml]['children'][j].name[0].value, 
+                  'type': model['__global']['_shared'][outputYml]['children'][j].syntax.return.type.specName[0].value, 
+                  'description': removeBottomMargin([ model['__global']['_shared'][outputYml]['children'][j].summary, 
+                                                      model['__global']['_shared'][outputYml]['children'][j].remarks].join('')),
+                });                  
+              }
+            }
+          }
+        }
+      }
+    }
+    if (Object.keys(input).length && Object.keys(dataFrame).length){
+      operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasInput': true, 'hasDataFrame': true});
+    }
+    else if (Object.keys(input).length){
+      operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasInput': true});
+    }
+    else if (Object.keys(dataFrame).length){
+      operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasDataFrame': true});
+    }
+    else{
+      operators.push({'description': description, 'output': output});
+    }
+  }
+  else if (model.children){
     const childrenLength = model.children.length;
     for (let i = 0; i < childrenLength; i++){
       if (model.children[i].uid.includes('Generate') || model.children[i].uid.includes('Process')){
@@ -30,29 +108,20 @@ function defineInputsAndOutputs(model){
         input = {};
         if (model.children[i].syntax.parameters && model.children[i].syntax.parameters[0]){
           input = {
-            'name': replaceIObservableAndTSource(model.children[i].syntax.parameters[0].type.specName[0].value),
-            'nameWithoutExtraHtml': model.children[i].syntax.parameters[0].type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
+            'specName': replaceIObservableAndTSource(model.children[i].syntax.parameters[0].type.specName[0].value),
+            'name': model.children[i].syntax.parameters[0].type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
             'description': removeBottomMargin([model.children[i].syntax.parameters[0].description, model.children[i].syntax.parameters[0].remarks].join(''))};
         }
         if (model.children[i].syntax.return){
-          output = {};
-          if (model.children[i].syntax.return.type.uid.includes('DataFrame')){
-            output = {
-              'name': replaceIObservableAndTSource(model.children[i].syntax.return.type.specName[0].value), 
-              'nameWithoutExtraHtml': model.children[i].syntax.return.type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
-              'description': ''};
-          }
-          else {
-            output = {
-              'name': replaceIObservableAndTSource(model.children[i].syntax.return.type.specName[0].value),
-              'nameWithoutExtraHtml': model.children[i].syntax.return.type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
-              'description': removeBottomMargin([model.children[i].syntax.return.description, model.children[i].syntax.return.remarks].join(''))};
-          }
+          output = {
+            'specName': replaceIObservableAndTSource(model.children[i].syntax.return.type.specName[0].value),
+            'name': model.children[i].syntax.return.type.name[0].value.replaceAll(/(IObservable<)|(>)/g, ''),
+            'description': removeBottomMargin([model.children[i].syntax.return.description, model.children[i].syntax.return.remarks].join(''))};
           dataFrame = [];
           outputYml = [ '~/api/', 
                         model.children[i].syntax.return.type.uid.replaceAll(/(\D*{)|(}$)/g, ''),  
                         '.yml'].join('');
-          if (model['__global']['_shared'][outputYml] && model['__global']['_shared'][outputYml]['children']){
+          if (model['__global']['_shared'][outputYml] && model['__global']['_shared'][outputYml]['children'] && (model['__global']['_shared'][outputYml].type === 'class')){
             const outputYmlChildrenLength = model['__global']['_shared'][outputYml]['children'].length;
             for (let j = 0; j < outputYmlChildrenLength; j++){
               if (model['__global']['_shared'][outputYml]['children'][j].type === 'property'){
@@ -74,7 +143,7 @@ function defineInputsAndOutputs(model){
                   dataFrame.push({
                     'name': model['__global']['_shared'][outputYml]['children'][j].name[0].value, 
                     'type': model['__global']['_shared'][outputYml]['children'][j].syntax.return.type.specName[0].value, 
-                    'description': removeBottomMargin( [model['__global']['_shared'][outputYml]['children'][j].summary, 
+                    'description': removeBottomMargin([ model['__global']['_shared'][outputYml]['children'][j].summary, 
                                                         model['__global']['_shared'][outputYml]['children'][j].remarks].join('')),
                     'enumFields': enumFields,
                     'hasEnum': true
@@ -84,7 +153,7 @@ function defineInputsAndOutputs(model){
                   dataFrame.push({
                     'name': model['__global']['_shared'][outputYml]['children'][j].name[0].value, 
                     'type': model['__global']['_shared'][outputYml]['children'][j].syntax.return.type.specName[0].value, 
-                    'description': removeBottomMargin( [model['__global']['_shared'][outputYml]['children'][j].summary, 
+                    'description': removeBottomMargin([ model['__global']['_shared'][outputYml]['children'][j].summary, 
                                                         model['__global']['_shared'][outputYml]['children'][j].remarks].join('')),
                   });                  
                 }
@@ -114,16 +183,16 @@ function defineInputsAndOutputs(model){
           }
         }
         if (Object.keys(input).length && Object.keys(dataFrame).length){
-          operators.push({'hasInput': true, 'hasDataFrame': true, 'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame});
+          operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasInput': true, 'hasDataFrame': true});
         }
         else if (Object.keys(input).length){
-          operators.push({'hasInput': true, 'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame});
+          operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasInput': true});
         }
         else if (Object.keys(dataFrame).length){
-          operators.push({'hasDataFrame': true, 'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame});
+          operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame, 'hasDataFrame': true});
         }
-        else{
-          operators.push({'description': description, 'input': input, 'output': output, 'dataFrame': dataFrame});
+        else {
+          operators.push({'description': description, 'output': output});
         }
       }
     }
@@ -133,8 +202,8 @@ function defineInputsAndOutputs(model){
 
 // Define source or sink in documentation by checking for an explicit Category tag. If the class does not provide one,
 // check the inheritance tree of the class. If the class inherits Bonsai.Sink and Bonsai.Combinator, ignore the Bonsai.Sink
-// inheritance overrides the Bonsai.Combinator inheritance for determining whether a node is a source or a combinator. This
-// is because maybe sink nodes inherit Bonsai.Combinator in addition to Bonsai.Sink.
+// inheritance overrides the Bonsai.Combinator inheritance for determining whether an operator is a source or a combinator. This
+// is because maybe sink operators inherit Bonsai.Combinator in addition to Bonsai.Sink.
 function defineOperatorType(model){
   let operatorType = {'source': false, 'sink': false, 'combinator': false};
   if (model.syntax && model.syntax.content[0].value){
@@ -164,11 +233,11 @@ function defineOperatorType(model){
           operatorType.combinator = true;
           operatorType.showWorkflow = true;
         }
-        else if (model.inheritance[i].uid.includes('HubDeviceFactory')){
+        if (model.inheritance[i].uid.includes('OpenEphys.Onix1.MultiDeviceFactory')){
           operatorType.hub = true;
           operatorType.showWorkflow = true;
         }
-        else if (model.inheritance[i].uid.includes('DeviceFactory')){
+        else if (model.inheritance[i].uid.includes('OpenEphys.Onix1.SingleDeviceFactory')){
           operatorType.device = true;
           operatorType.showWorkflow = true;
         }
@@ -206,13 +275,15 @@ function defineSubOperators(model){
               }
               if (enumFields.length > 0){
                 subProperties.push({'name': model['__global']['_shared'][potentialSubOperatorYml]['children'][j].name[0].value,
+                                    'type': model['__global']['_shared'][potentialSubOperatorYml]['children'][j].syntax.return.type.specName[0].value,
                                     'description': removeBottomMargin( [model['__global']['_shared'][potentialSubOperatorYml]['children'][j].summary, 
                                                                         model['__global']['_shared'][potentialSubOperatorYml]['children'][j].remarks].join('')),
-                                    'enum': enumFields,
+                                    'enumFields': enumFields,
                                     'hasEnum': true});
               }
               else{
                 subProperties.push({'name': model['__global']['_shared'][potentialSubOperatorYml]['children'][j].name[0].value,
+                                    'type': model['__global']['_shared'][potentialSubOperatorYml]['children'][j].syntax.return.type.specName[0].value,
                                     'description': removeBottomMargin( [model['__global']['_shared'][potentialSubOperatorYml]['children'][j].summary, 
                                                                         model['__global']['_shared'][potentialSubOperatorYml]['children'][j].remarks].join(''))
                 });
@@ -222,12 +293,15 @@ function defineSubOperators(model){
           if (subProperties.length > 0){
             subOperators.push({
               'object': model.children[i].name[0].value,
+              'type': model.children[i].syntax.return.type.specName[0].value,
               'subProperties': subProperties,
               'hasSubProperties': true});
           }
           else if (model.__global._shared['~/api/' + model.children[i].name[0].value + '.yml']){
             subOperators.push({
-              'object': model.children[i].name[0].value});
+              'object': model.children[i].name[0].value,
+              'type': model.children[i].syntax.return.type.specName[0].value,
+            });
           }
         }
       }
@@ -251,7 +325,7 @@ function defineProperties(model){
             if (model['__global']['_shared'][potentialEnumYml]['children'][j].type === 'field'){
               enumFields.push({
                 'field&value': model['__global']['_shared'][potentialEnumYml]['children'][j].syntax.content[0].value,
-                'description': removeBottomMargin( [model['__global']['_shared'][potentialEnumYml]['children'][j].summary, 
+                'description': removeBottomMargin([ model['__global']['_shared'][potentialEnumYml]['children'][j].summary, 
                                                     model['__global']['_shared'][potentialEnumYml]['children'][j].remarks].join(''))
               });
             }
@@ -262,7 +336,7 @@ function defineProperties(model){
             'name': model.children[i].name[0].value, 
             'type': model.children[i].syntax.return.type.specName[0].value, 
             'description': removeBottomMargin([model.children[i].summary, model.children[i].remarks].join('')),
-            'enum': enumFields,
+            'enumFields': enumFields,
             'hasEnum': true
           });
         }
@@ -339,6 +413,24 @@ const swapElements = (array, index1, index2) => {
   array[index2] = temp;
 };
 
+function defineEnumFields(model){
+  enumFields = [];
+  if (model.children){
+    const childrenLength = model.children.length;
+    for (let i = 0; i < childrenLength; i++){
+      if (model.children[i].type === 'field'){
+        enumFields.push({
+          'field&value': model.children[i].syntax.content[0].value,
+          'description': removeBottomMargin([ model.children[i].summary, 
+                                              model.children[i].remarks].join(''))
+        });
+      }
+    }
+  }
+  return enumFields;
+}
+
+
 /**
  * This method will be called at the start of exports.transform in ManagedReference.html.primary.js
  */
@@ -347,11 +439,6 @@ exports.preTransform = function (model) {
   model.oe = {};
   
   model.oe.description = [model.summary, model.remarks].join('');
-  
-  operators = defineInputsAndOutputs(model);
-  if (operators.length > 0){
-    model.oe.operators = operators;
-  }
 
   operatorType = defineOperatorType(model);
   if (operatorType.source){
@@ -364,8 +451,22 @@ exports.preTransform = function (model) {
     model.oe.operatorType = 'combinator';
   }
 
-  if (operatorType.hasOwnProperty('showWorkflow')) {
+  if (operatorType.showWorkflow) {
     model.showWorkflow = operatorType.showWorkflow;
+  }
+
+  if (operatorType.device) {
+    model.oe.hubOrDevice = 'device';
+    model.oe.device = true;
+  }
+  else if (operatorType.hub){
+    model.oe.hubOrDevice = 'hub';
+    model.oe.hub = true;
+  }
+  
+  operators = defineInputsAndOutputs(model);
+  if (operators.length > 0){
+    model.oe.operators = operators;
   }
 
   properties = defineProperties(model);
@@ -378,6 +479,45 @@ exports.preTransform = function (model) {
   if (subOperators.length > 0){
     model.oe.hasSubOperators = true;
     model.oe.subOperators = subOperators;
+  }
+
+  if (model.oe.hasProperties && model.oe.hasSubOperators){
+    subPropertyNames = [];
+    hubProperties = [];
+    const subOperatorsLength = model.oe.subOperators.length;
+    for (let i = 0; i < subOperatorsLength; i++){
+      subPropertyNames.push(model.oe.subOperators[i].object);
+    }
+    const propertiesLength = model.oe.properties.length;
+    for (let i = 0; i < propertiesLength; i++){
+      const subPropertyNamesLength = subPropertyNames.length;
+      propertyNotInSubOperator = false;
+      for (let j = 0; j < subPropertyNamesLength; j++){
+        if (model.oe.properties[i].name === subPropertyNames[j]){
+          propertyNotInSubOperator = true;
+        }
+      }
+      if (!propertyNotInSubOperator){
+        hubProperties.push(model.oe.properties[i]);
+      }
+    }
+    if (hubProperties.length > 0){
+      model.oe.subOperators.push({
+        'object': 'Misc',
+        'subProperties': hubProperties,
+        'hasSubProperties': true
+      })
+    }
+  }
+
+  enumFields = defineEnumFields(model);
+  if (enumFields.length > 0){
+    model.oe.hasEnumFields = true;
+    model.oe.enumFields = enumFields;
+  }
+
+  if (model.uid.includes('DeviceFactory')){
+    model.showWorkflow = false;
   }
 
   return model;
