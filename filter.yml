@@ -13,10 +13,6 @@ apiRules:
 - exclude:
       uidRegex: ^.*DeviceFactory
 - exclude:
-      uidRegex: ^.*DataFrame
-- exclude:
-      type: Enum      
-- exclude:
       uidRegex: OpenEphys.Onix.ConfigureFmcLinkController
 - exclude:
       uidRegex: OpenEphys.Onix.ConfigureDS90UB9x
