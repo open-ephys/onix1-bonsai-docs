@@ -27,9 +27,9 @@
 
 <div>{{{oe.description}}}</div>
 
-{{#oe.operatorType}}
+{{#showWorkflow}}
 <div class="workflow"><p><img src="../workflows/operators/{{name.0.value}}.bonsai" alt="{{name.0.value}} Workflow"></p></div>
-{{/oe.operatorType}}
+{{/showWorkflow}}
 
 {{#oe.operatorType}}
 

@@ -454,9 +454,7 @@ exports.preTransform = function (model) {
   if (operatorType.showWorkflow) {
     model.showWorkflow = operatorType.showWorkflow;
   }
-  if (model.uid.includes('DeviceFactory')){
-    model.showWorkflow = false;
-  }
+
   if (operatorType.device) {
     model.oe.hubOrDevice = 'device';
     model.oe.device = true;
@@ -516,6 +514,10 @@ exports.preTransform = function (model) {
   if (enumFields.length > 0){
     model.oe.hasEnumFields = true;
     model.oe.enumFields = enumFields;
+  }
+
+  if (model.uid.includes('DeviceFactory')){
+    model.showWorkflow = false;
   }
 
   return model;
