@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix1;assembly=OpenEphys.Onix1"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:CreateContext">
-          <onix:Driver>riffa</onix:Driver>
-          <onix:Index>0</onix:Index>
+        <Combinator xsi:type="onix1:CreateContext">
+          <onix1:Driver>riffa</onix1:Driver>
+          <onix1:Index>0</onix1:Index>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:ConfigureHeadstage64OpticalStimulator">
-          <onix:DeviceName>Headstage64/OpticalStimulator</onix:DeviceName>
-          <onix:DeviceAddress>260</onix:DeviceAddress>
+        <Combinator xsi:type="onix1:ConfigureHeadstage64OpticalStimulator">
+          <onix1:DeviceName>Headstage64/OpticalStimulator</onix1:DeviceName>
+          <onix1:DeviceAddress>260</onix1:DeviceAddress>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:StartAcquisition">
-          <onix:ReadSize>2048</onix:ReadSize>
-          <onix:WriteSize>2048</onix:WriteSize>
+        <Combinator xsi:type="onix1:StartAcquisition">
+          <onix1:ReadSize>2048</onix1:ReadSize>
+          <onix1:WriteSize>2048</onix1:WriteSize>
         </Combinator>
       </Expression>
     </Nodes>

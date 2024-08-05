@@ -4,7 +4,7 @@ export default {
   iconLinks: [
     {
       icon: 'github',
-      href: 'https://github.com/neurogears/onix-docs',
+      href: 'https://github.com/open-ephys/onix1-bonsai-docs',
       title: 'GitHub'
     },
     {

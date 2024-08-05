@@ -2,7 +2,7 @@
 <WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
-                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:onix="clr-namespace:OpenEphys.Onix1;assembly=OpenEphys.Onix1"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -23,8 +23,8 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:BreakoutAnalogOutput">
-          <onix:DataType>Volts</onix:DataType>
+        <Combinator xsi:type="onix1:BreakoutAnalogOutput">
+          <onix1:DataType>Volts</onix1:DataType>
         </Combinator>
       </Expression>
     </Nodes>
