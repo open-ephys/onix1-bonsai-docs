@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:onix1="clr-namespace:OpenEphys.Onix1;assembly=OpenEphys.Onix1"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:NeuropixelsV1eData">
-          <onix:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix:DeviceName>
-          <onix:BufferSize>36</onix:BufferSize>
+        <Combinator xsi:type="onix1:NeuropixelsV1eData">
+          <onix1:DeviceName>NeuropixelsV1eHeadstage/NeuropixelsV1e</onix1:DeviceName>
+          <onix1:BufferSize>36</onix1:BufferSize>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">

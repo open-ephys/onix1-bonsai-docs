@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:onix1="clr-namespace:OpenEphys.Onix1;assembly=OpenEphys.Onix1"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:NeuropixelsV2eBetaData">
-          <onix:DeviceName>NeuropixelsV2eBetaHeadstage/NeuropixelsV2eBeta</onix:DeviceName>
-          <onix:BufferSize>30</onix:BufferSize>
-          <onix:ProbeIndex>ProbeA</onix:ProbeIndex>
+        <Combinator xsi:type="onix1:NeuropixelsV2eBetaData">
+          <onix1:DeviceName>NeuropixelsV2eBetaHeadstage/NeuropixelsV2eBeta</onix1:DeviceName>
+          <onix1:BufferSize>30</onix1:BufferSize>
+          <onix1:ProbeIndex>ProbeA</onix1:ProbeIndex>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">

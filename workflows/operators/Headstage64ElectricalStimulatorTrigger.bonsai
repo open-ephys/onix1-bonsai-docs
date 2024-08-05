@@ -2,7 +2,7 @@
 <WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
-                 xmlns:onix="clr-namespace:OpenEphys.Onix;assembly=OpenEphys.Onix"
+                 xmlns:onix1="clr-namespace:OpenEphys.Onix1;assembly=OpenEphys.Onix1"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -17,21 +17,21 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix:Headstage64ElectricalStimulatorTrigger">
-          <onix:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix:DeviceName>
-          <onix:Enable>true</onix:Enable>
-          <onix:PowerEnable>false</onix:PowerEnable>
-          <onix:TriggerDelay>0</onix:TriggerDelay>
-          <onix:PhaseOneCurrent>0</onix:PhaseOneCurrent>
-          <onix:InterPhaseCurrent>0</onix:InterPhaseCurrent>
-          <onix:PhaseTwoCurrent>0</onix:PhaseTwoCurrent>
-          <onix:PhaseOneDuration>0</onix:PhaseOneDuration>
-          <onix:InterPhaseInterval>0</onix:InterPhaseInterval>
-          <onix:PhaseTwoDuration>0</onix:PhaseTwoDuration>
-          <onix:InterPulseInterval>0</onix:InterPulseInterval>
-          <onix:InterBurstInterval>0</onix:InterBurstInterval>
-          <onix:BurstPulseCount>0</onix:BurstPulseCount>
-          <onix:TrainBurstCount>0</onix:TrainBurstCount>
+        <Combinator xsi:type="onix1:Headstage64ElectricalStimulatorTrigger">
+          <onix1:DeviceName>Headstage64/Headstage64ElectricalStimulator</onix1:DeviceName>
+          <onix1:Enable>true</onix1:Enable>
+          <onix1:PowerEnable>false</onix1:PowerEnable>
+          <onix1:TriggerDelay>0</onix1:TriggerDelay>
+          <onix1:PhaseOneCurrent>0</onix1:PhaseOneCurrent>
+          <onix1:InterPhaseCurrent>0</onix1:InterPhaseCurrent>
+          <onix1:PhaseTwoCurrent>0</onix1:PhaseTwoCurrent>
+          <onix1:PhaseOneDuration>0</onix1:PhaseOneDuration>
+          <onix1:InterPhaseInterval>0</onix1:InterPhaseInterval>
+          <onix1:PhaseTwoDuration>0</onix1:PhaseTwoDuration>
+          <onix1:InterPulseInterval>0</onix1:InterPulseInterval>
+          <onix1:InterBurstInterval>0</onix1:InterBurstInterval>
+          <onix1:BurstPulseCount>0</onix1:BurstPulseCount>
+          <onix1:TrainBurstCount>0</onix1:TrainBurstCount>
         </Combinator>
       </Expression>
     </Nodes>
