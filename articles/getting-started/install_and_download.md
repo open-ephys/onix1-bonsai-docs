@@ -3,7 +3,7 @@ uid: InstallationAndDownload
 title: Installation and Download
 ---
 
-* To install `OpenEphys.Onix`, first install Bonsai [here](https://bonsai-rx.org/docs/articles/installation.html)
+* To install `OpenEphys.Onix1`, first install Bonsai [here](https://bonsai-rx.org/docs/articles/installation.html)
 * Once Bonsai is installed, open Bonsai and download the necessary packages
     * Open the Bonsai package manager
         
@@ -15,9 +15,9 @@ title: Installation and Download
         
         ![Search for Bonsai.StarterPack and install it](../../images/bonsai-package-manager-starterpack.png){width=650px}
 
-    * Change the package source to **All** (1), then follow the same steps (2,3) to search for and install `OpenEphys.Onix`
+    * Change the package source to **All** (1), then follow the same steps (2,3) to search for and install `OpenEphys.Onix1`
 
-        ![Search for OpenEphys.Onix and install it](../../images/bonsai-package-manager-openephys.onix.png){width=650px}
+        ![Search for OpenEphys.Onix1 and install it](../../images/bonsai-package-manager-openephys.onix.png){width=650px}
 
         > [!Warning]
         > Update this once the package has been published to NuGet

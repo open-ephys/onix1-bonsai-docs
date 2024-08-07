@@ -5,7 +5,7 @@ title: Initialize the ONI Context
 
 The [`CreateContext`](xref:OpenEphys.Onix1.CreateContext) operator initializes the acquisition context, and it should be the first node you add to your workflow as it provides access to the hardware device table for all other configuration operators. There are several different ways to find this node and add it to the workflow:
 
-1. From the Bonsai editor, navigate to the toolbox on the left side of the screen and expand the **Source** section. Next, expand the **OpenEphys.Onix** section, and find the `CreateContext` line. The node can then be added by either double-clicking it, or dragging and dropping the node into the workflow.
+1. From the Bonsai editor, navigate to the toolbox on the left side of the screen and expand the **Source** section. Next, expand the **OpenEphys.Onix1** section, and find the `CreateContext` line. The node can then be added by either double-clicking it, or dragging and dropping the node into the workflow.
 
     ![Search for CreateContext node manually](../../images/bonsai-editor-place-create-context-manually.png){width=700px}
 
