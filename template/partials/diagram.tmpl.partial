@@ -61,7 +61,7 @@
 
 {{#oe.operators.0.output.useInputDataFrame}}
 
-<h3 id="{{{oe.operators.0.input.name}}}">{{{oe.operators.input.name}}}</h3>
+<h3 id="{{{oe.operators.0.input.name}}}">{{{oe.operators.0.input.name}}}</h3>
 <div>{{{oe.operators.0.input.dataFrameDescription}}}</div>
 
 {{/oe.operators.0.output.useInputDataFrame}}
