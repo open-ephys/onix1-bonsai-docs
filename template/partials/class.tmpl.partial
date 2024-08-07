@@ -50,7 +50,9 @@
 
 <h3>{{{object}}}</h3>
 
+{{#subOperator}}
 <div>{{{object}}} is a {{{type}}} operator encapsulated by the {{name.0.value}} operator.</div>
+{{/subOperator}}
 
 {{#hasSubProperties}}
 
