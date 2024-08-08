@@ -19,7 +19,7 @@ To download Bonsai, select between the portable download and the installer downl
 
 To use Bonsai for interfacing with Open Ephys hardware in a meaningful way, additional packages are required.
 
-## Open the Bonsai Package Manager <a id='open-package-manager'></a>
+<h2 id='open-package-manager'>Open the Bonsai Package Manager</h2>
 
 The Bonsai package manager can be accessed from Bonsai's landing window or its workflow editor:
 
