@@ -1,16 +1,16 @@
 - name: Getting Started
   items:
-  - href: getting-started/getting_started.md
-  - href: getting-started/what_is_onix.md
-  - href: getting-started/install_and_download.md
-  - href: getting-started/bonsai_usage.md
-  - href: getting-started/node_types.md
-  - href: getting-started/tips_and_tricks.md
-  - href: getting-started/property_categories.md
-  - href: getting-started/initialize_oni_context.md
-  - href: getting-started/running_a_workflow.md
-  - href: getting-started/visualizing_data.md
-  - href: getting-started/next_steps.md
+  - href: getting-started/getting-started.md
+  - href: getting-started/what-is-onix.md
+  - href: getting-started/install-configure-bonsai.md
+  - href: getting-started/bonsai-usage.md
+  - href: getting-started/node-types.md
+  - href: getting-started/tips-tricks.md
+  - href: getting-started/property-categories.md
+  - href: getting-started/initialize-oni-context.md
+  - href: getting-started/start-workflow.md
+  - href: getting-started/visualizing-data.md
+  - href: getting-started/next-steps.md
 
 - name: Hubs
   items:
@@ -23,8 +23,8 @@
 - name: Devices
   items:
   - href: devices/bno055.md
-  - href: devices/bno055_neuropixelsv1e.md
-  - href: devices/bno055_neuropixelsv2e.md
+  - href: devices/bno055-neuropixelsv1e.md
+  - href: devices/bno055-neuropixelsv2e.md
   - href: devices/breakoutanalogio.md
   - href: devices/breakoutdigitalio.md
   - href: devices/electricalstimulator.md
