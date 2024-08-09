@@ -1,0 +1,2741 @@
+{
+  "source_base_path": "D:/a/onix1-bonsai-docs/onix1-bonsai-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Bno055CalibrationFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Bno055CalibrationFlags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Bno055Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Bno055Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Bno055DataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Bno055DataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIODataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIODataType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIODirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIODirection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIOVoltageRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogIOVoltageRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogInputDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogInputDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutAnalogOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutAnalogOutput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutButtonState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutButtonState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutDigitalInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutDigitalInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutDigitalInputDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutDigitalInputDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutDigitalOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutDigitalOutput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BreakoutDigitalPortState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BreakoutDigitalPortState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.BufferedDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.BufferedDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureBno055.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureBno055.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutAnalogIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutAnalogIO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutBoard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutBoard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutDigitalIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureBreakoutDigitalIO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureHarpSyncInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureHarpSyncInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64ElectricalStimulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64ElectricalStimulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64OpticalStimulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureHeadstage64OpticalStimulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureHeartbeat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureHeartbeat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureLoadTester.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureLoadTester.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureMemoryMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureMemoryMonitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1e.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1eBno055.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1eBno055.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1eHeadstage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV1eHeadstage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2e.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBeta.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBetaHeadstage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBetaHeadstage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBno055.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eBno055.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eHeadstage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureNeuropixelsV2eHeadstage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureRhd2164.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureRhd2164.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ConfigureTS4231V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ConfigureTS4231V1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.ContextTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.ContextTask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.CreateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.CreateContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.DataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.DataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.DeviceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.DeviceFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.DeviceNameConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.DeviceNameConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.HarpSyncInputData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.HarpSyncInputData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.HarpSyncInputDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.HarpSyncInputDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.HarpSyncSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.HarpSyncSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Headstage64ElectricalStimulatorTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Headstage64ElectricalStimulatorTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Headstage64OpticalStimulatorTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Headstage64OpticalStimulatorTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.HeartbeatData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.HeartbeatData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.HeartbeatDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.HeartbeatDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.MemoryMonitorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.MemoryMonitorData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.MemoryMonitorDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.MemoryMonitorDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.MultiDeviceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.MultiDeviceFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1Gain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1Gain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1ReferenceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1ReferenceSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eAdc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eAdc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eBno055Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eBno055Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV1eDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2Probe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2Probe.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankBank.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankBank.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankElectrode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankElectrode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankProbeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankProbeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2QuadShankReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBetaData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBetaDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBetaDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBno055Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eBno055Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.NeuropixelsV2eDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.PortName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.PortName.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Rhd2164AnalogHighCutoff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Rhd2164AnalogHighCutoff.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Rhd2164AnalogLowCutoff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Rhd2164AnalogLowCutoff.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Rhd2164Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Rhd2164Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Rhd2164DataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Rhd2164DataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.Rhd2164DspCutoff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.Rhd2164DspCutoff.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.SingleDeviceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.SingleDeviceFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.StartAcquisition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.StartAcquisition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.TS4231V1Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.TS4231V1Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.TS4231V1DataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.TS4231V1DataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.TS4231V1Envelope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.TS4231V1Envelope.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.TS4231V1PositionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.TS4231V1PositionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.TS4231V1PositionDataFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.TS4231V1PositionDataFrame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenEphys.Onix1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenEphys.Onix1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/bno055-neuropixelsv1e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/bno055-neuropixelsv1e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/bno055-neuropixelsv2e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/bno055-neuropixelsv2e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/bno055.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/bno055.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/breakoutanalogio.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/breakoutanalogio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/breakoutdigitalio.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/breakoutdigitalio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/electricalstimulator.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/electricalstimulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/heartbeat.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/heartbeat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/memorymonitor.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/memorymonitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/neuropixelsv1e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/neuropixelsv1e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/neuropixelsv2e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/neuropixelsv2e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/neuropixelsv2ebeta.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/neuropixelsv2ebeta.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/opticalstimulator.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/opticalstimulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/rhd2164.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/rhd2164.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/devices/ts4231.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/devices/ts4231.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/bonsai-usage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/bonsai-usage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/initialize-oni-context.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/initialize-oni-context.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/install-configure-bonsai.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/install-configure-bonsai.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/next-steps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/next-steps.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/node-types.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/node-types.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/property-categories.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/property-categories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/start-workflow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/start-workflow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/tips-tricks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/tips-tricks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/visualizing-data.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/visualizing-data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/what-is-onix.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/what-is-onix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hubs/breakoutboard.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hubs/breakoutboard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hubs/headstage64.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hubs/headstage64.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hubs/neuropixelsv1e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hubs/neuropixelsv1e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hubs/neuropixelsv2e.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hubs/neuropixelsv2e.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hubs/neuropixelsv2ebeta.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hubs/neuropixelsv2ebeta.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-editor-package-manager-highlight.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-editor-package-manager-highlight.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-editor-place-create-context-manually.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-editor-place-create-context-manually.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-editor-place-create-context-search.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-editor-place-create-context-search.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-editor-start-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-editor-start-button.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-install-Bonsai.StarterPack.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-install-Bonsai.StarterPack.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-install-OpenEphys.Onix1.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-install-OpenEphys.Onix1.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-package-manager-browse.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-package-manager-browse.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-package-manager-openephys.onix.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-package-manager-openephys.onix.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-package-manager-starterpack.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-package-manager-starterpack.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-splash-page-new-file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-splash-page-new-file.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-splash-page-package-manager-highlight.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-splash-page-package-manager-highlight.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-update-none.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-update-none.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/bonsai-update.webp",
+      "output": {
+        "resource": {
+          "relative_path": "images/bonsai-update.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/books.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/books.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/combinator-operator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/combinator-operator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/macbook.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/macbook.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/right-arrow.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/right-arrow.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/running.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/running.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sink-operator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/sink-operator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/source-operator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/source-operator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/headstage64-tut.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/headstage64-tut.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/landing-page.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/landing-page.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/neuropixelsv1e-tut.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/neuropixelsv1e-tut.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/neuropixelsv2e-tut.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/neuropixelsv2e-tut.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055-NeuropixelsV1e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055-NeuropixelsV1e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055-NeuropixelsV1e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055-NeuropixelsV1e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055-NeuropixelsV2e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055-NeuropixelsV2e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055-NeuropixelsV2e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055-NeuropixelsV2e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Bno055.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Bno055.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/BreakoutAnalogIO.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/BreakoutAnalogIO.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/BreakoutAnalogIO.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/BreakoutAnalogIO.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/BreakoutDigitalIO.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/BreakoutDigitalIO.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/BreakoutDigitalIO.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/BreakoutDigitalIO.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/ElectricalStimulator.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/ElectricalStimulator.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/ElectricalStimulator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/ElectricalStimulator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Heartbeat.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Heartbeat.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Heartbeat.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Heartbeat.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/MemoryMonitor.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/MemoryMonitor.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/MemoryMonitor.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/MemoryMonitor.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV1e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV1e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV1e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV1e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV2e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV2e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV2e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV2e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV2eBeta.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV2eBeta.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/NeuropixelsV2eBeta.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/NeuropixelsV2eBeta.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/OpticalStimulator.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/OpticalStimulator.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/OpticalStimulator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/OpticalStimulator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Rhd2164.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Rhd2164.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/Rhd2164.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/Rhd2164.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/TS4231.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/TS4231.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/devices/TS4231.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/devices/TS4231.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/Headstage64.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/Headstage64.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/Headstage64.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/Headstage64.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/NeuropixelsV1e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/NeuropixelsV1e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/NeuropixelsV1e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/NeuropixelsV1e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/NeuropixelsV2e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/NeuropixelsV2e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/examples/NeuropixelsV2e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/examples/NeuropixelsV2e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/BreakoutBoard.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/BreakoutBoard.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/BreakoutBoard.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/BreakoutBoard.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/Headstage64.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/Headstage64.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/Headstage64.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/Headstage64.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV1e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV1e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV1e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV1e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV2e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV2e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV2e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV2e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV2eBeta.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV2eBeta.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/hubs/NeuropixelsV2eBeta.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/hubs/NeuropixelsV2eBeta.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Bno055Data.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Bno055Data.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Bno055Data.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Bno055Data.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutAnalogInput.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutAnalogInput.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutAnalogInput.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutAnalogInput.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutAnalogOutput.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutAnalogOutput.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutAnalogOutput.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutAnalogOutput.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutDigitalInput.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutDigitalInput.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutDigitalInput.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutDigitalInput.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutDigitalOutput.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutDigitalOutput.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/BreakoutDigitalOutput.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/BreakoutDigitalOutput.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBno055.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBno055.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBno055.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBno055.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutAnalogIO.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutAnalogIO.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutAnalogIO.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutAnalogIO.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutBoard.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutBoard.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutBoard.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutBoard.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutDigitalIO.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutDigitalIO.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureBreakoutDigitalIO.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureBreakoutDigitalIO.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHarpSyncInput.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHarpSyncInput.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHarpSyncInput.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHarpSyncInput.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64ElectricalStimulator.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64ElectricalStimulator.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64ElectricalStimulator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64ElectricalStimulator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64OpticalStimulator.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64OpticalStimulator.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeadstage64OpticalStimulator.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeadstage64OpticalStimulator.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeartbeat.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeartbeat.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureHeartbeat.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureHeartbeat.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureLoadTester.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureLoadTester.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureLoadTester.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureLoadTester.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureMemoryMonitor.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureMemoryMonitor.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureMemoryMonitor.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureMemoryMonitor.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1eBno055.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1eBno055.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1eBno055.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1eBno055.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1eHeadstage.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1eHeadstage.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV1eHeadstage.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV1eHeadstage.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2e.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2e.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2e.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2e.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBeta.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBeta.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBeta.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBeta.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaBno055.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaBno055.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaBno055.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaBno055.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaHeadstage.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaHeadstage.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaHeadstage.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBetaHeadstage.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBno055.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBno055.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eBno055.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eBno055.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eHeadstage.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eHeadstage.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureNeuropixelsV2eHeadstage.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureNeuropixelsV2eHeadstage.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureRhd2164.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureRhd2164.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureRhd2164.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureRhd2164.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureTS4231V1.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureTS4231V1.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/ConfigureTS4231V1.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/ConfigureTS4231V1.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/CreateContext.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/CreateContext.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/CreateContext.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/CreateContext.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/HarpSyncInputData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/HarpSyncInputData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/HarpSyncInputData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/HarpSyncInputData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Headstage64ElectricalStimulatorTrigger.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Headstage64ElectricalStimulatorTrigger.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Headstage64ElectricalStimulatorTrigger.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Headstage64ElectricalStimulatorTrigger.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Headstage64OpticalStimulatorTrigger.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Headstage64OpticalStimulatorTrigger.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Headstage64OpticalStimulatorTrigger.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Headstage64OpticalStimulatorTrigger.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/HeartbeatData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/HeartbeatData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/HeartbeatData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/HeartbeatData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/MemoryMonitorData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/MemoryMonitorData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/MemoryMonitorData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/MemoryMonitorData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV1eBno055Data.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV1eBno055Data.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV1eBno055Data.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV1eBno055Data.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV1eData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV1eData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV1eData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV1eData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eBetaData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eBetaData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eBetaData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eBetaData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eBno055Data.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eBno055Data.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eBno055Data.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eBno055Data.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/NeuropixelsV2eData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/NeuropixelsV2eData.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Rhd2164Data.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Rhd2164Data.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/Rhd2164Data.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/Rhd2164Data.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/StartAcquisition.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/StartAcquisition.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/StartAcquisition.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/StartAcquisition.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/TS4231V1Data.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/TS4231V1Data.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/TS4231V1Data.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/TS4231V1Data.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/TS4231V1PositionData.bonsai",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/TS4231V1PositionData.bonsai"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "workflows/operators/TS4231V1PositionData.svg",
+      "output": {
+        "resource": {
+          "relative_path": "workflows/operators/TS4231V1PositionData.svg"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
