@@ -6,7 +6,7 @@ isDevice: true
 device: BNO055
 headstage: NeuropixelsV1e
 workflow: true
-workflow_file: ~/workflows/devices/bno055-neuropixelsv1e.bonsai
+workflow_file: ~/workflows/devices/Bno055-Neuropixelsv1e.bonsai
 visualize: true
 visualize_timeseries: true
 ---
