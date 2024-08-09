@@ -3,7 +3,7 @@ uid: PropertyCategories
 title: Property Categories
 ---
 
-There are specific categories of properties that define when a node's properties can be modified. 
+There are specific categories of properties that define when an operator's properties can be modified. 
 
 `Configuration` properties are only settable when the workflow is not running, and for ONIX devices define how to initialize the device. Examples would be setting the number of channels to record from, the frame rate of a camera, or defining filters to apply to recording channels. 
 

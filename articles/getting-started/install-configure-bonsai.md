@@ -81,4 +81,4 @@ It is good practice to periodically check for package updates. [Open the package
 
 ## Next Steps
 
-Now that Bonsai has been installed and configured, it is time to start placing nodes and configuring those. If you are new to Bonsai, the following sections give a high-level understanding of how Bonsai is organized, and some of the ONIX-specific concepts that will be useful for learning how to work with the nodes.
+Now that Bonsai has been installed and configured, it is time to start placing operators and configuring those. If you are new to Bonsai, the following sections give a high-level understanding of how Bonsai is organized, and some of the ONIX-specific concepts that will be useful for learning how to work with the operators.

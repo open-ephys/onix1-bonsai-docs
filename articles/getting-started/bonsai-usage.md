@@ -7,4 +7,4 @@ To begin, the first thing to do is to open up the Bonsai editor. This can be don
 
 ![Open a new file in Bonsai](../../images/bonsai-splash-page-new-file.png){width=650px}
 
-From the editor, nodes can be selected on the left side and placed into the workspace. Before going into details on how to place nodes, we will instead go over the different types of nodes, some examples of ONIX-specific nodes in each category, and some common categories of properties that can be modified across nodes.
+From the editor, operators can be selected on the left side and placed into the workspace. Before going into details on how to place operators, we will instead go over the different types of operators, some examples of ONIX-specific operators in each category, and some common categories of properties that can be modified across operators.
