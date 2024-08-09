@@ -2,4 +2,4 @@
 uid: OpenEphys.Onix1.ConfigureBreakoutBoard
 ---
 
-[!INCLUDE [Hub Template](hub_template.md)]
+[!INCLUDE [Hub Template](hub-template.md)]
