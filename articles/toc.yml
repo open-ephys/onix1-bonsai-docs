@@ -1,7 +1,6 @@
 - name: Getting Started
   items:
   - href: getting-started/getting-started.md
-  - href: getting-started/what-is-onix.md
   - href: getting-started/install-configure-bonsai.md
   - href: getting-started/bonsai-usage.md
   - href: getting-started/node-types.md
@@ -12,7 +11,8 @@
   - href: getting-started/visualizing-data.md
   - href: getting-started/next-steps.md
 
-- name: Hubs
+- name: Breakout Board & Headstages
+  href: hubs/index.md
   items:
   - href: hubs/breakoutboard.md
   - href: hubs/headstage64.md
