@@ -3,9 +3,9 @@
 
 # Onix1 Bonsai Docs
 
-Documentation for the Onix1 Bonsai packages.
+Documentation for the [Onix1 Bonsai package](https://github.com/open-ephys/onix-bonsai-onix1).
 
-These docs are built on [docfx](https://dotnet.github.io/docfx/index.html).
+These docs are built using [docfx](https://dotnet.github.io/docfx/index.html).
 
 ## Initialize the local Onix1 Bonsai Repository for Building Locally
 
@@ -13,59 +13,85 @@ These actions only need to be performed once when setting up the repo locally.
 
 Download and install [dotnet](https://dotnet.microsoft.com/en-us/download).
 
-To clone the remote repository into the active directory, run:
+> [!NOTE]  
+> The `docfx` program provides very little feedback about its state on the command line.
+> Often it will appear to hang because it does not output any status information.
+> Usually, the command will eventually return.
 
-`git clone https://github.com/open-ephys/onix1-bonsai-docs`
+1. Clone the source code repository and navigate into its top level directory:
+   
+    ``` console
+    git clone https://github.com/open-ephys/onix-bonsai-onix1
+    cd onix-bonsai-onix1
+    ```
+1. Clone the documentation repository into the source code repository:
 
-`cd onix1-bonsai-docs`
+    ``` console
+    git clone https://github.com/open-ephys/onix1-bonsai-docs
+    cd onix1-bonsai-docs
+    ```
+1. Pull in the latest files from the submodules according to the commit that the submodules point to:
 
-To pull in the latest files from the submodules according to the commit that the submodules point to, run:
+    ``` console
+    git submodule update --recursive --init
+    ```
+1. Configure the docfx version and restore docfx companion tools such as [DocLinkChecker](https://github.com/Ellerbach/docfx-companion-tools/tree/main/src/DocLinkChecker).
 
-`git submodule update --recursive --init`
+    ``` console
+    dotnet tool restore --configfile ../.bonsai/NuGet.config
+    ```
+1. To make the `docfx` command available after restoring the config file from the previous step, run:
 
-To configure dotnet, run:
+    ``` console
+    dotnet tool restore
+    ```
+1. Set up a local Bonsai environment for automatically exporting SVGs, run: 
 
-`dotnet tool restore --configfile .\.bonsai\NuGet.config `
-
-In particular, restoring the config file configures docfx version and docfx companion tools such as [DocLinkChecker](https://github.com/Ellerbach/docfx-companion-tools/tree/main/src/DocLinkChecker).
-
-To make the `docfx` command available after restoring the config file from the previous step, run:
-
-`dotnet tool restore`
-
-To set up a local Bonsai environment for automatically exporting SVGs, run: 
-
-`./.bonsai/Setup.cmd`
+    ``` console
+    ./bonsai/Setup.cmd
+    ```
 
 ## Build Documentation Locally
 
+> [!NOTE]  
+> The following steps should be be performed in Powershell.
+
 To build the docs and serve locally, run:
 
-`./build.ps1 --serve`
+``` console
+./build.ps1 --serve
+```
 
 If SVGs are already exported and do not need to be updated, they don't need to be re-exported. In that case, to build the docs and serve locally more quickly, run:
 
-`dotnet docfx --serve`
+``` console
+dotnet docfx --serve
+```
 
 ## Update Submodules
 
 It is best practice to develop docs with the submodule directories containing the latest commits in their respective `main` branches (unless you are intentionally testing local changes to or another branch of the source code, for example). To update all submodules, run:
 
-`git submodule update --recursive --remote`
+``` console
+git submodule update --recursive --remote
+```
 
 ## Before Pushing
 
 The following three commands are run remotely by remote GitHub Actions serve upon pushing to a branch. The branch will not be able to merge to main unless all three commands completely successfully without any errors. Confirm that that they can complete successfully without errors locally before committing and pushing. Otherwise, the branch becomes cluttered with potentially several attempts to pass the link-check process. Run: 
 
-`.\build.ps1 --logLevel Warning --warningsAsErrors`
-
-`dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config`
+``` console
+.\build.ps1 --logLevel Warning --warningsAsErrors
+dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config
+```
 
 If the above command fails because "you must install or update .NET", follow the URL from the failed command's output or [this one](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64) to download and install .NET runtime 6. Dotnet supports simultaneous installation of several .NET runtime versions, and version 6 is required to run the DocLinkChecker.
 
 To run the next command, install [Lychee](https://github.com/lycheeverse/lychee?tab=readme-ov-file) by following [these instructions](https://github.com/lycheeverse/lychee?tab=readme-ov-file#installation). If you are use Windows and download a Lychee executable, amend the below command according to the location and version of your Lychee executable, and run it.
 
-`<lychee/installation/directory>/lychee-v<x.xx.x>-windows-x86_64.exe --verbose --no-progress --base _site --exclude ^https://github\.com.*merge.* --exclude ^https://github\.com.*apiSpec.* '_site/**/*.html'`
+``` console
+<lychee/installation/directory>/lychee-v<x.xx.x>-windows-x86_64.exe --verbose --no-progress --base _site --exclude ^https://github\.com.*merge.* --exclude ^https://github\.com.*apiSpec.* '_site/**/*.html'
+```
 
 If you use a different operating systems and a different methods of installation, the above command might require additional amendments. 
 
@@ -84,10 +110,8 @@ The build command generates additional data models from the .yml files generated
 The build process involves multiple steps.
 
 1. Generates the raw data model
-
-2. Uses template to generate view data model from the raw data model. To see the raw model, refer to the relevant command in the [Troubleshoot](#troubleshoot) section of this README.md. 
-
-3. Uses template to populate pages with data from the view data model. To see the view models, refer to the relevant command in the [Troubleshoot](#troubleshoot) section of this README.md.
+1. Uses template to generate view data model from the raw data model. To see the raw model, refer to the relevant command in the [Troubleshoot](#troubleshoot) section of this README.md. 
+1. Uses template to populate pages with data from the view data model. To see the view models, refer to the relevant command in the [Troubleshoot](#troubleshoot) section of this README.md.
 
 The user can hook into and modify the build process at steps 2 and 3 by editing the template. 
 
@@ -95,15 +119,19 @@ All of the files involved in defining the template are specified in the build.te
 
 The input files for the `build` command are specified in build.content of the `docfx.json` file, and the output directory of the `build` command is specified in build.output of the `docfx.json` file. 
 
-## Troubleshoot
+## Troubleshooting
 
 The template in this repo builds upon the `default` and `modern` templates built into docfx. It might be helpful to reference those templates. To view them, run:
 
-`dotnet docfx template export default modern`
+``` console
+dotnet docfx template export default modern
+```
 
 It might be helpful to view the intermediate data models involved in the build process. To view those models, build, and serve the docs locally, run:
 
-`dotnet docfx --exportRawModel --rawModelOutputFolder _raw --exportViewModel --viewModelOutputFolder _view --serve`
+``` console
+dotnet docfx --exportRawModel --rawModelOutputFolder _raw --exportViewModel --viewModelOutputFolder _view --serve
+```
 
 Strip the `--serve` option and append `--dryRun` option if you want to export the models without completing the build process and serving.
 
@@ -112,7 +140,6 @@ If local html pages don't appear to be updating, hard refresh website pages in b
 If there are discrepancies between local and remote builds:
 
 * Confirm local and remote docfx versions are consistent. This inconsistency can occur when, for example, running `docfx` instead of `dotnet docfx` or running `dotnet tool restore --configfile <configfile>` on another config file other than the one in this repo.
-
 * Clear the local files to remove any cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory.
 
 ## Docs Maintainability
