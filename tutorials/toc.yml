@@ -1,4 +1,6 @@
 - href: landing-page.md
+- name: BreakoutBoard
+  href: breakoutboard-tut.md
 - name: Headstage64
   href: headstage64-tut.md
 - name: NeuropixelsV1e
