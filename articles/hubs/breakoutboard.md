@@ -30,5 +30,5 @@ The ONIX breakout board provides the following functions:
 
 This workflow configures an ONIX breakout board using <xref:OpenEphys.Onix1.ConfigureBreakoutBoard> and captures its resulting data streams. The breakout board is configured to capture data from its analog and digital inputs, and is used to monitor the control board's heartbeat and hardware memory usage. You can copy and paste the workflow into the Bonsai editor to try it out.
 
-[!TIP]
+> [!TIP]
 > You can right-click each of the source operators on the second line of the workflow and select `Output` to examine and expand their output types.

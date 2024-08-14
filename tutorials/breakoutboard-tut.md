@@ -4,7 +4,10 @@
 ![BreakoutBoard](../workflows/examples/BreakoutBoard.bonsai)
 :::
 
-In this example, we explore the breakout board's functionality. 
+In this example, we will explore the breakout board's functionality by demoing all its capabilities. 
+
+>[!TIP]
+> If you want a less busy starting point for using the breakout board then have a look at <xref:headstage-breakoutboard>.
 
 - Analog data is passed through a 1 kHz low-pass Butterworth filter. 
 - Digital input data is passed through `HasFlag` filters that can be used to determine if a certain digital input pin is logic-high or to check if a certain button has been depressed.

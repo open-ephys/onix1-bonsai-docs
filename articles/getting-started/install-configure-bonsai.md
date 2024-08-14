@@ -42,7 +42,7 @@ To install the `Bonsai.StarterPack` package [open the package manager](#open-bon
 To install the `OpenEphys.Commutator` package [open the package manager](#open-bonsai-package-manager) and:
 
 1.  Click the `Browse` tab.
-1.  Set `Package source`to `All` or `NuGet`.
+1.  Set `Package source` to `All` or `NuGet`.
 1.  Search for `OpenEphys.Commutator`.
 1.  Click `Install`.
 
@@ -62,7 +62,7 @@ To install the `OpenEphys.Onix1` package [open the package manager](#open-bonsai
 
 ## Update Packages in Bonsai
 
-It is good practice to periodically check for package updates. [Open the package manager](#open-bonsai-package-manager) and:
+It is good practice to periodically check for package updates. To do this, [open the package manager](#open-bonsai-package-manager) and:
 
 1.  Click the `Update` tab.
 1.  Set `Package source` to `All`.
