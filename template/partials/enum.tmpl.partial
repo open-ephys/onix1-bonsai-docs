@@ -1,7 +1,7 @@
 {{#isEnum}}
 
 <h1 class="text-break">
-  {{name.0.value}}
+  {{oe.name}}
   {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
 </h1>
 
