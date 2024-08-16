@@ -19,11 +19,35 @@ function extractEnumData(model) {
 }
 
 function sortPropertiesData(properties) {
-  return properties.sort((a, b) => {
-    const aMatch = /\D+\d+$/.exec(a.name);
-    const bMatch = /\D+\d+$/.exec(b.name);
-    return (aMatch ? parseInt(aMatch[0].match(/\d+$/)) : 0) - (bMatch ? parseInt(bMatch[0].match(/\d+$/)) : 0);
+
+  const propertyNames = properties.map(property => {
+    return [property.name,
+    /\D+\d+$/.test(property.name),
+    String(property.name.match(/\D+/)),
+    Number(property.name.match(/\d+$/))
+    ]
   });
+
+  let propertyNamesThatFitPattern = []
+  propertyNames
+    .filter(propertyName => propertyName[1])
+    .forEach(propertyName => { if (!propertyNamesThatFitPattern.includes(propertyName[2])) { propertyNamesThatFitPattern.push(propertyName[2]); } });
+  
+  const propertiesLength = properties.length;
+  const propertyNamesThatFitPatternLength = propertyNamesThatFitPattern.length;
+  for (let i = 0; i < propertyNamesThatFitPatternLength; i++) {
+    for (let j = 1; j < propertiesLength; j++) {
+      for (let k = j; k > 0; k--) {
+        if ((propertyNames[k][2] === propertyNamesThatFitPattern[i]) && (propertyNames[k - 1][2] === propertyNamesThatFitPattern[i])) {
+          if (propertyNames[k][3] < propertyNames[k - 1][3]) {
+            [properties[k], properties[k - 1]] = [properties[k - 1], properties[k]];
+            [propertyNames[k], propertyNames[k - 1]] = [propertyNames[k - 1], propertyNames[k]];
+          }
+        }
+      }
+    }
+  }
+  return properties;
 }
 
 function processChildProperty(child, sharedModel) {
@@ -51,33 +75,30 @@ function extractPropertiesData(model, sharedModel) {
 
 function extractPropertiesFromInheritedMembersData(model, sharedModel) {
 
-  function processInheritedMemberChildProperty(inheritedMember, sharedModel) {
-    return processChildProperty(
-      sharedModel[`~/api/${inheritedMember.parent}.yml`].children.find(inheritedMemberChild => inheritedMemberChild.uid === inheritedMember.uid),
-      sharedModel);
-  }
-
   return model.inheritedMembers
     .filter(inheritedMember => inheritedMember.type === 'property')
-    .map(inheritedMember => processInheritedMemberChildProperty(inheritedMember, sharedModel));
+    .map(inheritedMember => {
+      return processChildProperty(
+        sharedModel[`~/api/${inheritedMember.parent}.yml`].children.find(inheritedMemberChild => inheritedMemberChild.uid === inheritedMember.uid),
+        sharedModel
+      );
+    });
 }
 
 function extractConstituentOperatorsData(model) {
-  const constituentOperators = [];
-  model?.children
+  return model?.children
     .filter(child => child.type === 'property' && model.__global._shared?.[`~/api/${child.syntax.return.type.uid}.yml`].type === 'class')
-    .forEach(child => {
+    .map(child => {
       const deviceModel = model.__global._shared?.[`~/api/${child.syntax.return.type.uid}.yml`];
-      const subProperties = extractPropertiesData(deviceModel, model.__global._shared);
-      constituentOperators.push({
+      const subProperties = sortPropertiesData(extractPropertiesData(deviceModel, model.__global._shared));
+      return {
         'object': child.name[0].value,
         'type': child.syntax.return.type.specName[0].value,
         'constituentOperator': true,
         'hasSubProperties': subProperties === undefined || subProperties.length === 0 ? false : true,
         'subProperties': subProperties,
-      });
+      };
     });
-  return constituentOperators;
 }
 
 function extractOperatorData(model) {
