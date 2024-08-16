@@ -9,14 +9,31 @@ exports.preTransform = function (model) {
     if (model.items[0].items){
       itemsItemsLength = model.items[0].items.length;
       let items = [{
-        'name': 'Infrastructural Operators',
+        'name': 'Core Operators',
+        'href' : 'Core.html',
+        'topicHref': 'Core.html',
+        'topicUid': 'core',
         'items': []}, {
-        'name': 'Breakout Board, Headstage, Etc. Configuration Operators',
+        'name': 'Configuration Operators',
+        'href' : 'configure.html',
+        'topicHref': 'configure.html',
+        'topicUid': 'configure',
         'items': []}, {
         'name': 'Data I/O Operators',
+        'href' : 'dataio.html',
+        'topicHref': 'dataio.html',
+        'topicUid': 'dataio',
         'items': []}, {
-        'name': 'Device Configuration Operators (Not Recommended)',
-        'items': []
+        'name': 'Other',
+        'items': [
+          {
+            'name': 'Device Configuration Operators',
+            'href' : 'device-configure.html',
+            'topicHref': 'device-configure.html',
+            'topicUid': 'device-configure',
+            'items': [],
+          }
+        ]
       }];
       for (let i = 0; i < itemsItemsLength; i++) {
         globalYml = '~/api/' + model.items[0].items[i].topicUid + '.yml';
@@ -49,7 +66,7 @@ exports.preTransform = function (model) {
               items[0].items.push(model.items[0].items[i]);
             }
             else if (device){
-              items[3].items.push(model.items[0].items[i]);
+              items[3].items[0].items.push(model.items[0].items[i]);
             }
             else if (hub){
               items[1].items.push(model.items[0].items[i]);
