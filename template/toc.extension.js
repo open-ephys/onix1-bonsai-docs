@@ -10,8 +10,8 @@ exports.preTransform = function (model) {
       itemsItemsLength = model.items[0].items.length;
       let items = [{
         'name': 'Core Operators',
-        'href' : 'Core.html',
-        'topicHref': 'Core.html',
+        'href' : 'core.html',
+        'topicHref': 'core.html',
         'topicUid': 'core',
         'items': []}, {
         'name': 'Configuration Operators',
