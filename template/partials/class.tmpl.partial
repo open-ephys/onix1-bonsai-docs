@@ -5,8 +5,8 @@
 <div class = "alert alert-danger">
   This is a device configuration operator. If you are using Open Ephys hardware, use an aggregate configuration operator that corresponds to your particular headstage(s) instead. Aggregate operators confer the following benefits:
   <ul style = "margin-bottom: 0">
-    <li>The <code>address</code> properties of aggregate configuration operators are automatically configured whereas a device configuration operators requires manual configuration of its <code>address</code> property. This improves ease of using Open Ephys hardware.</li>
-    <li>The workflow is less cluttered with configuration operators as one aggregate configuration operator can correspond to multiple device operators. This improves workflow legibility and expedites the workflow scripting process.</li>
+    <li>The <code>address</code> and <code>name</code> properties of aggregate configuration operators undergo automatic configuration which reduces the risk of erroneous configuration. </li>
+    <li>The workflow is less cluttered with configuration operators as one aggregate configuration operator corresponds to multiple device operators. This improves workflow legibility and expedites the workflow scripting process.</li>
   </ul> 
 </div>
 
@@ -41,7 +41,7 @@
 
 {{#oe.operator.hub}}
 
-<p>{{oe.name}} is an aggregate operator. It comprises of the following sub-operators: </p>
+<p>{{oe.name}} is an aggregate operator. Its properties comprise of the following operators' properties: </p>
 
 {{#oe.properties}}
 
@@ -72,7 +72,7 @@
 {{/hasSubProperties}}
 
 {{^hasSubProperties}}
-<p>This has no public properties.</p>
+<p>This operator does not have any configuration options.</p>
 {{/hasSubProperties}}
 
 {{/oe.properties}}
