@@ -67,7 +67,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="onix1:StartAcquisition">
-          <onix1:ReadSize>2048</onix1:ReadSize>
+          <onix1:ReadSize>4096</onix1:ReadSize>
           <onix1:WriteSize>2048</onix1:WriteSize>
         </Combinator>
       </Expression>
@@ -192,7 +192,7 @@
       </Expression>
       <Expression xsi:type="HasFlag">
         <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutDigitalPortState">
-          <Value>Pin0</Value>
+          <Value>Pin0 Pin1 Pin7</Value>
         </Operand>
       </Expression>
       <Expression xsi:type="MemberSelector">
