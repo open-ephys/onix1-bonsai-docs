@@ -122,7 +122,6 @@ exports.preTransform = function (model) {
           ...extractPropertiesFromInheritedMembersData(model, model.__global._shared),
         ]).filter(modelProperty => !properties.map(property => property.object).includes(modelProperty?.name))
       });
-      console.log(JSON.stringify(properties, null, 2));
     }
     else {
       properties = sortPropertiesData([
