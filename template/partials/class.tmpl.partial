@@ -2,12 +2,10 @@
 
 {{#oe.operator.configureDevice}}
 
-<div class = "alert alert-danger">
-  This is a device configuration operator. If you are using Open Ephys hardware, use an aggregate configuration operator that corresponds to your particular headstage(s) instead. Aggregate operators confer the following benefits:
-  <ul style = "margin-bottom: 0">
-    <li>The <code>address</code> and <code>name</code> properties of aggregate configuration operators undergo automatic configuration which reduces the risk of erroneous configuration. </li>
-    <li>The workflow is less cluttered with configuration operators as one aggregate configuration operator corresponds to multiple device operators. This improves workflow legibility and expedites the workflow scripting process.</li>
-  </ul> 
+<div class="CAUTION alert alert-danger">
+    <h5>Caution</h5>
+    <p>This is a device configuration operator. Device configuration operators are not recommended for interfacing with off-the-shelf ONIX hardware. Use <a class="xref" href="configure.html">aggregate configuration operators</a> to do that instead.</p>
+    <p>To understand the benefits of <a class="xref" href="configure.html">aggregate configuration operators</a>, refer to the <a class="xref" href="device-configure.html">device configuration operators</a> page.</p>
 </div>
 
 {{/oe.operator.configureDevice}}
@@ -52,7 +50,7 @@
 {{/constituentOperator}}
 
 {{^constituentOperator}}
-<p>These properties do not derive from a constituent operator.</p>
+<p>These are properties of the aggregate operator, not of any constituent operator.</p>
 {{/constituentOperator}}
 
 {{#hasSubProperties}}
@@ -72,7 +70,7 @@
 {{/hasSubProperties}}
 
 {{^hasSubProperties}}
-<p>This constituent operator does not have any configuration options.</p>
+<p>This operator does not have any configuration options.</p>
 {{/hasSubProperties}}
 
 {{/oe.properties}}
