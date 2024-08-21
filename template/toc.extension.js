@@ -37,13 +37,16 @@ exports.preTransform = function (model) {
       }];
       for (let i = 0; i < itemsItemsLength; i++) {
         globalYml = '~/api/' + model.items[0].items[i].topicUid + '.yml';
-        if (model.items[0].items[i].name.includes('DataFrame') || 
+        if (model.items[0].items[i].name.includes('Frame') || 
             model.items[0].items[i].name.includes('DeviceFactory') ||
             model.items[0].items[i].name.includes('ContextTask') ||
             model.items[0].items[i].name.includes('DeviceNameConverter') ||
             model.items[0].items[i].name.includes('ConfigureDS90UB9x') ||
             model.items[0].items[i].name.includes('ConfigureFmcLinkController') ||
-            model.items[0].items[i].name.includes('DeviceContext')){
+            model.items[0].items[i].name.includes('DeviceContext') ||
+            model.items[0].items[i].name.includes('NeuropixelsV2QuadShankElectrode') ||
+            model.items[0].items[i].name.includes('NeuropixelsV2QuadShankProbeConfiguration') ||
+            model.items[0].items[i].name.includes('NeuropixelsV1eAdc')){
           model.items[0].items[i].hide = true;
         }
         else if (model.__global._shared[globalYml] && model.__global._shared[globalYml].type === 'enum') {

@@ -9,7 +9,10 @@ To download Bonsai, select between the portable download and the installer downl
 *   The **Portable** download (.zip) installs a sandboxed version of Bonsai. Portable environments enable users to switch between different environments to prevent package conflicts or confusion between similar packages.
     *   To install from the **Portable** download, extract the downloaded file. You can start the portable Bonsai by running the `Bonsai.exe` that is inside the extracted folder.
 *   The **Installer** download (.exe) installs Bonsai and all its dependencies globally.
-    *   To install from the **Installer** download, run the downloaded `Bonsai-X.X.X.exe` file and agree to the involved licenses. You can start the globally installed Bonsai by launching it from the `Bonsai Setup` window after installing or searching for it in your OS's search function, for example. You can create a shortcut such that the portable Bonsai environment is easy and name it such that it is easy to differentiate between different environments. 
+    *   To install from the **Installer** download, run the downloaded `Bonsai-X.X.X.exe` file and agree to the involved licenses. You can start the globally installed Bonsai by launching it from the `Bonsai Setup` window after installing or searching for it in your OS's search function, for example. 
+
+> [!TIP]
+> When using multiple environments, create and name shortcuts such that different Bonsai environments are easier to find and distinguish. 
 
 ## Open Bonsai Package Manager
 The Bonsai package manager can be accessed from Bonsai's landing window or its workflow editor:
@@ -72,6 +75,18 @@ It is good practice to periodically check for package updates. To do this, [open
     Alternatively, click on a package and click `Update` if you want to perform a subset of the available updates.
 
 ![Bonsai Update All or Just One Screenshot](../../images/bonsai-update.webp){width=650px}
+
+## Uninstall Packages in Bonsai
+
+Sometimes it is helpful to uninstall packages. [Open the package manager](#open-bonsai-package-manager) and:
+
+1.  Click the `Installed` tab.
+1.  Set `Package source` to `All`.
+1.  Leave the search bar blank if you want to see all installed packages.\
+    Alternatively, if you want to uninstall a particular package, you may type that package's name in the search bar.
+1.  Click a package and click `Uninstall` to uninstall a packages.
+
+![Bonsai Uninstall](../../images/bonsai-uninstall-Bonsai.OpenEphys.webp){width=650px}
 
 ## Next Steps
 

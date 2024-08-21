@@ -1,12 +1,10 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-// replace last instance of '<p' with '<p style="margin-bottom:0;"'
-function removeBottomMargin(str) {
-  return str
-    .split('').reverse().join('')
-    .replace('<p'.split('').reverse().join(''), '<p style="margin-bottom:0;"'.split('').reverse().join(''))
-    .split('').reverse().join('');
+function addCodeTag(remarks) {
+  return remarks
+    .replace('<td class=\"term\"> True </td>', '<td class=\"term\"><code> True </code></td>')
+    .replace('<td class=\"term\"> False </td>', '<td class=\"term\"><code> False </code></td>');
 }
 
 function extractEnumData(model) {
@@ -14,16 +12,16 @@ function extractEnumData(model) {
     .filter(child => child.type === 'field')
     .map(child => ({
       'field&value': child.syntax.content[0].value,
-      'enumDescription': removeBottomMargin([child.summary, child.remarks].join(''))
+      'enumDescription': [child.summary, child.remarks].join(''),
     }));
 }
 
 function sortPropertiesData(properties) {
-  return properties.sort((a, b) => {
-    const aMatch = /\D+\d+$/.exec(a.name);
-    const bMatch = /\D+\d+$/.exec(b.name);
-    return (aMatch ? parseInt(aMatch[0].match(/\d+$/)) : 0) - (bMatch ? parseInt(bMatch[0].match(/\d+$/)) : 0);
-  });
+  return properties.sort((a, b) => (
+    a.name.match(/\D+|\d+$/g)[0] === b.name.match(/\D+|\d+$/g)[0] ?
+      Number(a.name.match(/\D+|\d+$/g)[1]) - Number(b.name.match(/\D+|\d+$/g)[1]) :
+      0
+  ));
 }
 
 function processChildProperty(child, sharedModel) {
@@ -34,9 +32,7 @@ function processChildProperty(child, sharedModel) {
     'name': child.name[0].value,
     'type': child.syntax.return.type.specName[0].value,
     'propertyDescription': {
-      'text': enumFields.length > 0
-        ? [child.summary, child.remarks].join('')
-        : removeBottomMargin([child.summary, child.remarks].join('')),
+      'text': addCodeTag([child.summary, child.remarks].join('')),
       'hasEnum': enumFields.length > 0,
       'enum': enumFields,
     }
@@ -50,34 +46,30 @@ function extractPropertiesData(model, sharedModel) {
 }
 
 function extractPropertiesFromInheritedMembersData(model, sharedModel) {
-
-  function processInheritedMemberChildProperty(inheritedMember, sharedModel) {
-    return processChildProperty(
-      sharedModel[`~/api/${inheritedMember.parent}.yml`].children.find(inheritedMemberChild => inheritedMemberChild.uid === inheritedMember.uid),
-      sharedModel);
-  }
-
   return model.inheritedMembers
     .filter(inheritedMember => inheritedMember.type === 'property')
-    .map(inheritedMember => processInheritedMemberChildProperty(inheritedMember, sharedModel));
+    .map(inheritedMember => (
+      processChildProperty(
+        sharedModel[`~/api/${inheritedMember.parent}.yml`].children.find(inheritedMemberChild => inheritedMemberChild.uid === inheritedMember.uid),
+        sharedModel
+      )
+    ));
 }
 
 function extractConstituentOperatorsData(model) {
-  const constituentOperators = [];
-  model?.children
+  return model?.children
     .filter(child => child.type === 'property' && model.__global._shared?.[`~/api/${child.syntax.return.type.uid}.yml`].type === 'class')
-    .forEach(child => {
+    .map(child => {
       const deviceModel = model.__global._shared?.[`~/api/${child.syntax.return.type.uid}.yml`];
-      const subProperties = extractPropertiesData(deviceModel, model.__global._shared);
-      constituentOperators.push({
+      const subProperties = sortPropertiesData(extractPropertiesData(deviceModel, model.__global._shared));
+      return {
         'object': child.name[0].value,
         'type': child.syntax.return.type.specName[0].value,
         'constituentOperator': true,
         'hasSubProperties': subProperties === undefined || subProperties.length === 0 ? false : true,
         'subProperties': subProperties,
-      });
+      };
     });
-  return constituentOperators;
 }
 
 function extractOperatorData(model) {
@@ -100,8 +92,8 @@ function extractOperatorData(model) {
     .filter(child => child.name[0].value.includes('Process') || child.name[0].value.includes('Generate'))
     .map(child => ({
       'overloadsDescription': [child.summary, child.remarks].join(''),
-      'input': removeBottomMargin([child.syntax?.parameters[0].description, child.syntax?.parameters[0].remarks].join('')),
-      'output': removeBottomMargin([child.syntax.return.description, child.syntax.return.remarks].join('')),
+      'input': [child.syntax?.parameters[0].description, child.syntax?.parameters[0].remarks].join(''),
+      'output': [child.syntax.return.description, child.syntax.return.remarks].join(''),
     }));
 
   return {
@@ -128,7 +120,7 @@ exports.preTransform = function (model) {
         'subProperties': sortPropertiesData([
           ...extractPropertiesData(model, model.__global._shared),
           ...extractPropertiesFromInheritedMembersData(model, model.__global._shared),
-        ]).filter(modelProperty => !properties.map(property => property.object).includes(modelProperty.name))
+        ]).filter(modelProperty => !properties.map(property => property.object).includes(modelProperty?.name))
       });
     }
     else {
