@@ -83,9 +83,9 @@ exports.preTransform = function (model) {
       model.items[0].items = items;
     }
   }
-  if (model.items[1].name === 'OpenEphys.Onix1.Design'){
-    model.items.splice(1, 1);
-  }
+  // if (model.items[1].name === 'OpenEphys.Onix1.Design'){
+  //   model.items.splice(1, 1);
+  // }
   return model;
 }
 
