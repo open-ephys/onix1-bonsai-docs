@@ -1,3 +1,7 @@
+---
+uid: NeuropixelsV2eTutorial
+---
+
 # NeuropixelsV2e Tutorial
 
 :::workflow 
