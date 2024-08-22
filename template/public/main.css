@@ -1,4 +1,6 @@
 @import "workflow.css";
+@import "workflow-caption.css";
+@import "image-caption.css";
 
 div.tableFormat *:last-child {
   margin-bottom: 0;

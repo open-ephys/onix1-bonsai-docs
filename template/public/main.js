@@ -1,4 +1,6 @@
 import WorkflowContainer from "./workflow.js"
+import WorkflowCustomContainer from "./workflow-caption.js"
+import ImageContainer from "./image-caption.js"
 
 export default {
   iconLinks: [
@@ -20,5 +22,7 @@ export default {
   ],
     start: () => {
         WorkflowContainer.init();
+        WorkflowCustomContainer.init();
+        ImageContainer.init();
     }
 }
