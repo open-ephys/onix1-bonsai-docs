@@ -94,8 +94,11 @@ The hardware first-in-first-out (FIFO) memory use is monitored using 8-bit digit
 Finally, heartbeat data is monitored using a <xref:OpenEphys.Onix1.HeartbeatData> operator, which produces xref:OpenEphys.Onix1.HeartbeatDataFrames> at a regular interval defined in [breakout board configuration](#configurebreakoutboard).
 
 ## Loading data
+The following python script can be used to load and plot the data produced by the workflow described in this tutorial.
 
-> [!TODO]
-> Python script for loading the data produced by this workflow
+[!code-python[](../workflows/examples/load-breakoutboard.py)]
 
-
+> [!NOTE]
+> This script will attempt to load entire files into arrays. For long recordings, data will need to be split into more manageable chunks by:
+> - Modifying this script to partially load files
+> - Modifying the workflow to cyclically creating new files after a certain duration
