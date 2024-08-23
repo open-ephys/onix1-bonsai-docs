@@ -1,13 +1,11 @@
 {{#isEnum}}
 
 <h1 class="text-break">
-  {{name.0.value}}
+  {{oe.name}}
   {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
 </h1>
 
 {{{oe.description}}}
-
-{{#oe.hasEnumFields}}
 
 <h2>Fields</h2>
 
@@ -18,7 +16,7 @@
     <th>Description</th>
   </tr>
 
-  {{#oe.enumFields}}
+  {{#oe.enum}}
   <tr>
     <td style = "white-space: no-wrap">
       <code>
@@ -29,10 +27,8 @@
       {{{description}}}
     </td>
   </tr>
-  {{/oe.enumFields}}
+  {{/oe.enum}}
 
 </table>
-
-{{/oe.hasEnumFields}}
 
 {{/isEnum}}

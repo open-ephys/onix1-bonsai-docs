@@ -1,9 +1,0 @@
-<h2 id="devices">Devices</h2>
-<p>
-    For more information on each device, check out their corresponding page: 
-    {{#devices}}
-    <li>
-        <a class="xref" href="{{file}}.html">{{id}}</a>
-    </li>
-    {{/devices}}
-</p>

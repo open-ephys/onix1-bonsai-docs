@@ -2,3 +2,5 @@ apiRules:
 - exclude:
     hasAttribute:
       uid: System.ObsoleteAttribute
+- exclude:
+    uidRegex: ^OpenEphys.Onix1.Design
