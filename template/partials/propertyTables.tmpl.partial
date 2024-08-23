@@ -17,7 +17,7 @@
                 {{#enum}}
                 <tr>
                     <td class="term"><code>{{{field&value}}}</code></td>
-                    <td class="description">{{{description}}}</td>
+                    <td class="description">{{{enumDescription}}}</td>
                 </tr>
                 {{/enum}}
             </table>

@@ -3,6 +3,4 @@ apiRules:
     hasAttribute:
       uid: System.ObsoleteAttribute
 - exclude:
-    uidRegex: OpenEphys.Onix1.Design.NeuropixelsV2eChannelConfigurationDialog
-- exclude: 
-    uidRegex: OpenEphys.Onix1.Design.ChannelConfigurationDialog
+    uidRegex: ^OpenEphys.Onix1.Design
