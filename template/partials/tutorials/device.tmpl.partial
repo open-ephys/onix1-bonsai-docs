@@ -1,0 +1,16 @@
+<h3> {{data}} </h3>
+
+<div class="workflow">
+    <p><img src="../workflows/examples/{{{operator}}}.bonsai" alt="{{{operator}}} Workflow"></p>
+</div>
+
+<p>{{{graphDescription}}}</p>
+
+<p>{{{operator}}} is configured as follows:</p>
+
+<ul>
+    <li><code>DeviceName</code> is set to "{{{configureOperator}}}/{{{operator}}}". This is the only selection available in the drop down menu because the configuration chain contains a single {{{hub}}}.</li>
+    {{#bufferSize}}<li><code>BufferSize</code> is set to {{{bufferSize}}}. This means that {{{bufferSize}}} samples will be collected from each of the probe channels into a <a class="xref" ref="api/OpenEphys.Onix1.{{{operator}}}Frame.html">{{{operator}}}Frame</a> that is propagated downstream (each frame will contain a {{{bufferSize}}}-element Clock vector and a {{{bufferSize}}}-sample {{{data}}} data vector). To learn how to decide the ideal <code>BufferSize</code> value, refer to <a class="xref" href="breakoutboard-tut.html#analog-inputs">the corresponding section in the Breakout Board Tutorial</a>.</li>{{/bufferSize}}
+    {{#multiple}}<li><code>ProbeIndex</code> is set to "PortA". This means that {{{operator}}} generates data from a {{{data}}} connected to the headstage's Port A.</li>{{/multiple}} 
+    {{#additionalConfiguration}}<li>{{{.}}}</li>{{/additionalConfiguration}}
+</ul>

@@ -1,8 +1,10 @@
 {{!master(layout/_master.tmpl)}}
 
+{{^tut}}
 <h1>{{title}}</h1>
+{{/tut}}
+
 {{#isGuide}}
-<br>
 
 {{#workflow}}
 {{#isDevice}}
@@ -36,5 +38,9 @@
 
 {{/visualize}}
 {{/isGuide}}
+
+{{#tut}}
+{{>partials/tutorials/main}}
+{{/tut}}
 
 {{{conceptual}}}

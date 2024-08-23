@@ -2,6 +2,10 @@
 
 {{!master(layout/_master.tmpl)}}
 
+{{#isClass}}
 {{>partials/class}}
+{{/isClass}}
 
+{{#isEnum}}
 {{>partials/enum}}
+{{/isEnum}}
