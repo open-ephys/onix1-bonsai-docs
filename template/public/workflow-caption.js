@@ -37,7 +37,7 @@ export default {
         const parent = element.parentElement;
         const caption = document.createElement("div");
         caption.innerHTML = element.querySelector("p:last-child").textContent;
-        caption.style.cssText = "text-align: center;";
+        caption.style.cssText = "text-align: center; margin-bottom: 1rem;";
         element.querySelector("p:last-child").remove();
         parent.insertBefore(outerWrap, element);
         outerWrap.appendChild(wrap);

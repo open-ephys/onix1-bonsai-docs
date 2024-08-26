@@ -1,15 +1,6 @@
 export default {
     renderElement: function(element) {
-        const wrap = document.createElement("div");
-        wrap.style.cssText = 'margin-bottom: 0.5rem;';
-        const parent = element.parentElement;
-        const caption = document.createElement("div");
-        caption.innerHTML = element.querySelector("p:last-child").textContent;
-        caption.style.cssText = "text-align: center;";
-        element.querySelector("p:last-child").remove();
-        parent.insertBefore(wrap, element);
-        wrap.appendChild(element);
-        wrap.appendChild(caption);
+        element.querySelector("p").style.cssText = "margin-bottom: 0.5rem;";
     },
     init: async function() {
         const observer = new MutationObserver(() => {
