@@ -14,22 +14,20 @@
     }
   ],
   "build": {
+    "fileMetadata": {
+      "_layout": {
+        "index.md": "landing"
+      }
+    },
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/**.md"
-        ]
-      },
-      {
-        "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "tutorials/**.md",
-          "tutorials/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
+          "api/**/*.{md,yml}",
+          "articles/**/*.{md,yml}",
+          "tutorials/**/*.{md,yml}",
+          "*.{md,yml}"
+        ],
+        "exclude": ["filter.yml"]
       }
     ],
     "resource": [

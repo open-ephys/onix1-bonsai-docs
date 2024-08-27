@@ -1,7 +1,6 @@
 ---
 uid: index
 title: OpenEphys.Onix1
-_disableBreadcrumb: true
 ---
 
 > [!Warning]
