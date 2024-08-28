@@ -1,6 +1,6 @@
 # NeuropixelsV2e GUI
 
-In addition to the capabilities described in <xref:NeuropixelsV2eTutorial>, the `NeuropixelsV2e` headstage has a graphical user interface when the `OpenEphys.Onix1.Design` package is downloaded. For more information on how to install that library, check out the <xref:BonsaiInstallationAndConfiguration> page.
+In addition to the capabilities described in <xref:np2e-tut>, the `NeuropixelsV2e` headstage has a graphical user interface when the `OpenEphys.Onix1.Design` package is downloaded. For more information on how to install that library, check out the <xref:BonsaiInstallationAndConfiguration> page.
 
 ## Overview
 

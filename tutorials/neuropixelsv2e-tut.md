@@ -10,7 +10,8 @@ overview:
         -   Streams Neuropixels 2.0 and BNO055 data.
         -   Commutates the tether automatically if there is a proper commutator connection.
 configure: 
-    nonDefaultProperties: 
+    gui: true
+    nonDefaultProperties:
 dataIOOperators:
     -   operator: PortStatus
         data: Port Status
@@ -23,6 +24,12 @@ dataIOOperators:
     -   operator: NeuropixelsV2eBno055Data
         data: BNO055
         graphDescription: This processing graph generates data from the headstage's BNO055, writes it to a .csv file, and selects <code>Quaternion</code> data to send to a node that commutates the tether automatically if there is a proper commutator connection. Because <code>CsvWriter</code> is a <code>Sink</code> operator, it emits the same item downstream as it receives from upstream. Therefore, Bno55DataFrame members can by selected by hovering over <code>Output</code> in the context menu that appears by right-clicking the <code>CsvWriter</code> node. 
-        
-
 ---
+<!---
+[!code-python[](../workflows/examples/load-np2.py)]
+
+> [!NOTE]
+> This script will attempt to load entire files into arrays. For long recordings, data will need to be split into more manageable chunks by:
+> - Modifying this script to partially load files
+> - Modifying the workflow to cyclically creating new files after a certain duration
+--->
