@@ -16,7 +16,7 @@
 
 <div class="TIP alert alert-info">
     <h5>TIP</h5>
-    <p>If you want a less busy starting point for using the {{{hub}}} then have a look at the <a class="xref" href="articles/hubs/{{{hubSnakeCase}}}.html">{{{operator}}}</a> in the user guide.</p>
+    <p>If you want a less busy starting point for using the {{{hub}}} then have a look at the <a class="xref" href="../articles/hubs/{{{hubSnakeCase}}}.html">{{{operator}}}</a> in the user guide.</p>
 </div>
 
 {{/overview}}
@@ -25,7 +25,7 @@
 
 <h2> Configuring the {{{hub}}} </h2>
 
-<p>We start by configuring the hardware using a configuration chain. This chain creates a hardware context using <a class="xref" href="api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, adds a {{{hub}}} configuration using <a class="xref" href="api/OpenEphys.Onix1.{{{configureOperator}}}.html">{{{configureOperator}}}</a>, and then starts acquisition using <a class="xref" href="api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each of these operators. </p>
+<p>We start by configuring the hardware using a configuration chain. This chain creates a hardware context using <a class="xref" href="../api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, adds a {{{hub}}} configuration using <a class="xref" href="../api/OpenEphys.Onix1.Configure{{{configureOperator}}}.html">{{{configureOperator}}}</a>, and then starts acquisition using <a class="xref" href="../api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each of these operators. </p>
 
 <div class="workflow">
     <p><img src="../workflows/examples/{{{configureOperator}}}.bonsai" alt="{{{configureOperator}}} Workflow"></p>
@@ -33,27 +33,27 @@
 
 <h3> CreateContext </h3>
 
-<p>The <a class="xref" href="api/OpenEphys.Onix1.CreateContext.html">CreateContext</a> operator determines the device driver and host-computer index that the system communicates through. The <code>Driver</code> property is set to "riffa", which is the name of the the PCIe device used by ONIX. In our case, because we are using a single ONIX system, the the <code>Index</code> property is set to 0. If second system was used on the same computer, a second <a class="xref" href="api/OpenEphys.Onix1.CreateContext.html">CreateContext</a> operator would be required and its <code>Index</code> property set to 1.</p>
+<p>The <a class="xref" href="../api/OpenEphys.Onix1.CreateContext.html">CreateContext</a> operator determines the device driver and host-computer index that the system communicates through. The <code>Driver</code> property is set to "riffa", which is the name of the the PCIe device used by ONIX. In our case, because we are using a single ONIX system, the the <code>Index</code> property is set to 0. If second system was used on the same computer, a second <a class="xref" href="../api/OpenEphys.Onix1.CreateContext.html">CreateContext</a> operator would be required and its <code>Index</code> property set to 1.</p>
 
 <h3> {{{configureOperator}}} </h3>
 
-<p>The <a class="xref" href="api/OpenEphys.Onix1.{{{configureOperator}}}.html">{{{configureOperator}}}</a> operator is used to configure the {{hub}}. Configuration settings for the {{hub}} can be examined and edited by clicking on the operator to highlight it and open its property pane to the right of the editor. Expanding the members of the property pane allows you to configure each of the devices contained by the {{hub}}. In this demo, the {{hub}} properties are set to their default values with two exceptions:</p>
+<p>The <a class="xref" href="../api/OpenEphys.Onix1.Configure{{{configureOperator}}}.html">{{{configureOperator}}}</a> operator is used to configure the {{hub}}. Configuration settings for the {{hub}} can be examined and edited by clicking on the operator to open its property pane to the right of the editor. Expanding the members of the property pane allows you to configure each of the devices contained by the {{hub}}. {{^nonDefaultProperties}}In this demo, the {{hub}} properties are set to their default values.{{/nonDefaultProperties}}{{#nonDefaultProperties}}In this demo, the {{hub}} properties are set to their default values, except:{{/nonDefaultProperties}}</p>
 
 <ul>
     {{#nonDefaultProperties}}<li>{{{.}}}</li>{{/nonDefaultProperties}}
 </ul>
 
-<p>Aside from the configuration operations, the output of the <a class="xref" href="api/OpenEphys.Onix1.{{{configureOperator}}}.html">{{{configureOperator}}}</a> operator is timestamped and then saved to a CSV file. This file will contain the wall-clock time that data collection start along with metadata concerning important system configuration settings.</p>
+<p>Aside from the configuration operations, the output of the <a class="xref" href="../api/OpenEphys.Onix1.Configure{{{configureOperator}}}.html">{{{configureOperator}}}</a> operator is timestamped and then saved to a CSV file. This file will contain the wall-clock time that data collection start along with metadata concerning important system configuration settings.</p>
 
 <h3> StartAcquisition </h3>
 
-<p>The <a class="xref" href="api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a> operator begins acquisition after the hardware has been configured. In this example, we are going to be capturing data from the {{{hub}}}. To learn how to decide the ideal <code>ReadBlockSize</code> value, refer to <a class="xref" href="breakoutboard-tut.html#startacquisition">the corresponding section in the Breakout Board Tutorial</a> <!---<a class="xref">Setting ReadBlockSize Tutorial</a>--->.</p>
+<p>The <a class="xref" href="../api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a> operator begins acquisition after the hardware has been configured. In this example, we are going to be capturing data from the {{{hub}}}. <!---To learn how to decide the ideal <code>ReadBlockSize</code> value, refer to <a class="xref" href="breakoutboard-tut.html#startacquisition">the corresponding section in the Breakout Board Tutorial</a>---><!---<a class="xref">Setting ReadBlockSize Tutorial</a>--->.</p>
 
 {{/configure}}
 
 <h2> Streaming Data </h2>
 
-<p>The rest of the workflow concerns capturing data from and sending to the {{{hub}}}, using a set of discrete "processing graphs" that either produce data from hardware (inputs/sources) or accept data produced by software (outputs/sinks). We describe these graphs in the following sections.</p>
+<p>The rest of the workflow concerns capturing data to and from the {{{hub}}}, using a set of discrete "processing graphs" that either produce data from hardware (inputs/sources) or accept data produced by software (outputs/sinks). We describe these graphs in the following sections.</p>
 
 <div class="TIP alert alert-info">
     <h5>TIP</h5>
