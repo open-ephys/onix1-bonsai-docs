@@ -20,12 +20,11 @@ The Bonsai package manager can be accessed from Bonsai's landing window or its w
 ![Package manager from splash page](../../images/bonsai-splash-page-package-manager-highlight.png){width=350px} or ![Package manager from editor](../../images/bonsai-editor-package-manager-highlight.png){width=425px}
 
 ## Install Packages in Bonsai
-The three required packages to run the workflows in this documentation are:
+The following packages required to run the workflows in this documentation are:
 
 * `Bonsai.StarterPack`: the "standard library" for Bonsai that contains tools that are used in almost every workflow.
 * `OpenEphys.Commutator`: Bonsai package for controlling Open Ephys commutators.
-* `OpenEphys.Onix1`: this library.
-* `OpenEphys.Onix1.Design`: An extension of this library that includes graphical user interfaces (GUIs).
+* `OpenEphys.Onix1.Design`: An extension of the `OpenEphys.Onix1` library that includes graphical user interfaces (GUIs).
 
 > [!TIP]
 > Additional packages will allow you to extend the functionality of ONIX hardware beyond the scope of this documentation. There are packages that allow ONIX be combined with [visual psychophysics](https://bonsai-rx.org/docs/tutorials/vision-psychophysics.html), [markerless pose estimation](https://bonsai-rx.org/sleap/), [HARP behavioral devices](https://harp-tech.org/), and much more.
@@ -52,18 +51,6 @@ To install the `OpenEphys.Commutator` package [open the package manager](#open-b
 
 ![Bonsai OpenEphys.Commutator Install Screenshot](../../images/bonsai-install-OpenEphys.Commutator.webp){width=650px}
 
-### OpenEphys.Onix1
-
-To install the `OpenEphys.Onix1` package [open the package manager](#open-bonsai-package-manager) and:
-
-1.  Click the `Browse` tab.
-1.  Set `Package source` to `All` or `NuGet`.
-1.  Search `OpenEphys.Onix1`.
-1.  Click `Install`.
-1.  Click `I Accept` when the license agreement window appears.
-
-![Bonsai OpenEphys.Onix1 Install Screenshot](../../images/bonsai-install-OpenEphys.Onix1.webp){width=650px}
-
 ### OpenEphys.Onix1.Design
 
 To install the `OpenEphys.Onix1.Design` package [open the package manager](#open-bonsai-package-manager) and:
@@ -74,8 +61,7 @@ To install the `OpenEphys.Onix1.Design` package [open the package manager](#open
 1.  Click `Install`.
 1.  Click `I Accept` when the license agreement window appears.
 
-> [!WARNING]
-> Add in a screenshot of the onix1.design library in the package manager once it is pushed to Nuget
+![Bonsai OpenEphys.Onix1.Design Install Screenshot](../../images/bonsai-install-OpenEphys.Onix1.Design.webp){width=650px}
 
 ## Update Packages in Bonsai
 
