@@ -1,5 +1,6 @@
 ---
 uid: np2e-tut
+title: NeuropixelsV2e Headstage Tutorial
 tut: true
 hub: NeuropixelsV2e Headstage
 hubSnakeCase: neuropixelsv2e

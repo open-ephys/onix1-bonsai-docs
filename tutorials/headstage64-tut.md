@@ -1,5 +1,6 @@
 ---
 uid: hs64-tut
+title: Headstage64 Tutorial
 tut: true
 hub: Headstage64
 hubSnakeCase: headstage64
@@ -10,6 +11,9 @@ overview:
         -   Streams RHD2164, BNO055, and TS4231 data.
         -   Triggers electrical and optical stimulation.
 ---
+
+> [!NOTE]
+> This page is a WIP
 
 <!-- configure: 
     nonDefaultProperties: 
