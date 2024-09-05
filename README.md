@@ -50,10 +50,7 @@ Download and install [git](https://git-scm.com/downloads) if it is not installed
 
 ## Build Documentation Locally
 
-> [!NOTE]  
-> The following steps should be be performed in Powershell.
-
-To build the docs and serve locally, run:
+To build the docs and serve locally, run in PowerShell:
 
 ``` console
 ./build.ps1 --serve
@@ -108,6 +105,9 @@ This is summary of docfx-utils.ps1 list members. They are described above, but t
 - `docfx-utils.ps1 -a <path/to/lychee.exe>` performs all of the above steps.
 
 `docfx-utils.ps1 -l` and `docfx-utils.ps1 -a` will not run without a path to a lychee executable.   
+
+> [!NOTE]  
+> The docfx-utils.ps1 script (.ps1 PowerShell scripts in general) must be run in PowerShell.
 
 These commands do not serve the docs. Serve them by running `dotnet docfx serve`.
 
