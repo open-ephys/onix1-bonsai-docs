@@ -172,7 +172,7 @@ If local html pages don't appear to be updating, hard refresh website pages in b
 If there are discrepancies between local and remote builds:
 
 * Confirm local and remote docfx versions are consistent. This inconsistency can occur when, for example, running `docfx` instead of `dotnet docfx` or running `dotnet tool restore --configfile <configfile>` on another config file other than the one in this repo.
-* Clear the local any cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory. Run `./docfx-util.ps1 -c` to clean artifacts from previous builds. 
+* Clear any locally cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory. Run `./docfx-util.ps1 -c` to clean artifacts from previous builds. 
 
 ## Docs Maintainability
 
