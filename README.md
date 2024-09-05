@@ -98,6 +98,19 @@ The above command can also be run using the `docfx-util.ps1` Powershell script. 
 
 All three link-checking commands can be run with the following command: `./docfx-util.ps1 -a` in the repo's root directory. This command additionally cleans remaining artifacts from past builds before performing all the link-checking commands. This is the most robust and expedient way to confirm that the repo will pass the link checks when pushed. 
 
+### docfx-utils.ps1
+
+This is summary of docfx-utils.ps1 list members. They are described above, but they are also described below for ease-of-finding:
+
+- `docfx-utils.ps1 -c` cleans cached files/removes artifacts from previous builds.
+- `docfx-utils.ps1 -b` exports SVGs and builds the docs.
+- `docfx-utils.ps1 -l <path/to/lychee.exe>` checks for broken/missing links and references.
+- `docfx-utils.ps1 -a <path/to/lychee.exe>` performs all of the above steps.
+
+`docfx-utils.ps1 -l` and `docfx-utils.ps1 -a` will not run without a path to a lychee executable.   
+
+These commands do not serve the docs. Serve them by running `dotnet docfx serve`.
+
 ## `dotnet docfx`
 
 Running `dotnet docfx` runs both the `dotnet docfx metadata` command and the `dotnet docfx build` command in that order. Unless specified otherwise, `dotnet docfx` uses the `docfx.json` as its config file.
@@ -159,7 +172,7 @@ If local html pages don't appear to be updating, hard refresh website pages in b
 If there are discrepancies between local and remote builds:
 
 * Confirm local and remote docfx versions are consistent. This inconsistency can occur when, for example, running `docfx` instead of `dotnet docfx` or running `dotnet tool restore --configfile <configfile>` on another config file other than the one in this repo.
-* Run `./docfx-util.ps1 -c` to clean artifacts from previous builds. 
+* Clear the local any cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory. Run `./docfx-util.ps1 -c` to clean artifacts from previous builds. 
 
 ## Docs Maintainability
 
