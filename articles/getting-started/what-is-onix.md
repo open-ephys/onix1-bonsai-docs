@@ -1,5 +1,5 @@
 ---
-uid: WhatIsOnix
+uid: what-is-onix
 title: What is ONIX?
 ---
 

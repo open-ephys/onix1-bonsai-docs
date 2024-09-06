@@ -1,5 +1,5 @@
 ---
-uid: TipsAndTricks
+uid: tips-and-tricks
 title: Tips and Tricks
 ---
 

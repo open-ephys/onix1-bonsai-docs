@@ -1,39 +1,33 @@
 {{!master(layout/_master.tmpl)}}
 
-<h1>{{title}}</h1>
-{{#isGuide}}
-<br>
+<h1>{{{title}}}</h1>
 
-{{#workflow}}
-{{#isDevice}}
-{{>partials/device.workflow}}
-{{/isDevice}}
-{{#isHeadstage}}
-{{>partials/headstage.workflow}}
-<br>
-{{/isHeadstage}}
-{{/workflow}}
 
-{{#visualize}}
-<br>
-<h2 id="visualize-data">Visualize Data</h2>
 
-{{#visualize_timeseries}}
-{{>partials/device.visualize_timeseries}}
-{{/visualize_timeseries}}
+{{#hub}}
 
-{{#visualize_mat}}
-{{>partials/device.visualize_mat}}
-{{/visualize_mat}}
+{{#index}}
+{{>partials/hubs/index}}
+{{/index}}
 
-{{#visualize_text}}
-{{>partials/device.visualize_text}}
-{{/visualize_text}}
+{{#configuration}}
+{{>partials/hubs/configuration}}
+{{/configuration}}
 
-<p>Refer to <a class="xref" href="~/articles/getting-started/visualizing-data.html">Visualizing Data</a> for more information on visualizers and how to download them.</p>
-<p>Note that data will not be shown until a workflow is running. Check out <a class="xref" href="~/articles/getting-started/start-workflow.html">Running a Workflow</a> to see how to run a workflow.</p>
+{{#device}}
+{{>partials/hubs/device}}
+{{/device}}
 
-{{/visualize}}
-{{/isGuide}}
+{{#loadData}}
+{{{conceptual}}}
+{{/loadData}}
+
+{{/hub}}
+
+
+
+{{^hub}}
 
 {{{conceptual}}}
+
+{{/hub}}

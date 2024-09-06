@@ -1,38 +1,45 @@
-- name: Getting Started
+- href: getting-started/index.md
   items:
-  - href: getting-started/getting-started.md
   - href: getting-started/install-configure-bonsai.md
   - href: getting-started/bonsai-usage.md
-  - href: getting-started/node-types.md
+  - href: getting-started/operator-types.md
   - href: getting-started/tips-tricks.md
   - href: getting-started/property-categories.md
   - href: getting-started/initialize-oni-context.md
   - href: getting-started/start-workflow.md
-  - href: getting-started/visualizing-data.md
+  - href: getting-started/visualize-data.md
   - href: getting-started/next-steps.md
 
-- name: Breakout Board & Headstages
+- name: Breakout Boards, Miniscopes & Headstages
   href: hubs/index.md
   items:
-  - href: hubs/breakoutboard.md
-  - href: hubs/headstage64.md
-  - href: hubs/neuropixelsv1e.md
-  - href: hubs/neuropixelsv2e.md
-  - href: hubs/neuropixelsv2ebeta.md
+  - href: hubs/onix1-breakout/index.md
+    items: 
+    - name: Configuration
+      href: hubs/onix1-breakout/configuration.md
+    - name: Digital Input
+      href: hubs/onix1-breakout/digital-input.md
+    - name: Digital Output
+      href: hubs/onix1-breakout/digital-output.md
+    - name: Analog I/O
+      href: hubs/onix1-breakout/analog-io.md
+    - name: Heartbeat
+      href: hubs/onix1-breakout/heartbeat.md
+    - name: Memory Monitor
+      href: hubs/onix1-breakout/memory-monitor.md
+    - href: hubs/onix1-breakout/load-data.md
+  - href: hubs/hs64/index.md
+    items: 
+  - href: hubs/np1e/index.md
+    items: 
+  - href: hubs/np2e/index.md
+    items: 
+    - href: hubs/np2e/gui.md 
+  - href: hubs/np2ebeta/index.md
+    items: 
 
-- name: Devices
-  items:
-  - href: devices/bno055.md
-  - href: devices/bno055-neuropixelsv1e.md
-  - href: devices/bno055-neuropixelsv2e.md
-  - href: devices/breakoutanalogio.md
-  - href: devices/breakoutdigitalio.md
-  - href: devices/electricalstimulator.md
-  - href: devices/opticalstimulator.md
-  - href: devices/heartbeat.md
-  - href: devices/memorymonitor.md
-  - href: devices/neuropixelsv1e.md
-  - href: devices/neuropixelsv2e.md
-  - href: devices/neuropixelsv2ebeta.md
-  - href: devices/rhd2164.md
-  - href: devices/ts4231.md
+- href: tutorials/index.md
+  items: 
+  - href: tutorials/configuration-chain.md
+  - href: tutorials/buffers-memory-usage.md
+  - href: tutorials/troubleshoot-workflows.md

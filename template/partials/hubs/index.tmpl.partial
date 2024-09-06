@@ -1,0 +1,9 @@
+<p>Familiarize yourself with the <a class="xref" href="~/articles/getting-started/index.html">Getting Started</a> pages before proceeding.</p>
+
+<p>To explore the {{{hub}}}'s functionality and save data produced by it, copy and paste the workflow below into Bonsai and run it. To learn about the {{{hub}}}'s functionality in greater depth and how the workflow works graph-by-graph, scroll to the bottom of the page or explore the other pages in this section of the docs.</p>
+
+<div class="workflow"> 
+    <p><img src="~/workflows/hubs/{{{hubDirectory}}}/quick-start.bonsai" alt="~/workflows/hubs/{{{hubDirectory}}}/quick-start.bonsai workflow"></p>
+</div>
+
+{{{conceptual}}}

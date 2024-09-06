@@ -26,7 +26,7 @@
 
 {{#oe.operator.workflow}}
 
-<div class="workflow"><p><img src="../workflows/operators/{{oe.name}}.bonsai" alt="{{oe.name}} Workflow"></p></div>
+<div class="workflow"><p><img src="~/workflows/operators/{{oe.name}}.bonsai" alt="{{oe.name}} Workflow"></p></div>
 
 {{#oe.operator}} 
 <h2>Inputs & Outputs</h2>

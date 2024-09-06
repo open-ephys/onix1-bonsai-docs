@@ -1,5 +1,5 @@
 ---
-uid: PropertyCategories
+uid: property-categories
 title: Property Categories
 ---
 

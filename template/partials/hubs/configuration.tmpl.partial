@@ -1,0 +1,29 @@
+<p>The {{{hub}}} is configurable in Bonsai through the <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a> operator. To learn about devices on the {{{hub}}} that can be configured through the <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a> operator, visit the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">{{{hub}}}</a> page.</p>
+
+<p>This is an excerpt from the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">Quick Start Guide</a> to demonstrate how the {{{hub}}} is configured and how to write timestamped configuration data.</p>
+
+<div class="workflow"> 
+    <p><img src="~/workflows/hubs/{{{hubDirectory}}}/{{{deviceDirectory}}}.bonsai" alt="~/workflows/hubs/{{{hubDirectory}}}/{{{deviceDirectory}}}.bonsai workflow"></p>
+</div>
+
+<div class="NOTE alert alert-info">
+    <h5>NOTE</h5>
+    <p>The above workflow excerpt alone is insufficient to stream data from the {{{hub}}} (besides timestamped configuration data). At least one more graph containing a related <a class="xref" href="~/api/dataio.html"">Data I/O operator</a> is required.</p>
+</div>
+
+<p>The operation of an operator is modified by editing its properties. To examine and edit properties, click on the node to
+select it, and view the Properties pane that appears immediately right of the workflow editor. Expanding the members of the
+Properties pane provides configuration access to each of the devices within the {{{hub}}} which are all briefly described in the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">Quick Start Guide</a>. For example, this is how the {{{configureOperator}}} 
+properties were edited for the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">Quick Start Workflow</a>:</p>
+
+<video width="100%" autoplay="true" loop="true" controls="true">
+    <source src="~/images/hubs/{{{hubDirectory}}}/{{{deviceDirectory}}}.mp4" type="video/mp4"/>
+</video> 
+
+<p>The above animation is just for demonstration purposes; it's not necessary to repeat those steps if the {{hub}} configuration graph is copied-and-pasted into your workflow from either here or the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">Quick Start Workflow</a>.</p>
+
+<p>{{{graphDescription}}} In more detail:</p>
+
+{{{conceptual}}}
+
+<p>To learn about the top-level <a class="xref" href="~/api/OpenEphys.Onix1.CreateContext.html"><code>CreateContext</code></a>/<a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html"><code>StartAcquisition</code></a> hardware configuration motif that is present in every workflow involving Onix hardware, visit the <a class="xref" href="~/articles/tutorials/configuration-chain.html">Configuration Chain Tutorial</a>.</p>

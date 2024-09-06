@@ -15,32 +15,16 @@
   ],
   "build": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/**.md"
-        ]
-      },
-      {
-        "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "tutorials/**.md",
-          "tutorials/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      }
+      "articles/**.{md,yml}",
+      "api/**.{md,yml}",
+      "toc.yml",
+      "index.md"
     ],
     "resource": [
-      {
-        "files": [
           "logo.svg",
           "favicon.png",
           "images/**",
           "workflows/**"
-        ]
-      }
     ],
     "output": "_site",
     "overwrite": [
