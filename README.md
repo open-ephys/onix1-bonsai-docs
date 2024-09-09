@@ -75,7 +75,7 @@ git submodule update --recursive --remote
 The following three commands are run remotely by remote GitHub Actions serve upon pushing to a branch. The branch will not be able to merge to main unless all three commands complete successfully without any errors. Confirm that they can complete successfully without errors locally before committing and pushing. Otherwise, the branch becomes cluttered with potentially several attempts to pass the link-check process. Run: 
 
 ``` console
-.\build.ps1 --logLevel Warning --warningsAsErrors
+.\build.ps1 --logLevel Suggestion --warningsAsErrors
 dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config
 ```
 

@@ -12,10 +12,10 @@ This above configuration graph creates a context (an object that interfaces with
 
 
 - The [`BreakoutBoard`](xref:OpenEphys.Onix1.ConfigureBreakoutBoard) operator is set to configure the Onix1 Breakout to:
-    - stream digital IO and analog IO data 
-    - set analog pin 0 as output and the rest as input
-    - accept ±10V analog inputs range 
-    - stream heartbeat and memory usage data at 10Hz
+    - Stream digital IO and analog IO data 
+    - Set analog pin 0 as output and the rest as input
+    - Accept ±10V analog inputs range 
+    - Stream heartbeat and memory usage data at 10Hz
 - The above bullet point is accomplished by changing the following properties from their default values:  
     - The `BreakoutBoard`'s `AnalogIO Direction0` property is set to `Output`.
     - The `BreakoutBoard`'s `MemoryMonitor Enable` property is set to `True`.

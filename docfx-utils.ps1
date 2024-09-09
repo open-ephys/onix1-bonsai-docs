@@ -16,7 +16,7 @@ function removeartifacts
     Write-Output ""
 }
 
-function build{.\build.ps1 --logLevel Warning --warningsAsErrors}
+function build{.\build.ps1 --logLevel Suggestion --warningsAsErrors}
 
 function linkcheck 
 {
