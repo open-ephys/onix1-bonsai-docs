@@ -3,6 +3,11 @@ uid: onix1-breakout
 title: Onix1 Breakout
 hub: Onix1 Breakout
 hubDirectory: onix1-breakout
+quickStart: 
+    - Stream and save analog and digital inputs.
+    - Compute and outputs patterns to all digital output pins and analog pin 0.
+    - Stream and saves memory usage.
+    - Stream heartbeat data.
 index: true
 ---
 

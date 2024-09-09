@@ -16,7 +16,7 @@ For `NeuropixelsV2eHeadstage`, the GUI allows for an easy way to change settings
     - Change the [reference](xref:OpenEphys.Onix1.NeuropixelsV2QuadShankReference) for all electrodes
     - Choose pre-defined channel presets or manually define within a constrained set of possible combinations
     - Easily visualize which electrodes are enabled
-- Enable and disable the <xref:OpenEphys.Onix1.NeuropixelsV1eBno055Data> stream
+- Enable and disable the <xref:OpenEphys.Onix1.NeuropixelsV2eBno055Data> stream
 
 There are two ways to access configuration dialogs; 1) at the individual `NeuropixelsV2eProbeConfiguration` level where either `Probe A` or `Probe B` can be modified by itself, and 2) at the headstage level where both probes can be modified, as well as the `NeuropixelsV2eBno055` device.
 

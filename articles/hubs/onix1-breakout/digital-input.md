@@ -19,8 +19,6 @@ sourceOperator: BreakoutDigitalInput
 dataFrame: BreakoutDigitalInputDataFrame
 event: a pin, button, or switch is toggled
 configureOperator: ConfigureBreakoutBoard
-graphDescription: This graph generates digital input data, writes it to a file, selects specific members from the digital input data frame, and checks if certain inputs are true. 
-source: true
 ---
 
 <!--
@@ -28,9 +26,11 @@ source: true
 - use code tags where classes are hyperlinked?
 -->
 
+This graph generates digital input data, writes it to a file, selects `DigitalInputs` and `Buttons`  members from the digital input data frame, and checks if certain inputs are true. 
+
 - The <xref:OpenEphys.Onix1.BreakoutDigitalInput> operator generates a sequence of <xref:OpenEphys.Onix1.BreakoutDigitalInputDataFrame>s.
     - The <xref:OpenEphys.Onix1.BreakoutDigitalInput>'s `DeviceName` property is set to "BreakoutBoard/BreakoutDigitalOutput". This links the <xref:OpenEphys.Onix1.BreakoutDigitalInput> operator to the corresponding configuration operator. 
-- The [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) operator writes files containing `Clock`, `DigitalInputs`, and `Buttons` members from the <xref:OpenEphys.Onix1.BreakoutDigitalInputDataFrame> with the following name format: `digital-input_<timestamp>.csv`. Because [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) is a <em>sink</em> operator, its output sequence is equivalent to its input sequence. In other words, its output is equivalent to <xref:OpenEphys.Onix1.BreakoutDigitalInput>'s output. Therefore, it's possible to use [`MemberSelector`](https://bonsai-rx.org/docs/api/Bonsai.Expressions.MemberSelectorBuilder.html) operators on the [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) to select members from <xref:OpenEphys.Onix1.BreakoutDigitalInputDataFrame>.
+- The [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) operator writes files containing `Clock`, `DigitalInputs`, and `Buttons` members from the <xref:OpenEphys.Onix1.BreakoutDigitalInputDataFrame> with the following name format: `digital-input_<timestamp>.csv`. Because [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) is a _sink_ operator, its output sequence is equivalent to its input sequence. In other words, its output is equivalent to <xref:OpenEphys.Onix1.BreakoutDigitalInput>'s output. Therefore, it's possible to use [`MemberSelector`](https://bonsai-rx.org/docs/api/Bonsai.Expressions.MemberSelectorBuilder.html) operators on the [`CsvWriter`](https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html) to select members from <xref:OpenEphys.Onix1.BreakoutDigitalInputDataFrame>.
 - The members selected in the workflow, <xref:OpenEphys.Onix1.BreakoutDigitalPortState> and <xref:OpenEphys.Onix1.BreakoutButtonState>, are enumerators. Enumerators assign names to values. <xref:OpenEphys.Onix1.BreakoutDigitalPortState>'s and <xref:OpenEphys.Onix1.BreakoutButtonState>'s enumerated values correspond to bit positions of a bit field. Therefore, when <xref:OpenEphys.Onix1.BreakoutDigitalPortState> or <xref:OpenEphys.Onix1.BreakoutButtonState> are connected to a `HasFlags` operator, the names that appear in the `HasFlags`'s `Value` property's dropdown menu correspond to bit positions in the respective digital input port. In this workflow, the top `HasFlags` operator checks if `Triangle` or `X` are `True`. 
 
 <!-- content regarding setting operators commented out bc that's too much text I think -->

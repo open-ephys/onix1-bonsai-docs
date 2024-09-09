@@ -1,18 +1,17 @@
 ---
-uid: np2e_configuration
+uid: np2ebeta_configuration
 title: Neuropixels 2.0 Headstage Configuration
-hub: NeuropixelsV2e Headstage
-hubDirectory: np2e
+hub: NeuropixelsV2e Beta Headstage
+hubDirectory: np2ebeta
 deviceDirectory: configuration
 configuration: true
-operator: ConfigureNeuropixelsV2eHeadstage
+operator: ConfigureNeuropixelsV2eBetaHeadstage
 noVideo: true
-gui: Neuropixels 2.0 probe
 ---
 
-This graph creates a context (an object that interfaces with the hardware), configures the NeuropixelsV2e Headstage through that context, starts acquisition, and timestamps/saves the Onix1 breakout configuration action.
+This graph creates a context (an object that interfaces with the hardware), configures the NeuropixelsV2e Beta Headstage through that context, starts acquisition, and timestamps/saves the Onix1 breakout configuration action.
 
-- The [`NeuropixelsV2eHeadstage`](xref:OpenEphys.Onix1.ConfigureNeuropixelsV2eHeadstage) operator is set to configure the NeuropixelsV2e Headstage to:
+- The [`NeuropixelsV2eBetaHeadstage`](xref:OpenEphys.Onix1.ConfigureNeuropixelsV2eBetaHeadstage) operator is set to configure the NeuropixelsV2eBeta Headstage to:
     - stream and save electrophysiology data from a Neuropixels 2.0 probe
     - stream and save orientation data from a Bno055
 - The [`TimeStamp`](https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html) operator generates a sequence of timestamped items from its input sequence.
@@ -20,5 +19,5 @@ This graph creates a context (an object that interfaces with the hardware), conf
 
 
 <!-- - The above bullet point is accomplished by changing the following properties from their default values:  
-    - The `NeuropixelsV2eHeadstage`'s `AnalogIO Direction0` property is set to `Output`.
-    - The `NeuropixelsV2eHeadstage`'s `MemoryMonitor Enable` property is set to `True`. -->
+    - The `NeuropixelsV2eBetaHeadstage`'s `AnalogIO Direction0` property is set to `Output`.
+    - The `NeuropixelsV2eBetaHeadstage`'s `MemoryMonitor Enable` property is set to `True`. -->

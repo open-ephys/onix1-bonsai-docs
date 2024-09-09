@@ -1,9 +1,18 @@
 <p>Familiarize yourself with the <a class="xref" href="~/articles/getting-started/index.html">Getting Started</a> pages before proceeding.</p>
 
-<p>To explore the {{{hub}}}'s functionality and save data produced by it, copy and paste the workflow below into Bonsai and run it. To learn about the {{{hub}}}'s functionality in greater depth and how the workflow works graph-by-graph, scroll to the bottom of the page or explore the other pages in this section of the docs.</p>
+<p>Scroll to the bottom of this page for a brief overview of the {{{hub}}} devices. Explore the other pages in the <a class="xref" href="~/articles/hubs/{{{hubDirectory}}}/index.html">{{{hub}}}</a> section of the docs for more comprehensive descriptions of the devices and the corresponding graphs in the workflow.</p>
+
+<p>Copy and paste the workflow below into Bonsai and run it to:</p>
+
+<ul>
+    <li>Configure the {{{hub}}} to accomplish the following functionalities:</li>
+    {{#quickStart}}<li>{{{.}}}</li>{{/quickStart}}
+</ul>
 
 <div class="workflow"> 
     <p><img src="~/workflows/hubs/{{{hubDirectory}}}/quick-start.bonsai" alt="~/workflows/hubs/{{{hubDirectory}}}/quick-start.bonsai workflow"></p>
 </div>
+
+<p>These are the devices available on the the {{{hub}}}:</p>
 
 {{{conceptual}}}

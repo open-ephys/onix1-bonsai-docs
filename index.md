@@ -1,6 +1,7 @@
 ---
 uid: index
 title: OpenEphys.Onix1
+_disableBreadcrumb: true
 ---
 
 > [!Warning]
@@ -24,9 +25,9 @@ Other major advantages include:
 
 <div class="quick-links">
 
-| <xref:getting-started> | <xref:OpenEphys.Onix1> | <xref:tutorials> |
+| <xref:GettingStarted> | <xref:OpenEphys.Onix1> | <xref:tutorials> |
 |:--------------:|:-------------------:|:---------:|
-| [![User Guide](images/macbook.svg){width=200}](xref:getting-started) | [![Operator Guide](images/books.svg){width=200}](xref:OpenEphys.Onix1) | [![Tutorials](images/running.svg){width=200}](xref:tutorials) |
-| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:getting-started) | [Operator references here](xref:OpenEphys.Onix1) | [Check out our tutorials <br>for useful workflows](xref:tutorials) |
+| [![User Guide](images/macbook.svg){width=200}](xref:GettingStarted) | [![Operator Guide](images/books.svg){width=200}](xref:OpenEphys.Onix1) | [![Tutorials](images/running.svg){width=200}](xref:tutorials) |
+| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:GettingStarted) | [Operator references here](xref:OpenEphys.Onix1) | [Check out our tutorials <br>for useful workflows](xref:tutorials) |
 
 </div>

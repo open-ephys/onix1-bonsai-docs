@@ -20,14 +20,14 @@ sinkOperator: BreakoutAnalogInput
 sourceOperator: BreakoutAnalogOutput
 dataFrame: BreakoutAnalogInputDataFrame
 configureOperator: ConfigureBreakoutBoard
-graphDescription: This graph computes a 1Hz sawtooth pattern and outputs it from the analog output port. It is also generates analog input data, selects specific members from the analog input data frame, and writes those members to two separate files. Though this graph comprises of two smaller discrete graphs, they are combined on this page because the easiest way to demonstrate the analog input is to read back analog output data.
-source: true
 ---
 
 <!--
 - use code tags where classes are hyperlinked?
 - reverse the order of analog output and analog input in the quick-start and on the excerpt
 -->
+
+This graph computes a 1Hz sawtooth pattern and outputs it from the analog output port. It is also generates analog input data, selects `Clock` and `AnalogData` members from the analog input data frame, and writes those members to various files. Though this graph comprises of two smaller discrete graphs, they are combined on this page because the easiest way to demonstrate the analog input is to read back analog output data.
 
 ### Analog output
 
@@ -37,8 +37,10 @@ source: true
 
 -   The `RampGenerator` operator generates a sequence of values which comprises ~1Hz sawtooth waveform from -10 to 10. 
 -   The <xref:OpenEphys.Onix1.BreakoutAnalogOutput> updates the analog output port upon receiving a value in the upstream sequence. This is accomplished by changing the following <xref:OpenEphys.Onix1.BreakoutAnalogOutput> properties from their default values:
-    - The <xref:OpenEphys.Onix1.BreakoutAnalogOutput>'s `DataType` property is set to "Volts". The `RampGenerator` operator computes a sawtooth pattern in units of volts, so <xref:OpenEphys.Onix1.BreakoutAnalogOutput> should be set accordingly.
+    - The <xref:OpenEphys.Onix1.BreakoutAnalogOutput>'s `DataType` property is set to "Volts". The `RampGenerator` operator computes a sawtooth pattern that consists of float types in units of volts, so <xref:OpenEphys.Onix1.BreakoutAnalogOutput> should be set accordingly.
     - The <xref:OpenEphys.Onix1.BreakoutAnalogOutput>'s `DeviceName` property is set to "BreakoutBoard/AnalogIO". This links the <xref:OpenEphys.Onix1.BreakoutAnalogOutput> operator to the corresponding configuration operator. 
+    - To learn about considerations setting the `Buffer` property, visit the <xref:buffers-memory-usage>.
+
 
 Although a voltage ramp is sent to all the channels, only channel 0
 was selected to be a output, so this is the only channel that will be affected. If other channels
@@ -84,8 +86,9 @@ Even if a analog IO channel is set as output, its output voltage is looped back 
   - The `DeviceName` is set to `BreakoutBoard/AnalogIO`. This links the <xref:OpenEphys.Onix1.BreakoutAnalogInput> operator to the corresponding configuration operator. 
   - The `DataType` is set to `Volts`. This means that samples will be represented as units of units of voltage in a single-precision
     floating point type.
-- The [`MemberSelector`](https://bonsai-rx.org/docs/api/Bonsai.Expressions.MemberSelectorBuilder.html) operators each select a member from the <xref:OpenEphys.Onix1.BreakoutAnalogInputDataFrame>. Selected members in the workflow, `Clock` and `AnalogData` are unsigned integers and an array, respectively. 
-- The [`MatrixWriter`](https://bonsai-rx.org/docs/api/Bonsai.Dsp.MatrixWriter.html) operators save `Clock` and `AnalogData` to files with the following format: `analog-clock_<timestamp>.raw` and `analog-data_<timestamp>.raw`, respectively. 
+  - To learn about considerations setting the `Buffer` property, visit the <xref:buffers-memory-usage>.
+- The [`MemberSelector`](https://bonsai-rx.org/docs/api/Bonsai.Expressions.MemberSelectorBuilder.html) operators each select a member from the <xref:OpenEphys.Onix1.BreakoutAnalogInputDataFrame>, `Clock` and `AnalogData`. 
+- The [`MatrixWriter`](https://bonsai-rx.org/docs/api/Bonsai.Dsp.MatrixWriter.html) operators saves the selected members to files with the following format: `analog-clock_<timestamp>.raw` and `analog-data_<timestamp>.raw`, respectively. 
 
 <!-- content regarding setting operators commented out bc that's too much text I think -->
 

@@ -14,14 +14,13 @@ features: |
 sinkOperator: BreakoutDigitalOutput
 dataFrame: BreakoutDigitalOutputDataFrame
 configureOperator: ConfigureBreakoutBoard
-graphDescription: This graph computes a 10Hz binary digital counter and outputs that value at the digital output port.
-sink: true
 ---
 
 <!--
 - use code tags where classes are hyperlinked?
-
 -->
+
+This graph computes a 10Hz binary digital counter and outputs that value at the digital output port.
 
 -   The [`Timer`](https://bonsai-rx.org/docs/api/Bonsai.Shaders.Timer.html) operator generates a sequence of [`64-bit signed integer`](https://learn.microsoft.com/en-us/dotnet/api/system.int64?view=net-8.0) in 100ms intervals. 
 -   The value of the integers produced by the `Timer` operator is unimportant. The [`Int`](https://bonsai-rx.org/docs/api/Bonsai.Expressions.IntProperty.html) operator emits an integer (with a value of 1 in our case) upon receiving an item from the upstream sequence. 
