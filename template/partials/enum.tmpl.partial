@@ -1,5 +1,3 @@
-{{#isEnum}}
-
 <h1 class="text-break">
   {{oe.name}}
   {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
@@ -17,18 +15,16 @@
   </tr>
 
   {{#oe.enum}}
-  <tr>
-    <td style = "white-space: no-wrap">
-      <code>
-        {{{field&value}}}
-      </code>
-    </td>
-    <td>
-      {{{description}}}
-    </td>
-  </tr>
+    <tr>
+      <td style = "white-space: no-wrap">
+        <code>
+          {{{field&value}}}
+        </code>
+      </td>
+      <td>
+        {{{description}}}
+      </td>
+    </tr>
   {{/oe.enum}}
 
 </table>
-
-{{/isEnum}}

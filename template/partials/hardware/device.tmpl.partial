@@ -1,0 +1,19 @@
+
+{{#portStatus}}
+  {{>partials/hardware/portStatus}}
+{{/portStatus}}
+
+{{#bno055}}
+  {{>partials/hardware/bno055}}
+{{/bno055}}
+
+{{{conceptual}}}
+
+{{#videoCaption}}
+  <figure>
+    <video width="100%" loop="true" controls="true">
+      <source src="~/images/{{{oe.path}}}.mp4" type="video/mp4"/>
+    </video>   
+    <figcaption>{{{videoCaption}}}</figcaption>
+  </figure>
+{{/videoCaption}}

@@ -60,7 +60,10 @@
       "markdigExtensions": [
         "attributes",
         "customcontainers"
-      ]
+      ],
+      "alerts": {
+        "TODO": "alert alert-secondary"
+      }
     },
     "xref": [
       "https://bonsai-rx.org/docs/xrefmap.yml",

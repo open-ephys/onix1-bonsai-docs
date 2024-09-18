@@ -22,7 +22,7 @@ div.tableFormat td {
 div.tableFormat td.term {
   /* !important tag prevents overrides from dotnet.css associated with:
    body[data-yaml-mime="ManagedReference"] article td.term, body[data-yaml-mime="ApiPage"] article td.term 
-   important tags not good practice*/
+   important tags are not good practice*/
   font-weight: var(--bs-body-font-weight) !important; 
   white-space: nowrap;
 }
@@ -52,6 +52,13 @@ div.tableFormat td.description {
   margin: 0;
   padding: 0;
 } */
+
+figcaption {
+  /* font-size: calc(var(--bs-body-font-size) * 0.9); */
+  font-style: italic;
+  border: solid 1px var(--bs-border-color); 
+  padding: 0.25rem;
+}
 
 h1 {
   font-weight: 500;

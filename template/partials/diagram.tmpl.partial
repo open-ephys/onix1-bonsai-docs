@@ -5,43 +5,43 @@
 <table style="border: 0px; table-layout: fixed; padding: 0; margin: 0; margin-bottom: 1rem;">
   <tr style="border: 0px;">
 
-    <!-- input -->
+  <!-- input -->
 
-    <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
-      <table style="table-layout: fixed; padding: 0; margin: 0; vertical-align: middle;">
-        <tr style="border: 0px;">
-          {{#input}}
-          <td style="border: 1px solid; vertical-align: middle; width: 80%; border-color: var(--bs-border-color);">
-            <div class="tableFormat">{{{input}}}</div>
-          </td>
-          <td style="text-align: right; vertical-align: middle; margin: 0; padding: 0; width: 20%; border: 0px;">
-            <img src="../images/right-arrow.svg" alt="right-arrow">
-          </td>
-          {{/input}}
-        </tr>
-      </table>
-    </td>
+  <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
+    <table style="table-layout: fixed; padding: 0; margin: 0; vertical-align: middle;">
+    <tr style="border: 0px;">
+      {{#input}}
+      <td style="border: 1px solid; vertical-align: middle; width: 80%; border-color: var(--bs-border-color);">
+      <div class="tableFormat">{{{input}}}</div>
+      </td>
+      <td style="text-align: right; vertical-align: middle; margin: 0; padding: 0; width: 20%; border: 0px;">
+      <img src="../images/right-arrow.svg" alt="right-arrow">
+      </td>
+      {{/input}}
+    </tr>
+    </table>
+  </td>
 
-    <!-- operator -->
+  <!-- operator -->
 
-    <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0; width: 10%;">
-      <img src="../images/{{type}}-operator.svg" alt="representation of a {{type}} operator">
-    </td>
+  <td style="border: 0px; text-align: center; vertical-align: middle; margin: 0; padding: 0; width: 10%;">
+    <img src="../images/{{type}}-operator.svg" alt="representation of a {{type}} operator">
+  </td>
 
-    <!-- output -->
+  <!-- output -->
 
-    <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
-      <table style="table-layout: fixed; padding: 0; margin: 0; vertical-align: middle;">
-        <tr style="border: 0px;">
-          <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 20%;">
-            <img src="../images/right-arrow.svg" alt="right-arrow">
-          </td>
-          <td style="border: 1px solid; vertical-align: middle; width: 80%; border-color: var(--bs-border-color);">
-            <div class="tableFormat">{{{output}}}</div>
-          </td>
-        </tr>
-      </table>
-    </td>
+  <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 45%;">
+    <table style="table-layout: fixed; padding: 0; margin: 0; vertical-align: middle;">
+    <tr style="border: 0px;">
+      <td style="border: 0px; vertical-align: middle; margin: 0; padding: 0; width: 20%;">
+      <img src="../images/right-arrow.svg" alt="right-arrow">
+      </td>
+      <td style="border: 1px solid; vertical-align: middle; width: 80%; border-color: var(--bs-border-color);">
+      <div class="tableFormat">{{{output}}}</div>
+      </td>
+    </tr>
+    </table>
+  </td>
   </tr>
 </table>
 

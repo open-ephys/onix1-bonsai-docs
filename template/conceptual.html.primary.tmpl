@@ -2,32 +2,15 @@
 
 <h1>{{{title}}}</h1>
 
+{{#hardware}}
+  {{#configuration}}
+    {{>partials/hardware/configuration}}
+  {{/configuration}}
+  {{#device}}
+    {{>partials/hardware/device}}
+  {{/device}}
+{{/hardware}}
 
-
-{{#hub}}
-
-{{#index}}
-{{>partials/hubs/index}}
-{{/index}}
-
-{{#configuration}}
-{{>partials/hubs/configuration}}
-{{/configuration}}
-
-{{#device}}
-{{>partials/hubs/device}}
-{{/device}}
-
-{{#loadData}}
-{{{conceptual}}}
-{{/loadData}}
-
-{{/hub}}
-
-
-
-{{^hub}}
-
-{{{conceptual}}}
-
-{{/hub}}
+{{^hardware}}
+  {{{conceptual}}}
+{{/hardware}}
