@@ -13,20 +13,24 @@
 - name: Hardware Guides
   href: hardware/index.md
   items:
-  - href: hardware/breakout/overview.md
+  - href: hardware/np1e/overview.md
     items: 
-    - name: Example Workflow
-      href: hardware/breakout/workflow.md
     - name: Configuration
-      href: hardware/breakout/configuration.md
-    - name: Digital Inputs
-      href: hardware/breakout/digital-inputs.md
-    - name: Digital Outputs
-      href: hardware/breakout/digital-outputs.md
-    - name: Analog IO
-      href: hardware/breakout/analog-io.md
-    - name: Heartbeat
-      href: hardware/breakout/heartbeat.md
-    - name: Memory Monitor
-      href: hardware/breakout/memory-monitor.md
-    - href: hardware/breakout/load-data.md
+      href: hardware/np1e/configuration.md
+    - name: Port Status
+      href: hardware/np1e/port-status.md
+    - name: Neuropixels 1.0
+      href: hardware/np1e/np1.md
+    - name: Bno055 & Commutation
+      href: hardware/np1e/bno055.md
+  - href: hardware/np2e/overview.md
+    items: 
+    - name: Configuration
+      href: hardware/np2e/configuration.md
+    - name: Port Status
+      href: hardware/np2e/port-status.md
+    - name: Neuropixels 2.0
+      href: hardware/np2e/np2.md
+    - name: Bno055 & Commutation
+      href: hardware/np2e/bno055.md
+    - href: hardware/np2e/gui.md 
