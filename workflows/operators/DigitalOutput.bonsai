@@ -6,7 +6,7 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutDigitalOutput" />
+        <Combinator xsi:type="onix1:DigitalOutput" />
       </Expression>
     </Nodes>
     <Edges />

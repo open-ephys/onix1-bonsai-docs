@@ -57,6 +57,20 @@
             <onix1:DeviceAddress>7</onix1:DeviceAddress>
             <onix1:Enable>true</onix1:Enable>
           </onix1:DigitalIO>
+          <onix1:ClockOutput>
+            <onix1:DeviceName>BreakoutBoard/OutputClock</onix1:DeviceName>
+            <onix1:DeviceAddress>5</onix1:DeviceAddress>
+            <onix1:ClockGate>false</onix1:ClockGate>
+            <onix1:Frequency>1000000</onix1:Frequency>
+            <onix1:DutyCycle>50</onix1:DutyCycle>
+            <onix1:Delay>0</onix1:Delay>
+          </onix1:ClockOutput>
+          <onix1:HarpInput>
+            <onix1:DeviceName>BreakoutBoard/HarpSyncInput</onix1:DeviceName>
+            <onix1:DeviceAddress>12</onix1:DeviceAddress>
+            <onix1:Enable>true</onix1:Enable>
+            <onix1:Source>Breakout</onix1:Source>
+          </onix1:HarpInput>
           <onix1:MemoryMonitor>
             <onix1:DeviceName>BreakoutBoard/MemoryMonitor</onix1:DeviceName>
             <onix1:DeviceAddress>10</onix1:DeviceAddress>
@@ -95,14 +109,10 @@
       </Expression>
       <Expression xsi:type="rx:Accumulate" />
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutDigitalOutput">
-          <onix1:DeviceName>BreakoutBoard/DigitalIO</onix1:DeviceName>
-        </Combinator>
+        <Combinator xsi:type="onix1:DigitalOutput" />
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutDigitalInput">
-          <onix1:DeviceName>BreakoutBoard/DigitalIO</onix1:DeviceName>
-        </Combinator>
+        <Combinator xsi:type="onix1:DigitalInput" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
         <io:FileName>digital-data_.csv</io:FileName>
@@ -118,8 +128,8 @@
         <Selector>DigitalInputs</Selector>
       </Expression>
       <Expression xsi:type="HasFlag">
-        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutDigitalPortState">
-          <Value />
+        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:DigitalPortState">
+          <Value>Pin1</Value>
         </Operand>
       </Expression>
       <Expression xsi:type="MemberSelector">
@@ -179,16 +189,14 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutAnalogOutput">
-          <onix1:DeviceName>BreakoutBoard/AnalogIO</onix1:DeviceName>
-          <onix1:DataType>Volts</onix1:DataType>
+        <Combinator xsi:type="onix1:AnalogOutput">
+          <onix1:DataType>S16</onix1:DataType>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutAnalogInput">
-          <onix1:DeviceName>BreakoutBoard/AnalogIO</onix1:DeviceName>
-          <onix1:BufferSize>50</onix1:BufferSize>
-          <onix1:DataType>Volts</onix1:DataType>
+        <Combinator xsi:type="onix1:AnalogInput">
+          <onix1:BufferSize>100</onix1:BufferSize>
+          <onix1:DataType>S16</onix1:DataType>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">

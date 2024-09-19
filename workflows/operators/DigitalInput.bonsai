@@ -6,7 +6,7 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutDigitalInput" />
+        <Combinator xsi:type="onix1:DigitalInput" />
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>DigitalInputs</Selector>

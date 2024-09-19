@@ -23,8 +23,8 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutAnalogOutput">
-          <onix1:DataType>Volts</onix1:DataType>
+        <Combinator xsi:type="onix1:AnalogOutput">
+          <onix1:DataType>S16</onix1:DataType>
         </Combinator>
       </Expression>
     </Nodes>

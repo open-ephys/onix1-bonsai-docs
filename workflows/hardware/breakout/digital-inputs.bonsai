@@ -7,12 +7,10 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutDigitalInput">
-          <onix1:DeviceName>BreakoutBoard/BreakoutDigitalIO</onix1:DeviceName>
-        </Combinator>
+        <Combinator xsi:type="onix1:DigitalInput" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>digital-input_.csv</io:FileName>
+        <io:FileName>digital-data_.csv</io:FileName>
         <io:Delimiter>;</io:Delimiter>
         <io:ListSeparator />
         <io:Append>false</io:Append>
@@ -25,8 +23,8 @@
         <Selector>DigitalInputs</Selector>
       </Expression>
       <Expression xsi:type="HasFlag">
-        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutDigitalPortState">
-          <Value />
+        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:DigitalPortState">
+          <Value>Pin1</Value>
         </Operand>
       </Expression>
       <Expression xsi:type="MemberSelector">
@@ -34,7 +32,7 @@
       </Expression>
       <Expression xsi:type="HasFlag">
         <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutButtonState">
-          <Value />
+          <Value>Triangle X</Value>
         </Operand>
       </Expression>
     </Nodes>

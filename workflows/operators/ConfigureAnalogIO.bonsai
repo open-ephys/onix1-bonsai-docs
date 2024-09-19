@@ -12,8 +12,7 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:ConfigureBreakoutAnalogIO">
-          <onix1:DeviceName>AnalogIO</onix1:DeviceName>
+        <Combinator xsi:type="onix1:ConfigureAnalogIO">
           <onix1:DeviceAddress>6</onix1:DeviceAddress>
           <onix1:Enable>true</onix1:Enable>
           <onix1:InputRange0>TenVolts</onix1:InputRange0>

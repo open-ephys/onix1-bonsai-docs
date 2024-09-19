@@ -6,7 +6,7 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:BreakoutAnalogInput">
+        <Combinator xsi:type="onix1:AnalogInput">
           <onix1:BufferSize>100</onix1:BufferSize>
           <onix1:DataType>S16</onix1:DataType>
         </Combinator>
