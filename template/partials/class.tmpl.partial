@@ -71,14 +71,19 @@
 {{/oe.operator.hub}}
 
 {{^oe.operator.hub}}
-  <table>
-    <tr>
-      <th style = "white-space: nowrap;">Property</th>
-      <th style = "white-space: nowrap;">Type</th> 
-      <th>Description</th>
-    </tr>
-    {{#oe.properties}}
-      {{>partials/propertyTables}}
-    {{/oe.properties}}
-  </table>
+
+<table>
+
+  <tr>
+    <th style="white-space: nowrap;">Property</th>
+    <th style="white-space: nowrap;">Type</th> 
+    <th>Description</th>
+  </tr>
+
+  {{#oe.properties}}
+  {{>partials/propertyTables}}
+  {{/oe.properties}}
+  
+</table>
+
 {{/oe.operator.hub}}
