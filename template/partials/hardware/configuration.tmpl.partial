@@ -1,5 +1,5 @@
 <p>
-  The following excerpt from the <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/{{{workflowLocation}}}.html">{{{hardware}}} example workflow</a> demonstrates how create an ONIX acquisition context using <a class="xref" href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, configures a breakout board using <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a>, and then starts acquisition using <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each of these operators. 
+  The following excerpt from the <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/{{{workflowLocation}}}.html">{{{hardware}}} example workflow</a> demonstrates how to create an ONIX acquisition context using <a class="xref" href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, configures a breakout board using <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a>, and then starts acquisition using <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each of these operators. 
 </p>
 
 <div class="workflow"> 

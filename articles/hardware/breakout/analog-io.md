@@ -12,7 +12,7 @@ The following excerpt from the [Breakout Board example workflow](xref:breakout) 
 ![/workflows/hardware/breakout/analog-io.bonsai workflow](../../../workflows/hardware/breakout/analog-io.bonsai)
 :::
 
-## Analog outputs
+## Analog Outputs
 
 :::workflow
 ![/workflows/hardware/breakout/analog-outputs.bonsai workflow](../../../workflows/hardware/breakout/analog-outputs.bonsai)
@@ -33,7 +33,7 @@ Examine `RampGenerator`'s internals by pressing <kbd>Ctrl</kbd> + <kbd>Enter</kb
 ![/workflows/hardware/breakout/ramp-generator.bonsai workflow](../../../workflows/hardware/breakout/ramp-generator.bonsai)
 :::
 
-## Analog inputs
+## Analog Inputs
 
 Analog input data can be produced from an analog IO channel that is configured as an output. Because analog inputs and analog outputs share pins on the breakout board, this enables loopback recordings of signals from the analog output port through the analog input port. The Breakout Board example workflow does exactly this on analog IO channel 0.
 
