@@ -12,7 +12,7 @@ param
 # this is called removeartifacts instead of clean because clean might be already mean something in powershell?
 function removeartifacts
 {
-    $deletePaths = ".\workflows\**\*.svg", ".\api\*.yml", ".\api\.manifest", ".\_site\", ".\_raw\", ".\_view\"
+    $deletePaths = ".\workflows\**\*.svg", ".\workflows\**\*.bonsai.layout", ".\api\*.yml", ".\api\.manifest", ".\_site\", ".\_raw\", ".\_view\"
     foreach($deletePath in $deletePaths){if (Test-Path $deletePath){Remove-Item $deletePath -Recurse}}
     Write-Output ""
 }
