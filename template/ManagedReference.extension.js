@@ -12,7 +12,7 @@ function extractEnumData(model) {
     .filter(child => child.type === 'field')
     .map(child => ({
       'field&value': child.syntax.content[0].value,
-      'enumDescription': [child.summary, child.remarks].join(''),
+      'description': [child.summary, child.remarks].join(''),
     }));
 }
 
