@@ -5,7 +5,7 @@ hardware: true
 device: memory monitor
 ---
 
-The following excerpt from the [Breakout Board example workflow](xref:breakout_workflow) demonstrates memory monitor functionality and saves memory monitor data.
+The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow) demonstrates memory monitor functionality and saves memory monitor data.
 
 ::: workflow
 ![/workflows/hardware/breakout/memory-monitor.bonsai workflow](../../../workflows/hardware/breakout/memory-monitor.bonsai)

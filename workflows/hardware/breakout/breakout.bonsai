@@ -60,7 +60,7 @@
           <onix1:ClockOutput>
             <onix1:DeviceName>BreakoutBoard/OutputClock</onix1:DeviceName>
             <onix1:DeviceAddress>5</onix1:DeviceAddress>
-            <onix1:ClockGate>false</onix1:ClockGate>
+            <onix1:ClockGate>true</onix1:ClockGate>
             <onix1:Frequency>1000000</onix1:Frequency>
             <onix1:DutyCycle>50</onix1:DutyCycle>
             <onix1:Delay>0</onix1:Delay>
@@ -94,51 +94,45 @@
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>Timestamp</io:Suffix>
         <io:IncludeHeader>false</io:IncludeHeader>
-        <io:Selector>Timestamp,Value.AcquisitionClockHz,Value.BlockReadSize,Value.BlockWriteSize</io:Selector>
+        <io:Selector>Timestamp,Value</io:Selector>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Timer">
-          <rx:DueTime>PT0S</rx:DueTime>
-          <rx:Period>PT0.1S</rx:Period>
+        <Combinator xsi:type="onix1:AnalogInput">
+          <onix1:DeviceName>BreakoutBoard/AnalogIO</onix1:DeviceName>
+          <onix1:BufferSize>100</onix1:BufferSize>
+          <onix1:DataType>Volts</onix1:DataType>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Clock</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dsp:MatrixWriter">
+          <dsp:Path>analog-clock_.raw</dsp:Path>
+          <dsp:Suffix>Timestamp</dsp:Suffix>
+          <dsp:Overwrite>false</dsp:Overwrite>
+          <dsp:Layout>ColumnMajor</dsp:Layout>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>AnalogData</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dsp:MatrixWriter">
+          <dsp:Path>analog-data_.raw</dsp:Path>
+          <dsp:Suffix>Timestamp</dsp:Suffix>
+          <dsp:Overwrite>false</dsp:Overwrite>
+          <dsp:Layout>ColumnMajor</dsp:Layout>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="IntProperty">
-          <Value>1</Value>
+        <Combinator xsi:type="dsp:Butterworth">
+          <dsp:SampleRate>100000</dsp:SampleRate>
+          <dsp:Cutoff1>1000</dsp:Cutoff1>
+          <dsp:Cutoff2>0</dsp:Cutoff2>
+          <dsp:FilterOrder>3</dsp:FilterOrder>
+          <dsp:FilterType>LowPass</dsp:FilterType>
         </Combinator>
-      </Expression>
-      <Expression xsi:type="rx:Accumulate" />
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:DigitalOutput" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:DigitalInput" />
-      </Expression>
-      <Expression xsi:type="io:CsvWriter">
-        <io:FileName>digital-data_.csv</io:FileName>
-        <io:Delimiter>;</io:Delimiter>
-        <io:ListSeparator />
-        <io:Append>false</io:Append>
-        <io:Overwrite>false</io:Overwrite>
-        <io:Suffix>Timestamp</io:Suffix>
-        <io:IncludeHeader>false</io:IncludeHeader>
-        <io:Selector>Clock,DigitalInputs,Buttons</io:Selector>
-      </Expression>
-      <Expression xsi:type="MemberSelector">
-        <Selector>DigitalInputs</Selector>
-      </Expression>
-      <Expression xsi:type="HasFlag">
-        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:DigitalPortState">
-          <Value>Pin1</Value>
-        </Operand>
-      </Expression>
-      <Expression xsi:type="MemberSelector">
-        <Selector>Buttons</Selector>
-      </Expression>
-      <Expression xsi:type="HasFlag">
-        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutButtonState">
-          <Value>Triangle X</Value>
-        </Operand>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Ramp Generator</Name>
@@ -190,36 +184,80 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="onix1:AnalogOutput">
-          <onix1:DataType>S16</onix1:DataType>
+          <onix1:DeviceName>BreakoutBoard/AnalogIO</onix1:DeviceName>
+          <onix1:DataType>Volts</onix1:DataType>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:AnalogInput">
-          <onix1:BufferSize>100</onix1:BufferSize>
-          <onix1:DataType>S16</onix1:DataType>
+        <Combinator xsi:type="onix1:DigitalInput">
+          <onix1:DeviceName>BreakoutBoard/DigitalIO</onix1:DeviceName>
         </Combinator>
+      </Expression>
+      <Expression xsi:type="io:CsvWriter">
+        <io:FileName>digital-data_.csv</io:FileName>
+        <io:Append>false</io:Append>
+        <io:Overwrite>false</io:Overwrite>
+        <io:Suffix>Timestamp</io:Suffix>
+        <io:IncludeHeader>false</io:IncludeHeader>
+        <io:Selector>Clock,DigitalInputs,Buttons</io:Selector>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>Clock</Selector>
+        <Selector>Buttons</Selector>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:MatrixWriter">
-          <dsp:Path>analog-clock_.raw</dsp:Path>
-          <dsp:Suffix>Timestamp</dsp:Suffix>
-          <dsp:Overwrite>false</dsp:Overwrite>
-          <dsp:Layout>ColumnMajor</dsp:Layout>
-        </Combinator>
+      <Expression xsi:type="HasFlag">
+        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:BreakoutButtonState">
+          <Value>Moon Square</Value>
+        </Operand>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>AnalogData</Selector>
+        <Selector>DigitalInputs</Selector>
+      </Expression>
+      <Expression xsi:type="HasFlag">
+        <Operand xsi:type="WorkflowProperty" TypeArguments="onix1:DigitalPortState">
+          <Value>Pin0</Value>
+        </Operand>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:MatrixWriter">
-          <dsp:Path>analog-data_.raw</dsp:Path>
-          <dsp:Suffix>Timestamp</dsp:Suffix>
-          <dsp:Overwrite>false</dsp:Overwrite>
-          <dsp:Layout>ColumnMajor</dsp:Layout>
+        <Combinator xsi:type="rx:Timer">
+          <rx:DueTime>PT0S</rx:DueTime>
+          <rx:Period>PT0.1S</rx:Period>
         </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>1</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="rx:Accumulate" />
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix1:DigitalOutput">
+          <onix1:DeviceName>BreakoutBoard/DigitalIO</onix1:DeviceName>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix1:HarpSyncInputData">
+          <onix1:DeviceName>BreakoutBoard/HarpSyncInput</onix1:DeviceName>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="io:CsvWriter">
+        <io:FileName>harp-sync_.csv</io:FileName>
+        <io:Append>false</io:Append>
+        <io:Overwrite>false</io:Overwrite>
+        <io:Suffix>Timestamp</io:Suffix>
+        <io:IncludeHeader>false</io:IncludeHeader>
+        <io:Selector>Clock,HarpTime</io:Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="onix1:OutputClockData">
+          <onix1:DeviceName>BreakoutBoard/OutputClock</onix1:DeviceName>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="io:CsvWriter">
+        <io:FileName>output-clock_.csv</io:FileName>
+        <io:Append>false</io:Append>
+        <io:Overwrite>false</io:Overwrite>
+        <io:Suffix>Timestamp</io:Suffix>
+        <io:IncludeHeader>false</io:IncludeHeader>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="onix1:MemoryMonitorData">
@@ -252,21 +290,24 @@
       <Edge From="1" To="3" Label="Source1" />
       <Edge From="3" To="4" Label="Source1" />
       <Edge From="5" To="6" Label="Source1" />
+      <Edge From="5" To="8" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
-      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
-      <Edge From="10" To="11" Label="Source1" />
-      <Edge From="10" To="13" Label="Source1" />
       <Edge From="11" To="12" Label="Source1" />
       <Edge From="13" To="14" Label="Source1" />
+      <Edge From="14" To="15" Label="Source1" />
+      <Edge From="14" To="17" Label="Source1" />
       <Edge From="15" To="16" Label="Source1" />
       <Edge From="17" To="18" Label="Source1" />
-      <Edge From="17" To="20" Label="Source1" />
-      <Edge From="18" To="19" Label="Source1" />
+      <Edge From="19" To="20" Label="Source1" />
       <Edge From="20" To="21" Label="Source1" />
-      <Edge From="22" To="23" Label="Source1" />
+      <Edge From="21" To="22" Label="Source1" />
       <Edge From="23" To="24" Label="Source1" />
       <Edge From="25" To="26" Label="Source1" />
+      <Edge From="27" To="28" Label="Source1" />
+      <Edge From="28" To="29" Label="Source1" />
+      <Edge From="30" To="31" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

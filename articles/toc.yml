@@ -19,12 +19,16 @@
       href: hardware/breakout/workflow.md
     - name: Configuration
       href: hardware/breakout/configuration.md
+    - name: Analog IO
+      href: hardware/breakout/analog-io.md
     - name: Digital Inputs
       href: hardware/breakout/digital-inputs.md
     - name: Digital Outputs
       href: hardware/breakout/digital-outputs.md
-    - name: Analog IO
-      href: hardware/breakout/analog-io.md
+    - name: Clock Output
+      href: hardware/breakout/clock-output.md
+    - name: HARP Sync
+      href: hardware/breakout/harp-sync.md
     - name: Heartbeat
       href: hardware/breakout/heartbeat.md
     - name: Memory Monitor

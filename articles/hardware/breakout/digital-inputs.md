@@ -6,7 +6,7 @@ device: digital inputs
 videoCaption: This visualizes digital input data using Bonsai visualizers. The "Buttons" window shows which buttons are being pressed. The "HasFlags" window shows whether or not certain button are being pressed (in the case of the breakout board example workflow, "Triangle" or "X"). These visualizers correspond to actual button presses which are demonstrated by the bottom-right breakout board inset.
 ---
 
-The following excerpt from the [Breakout Board example workflow](xref:breakout_workflow) demonstrates digital inputs functionality by responding to button presses and saves digital inputs data.
+The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow) demonstrates digital inputs functionality by responding to button presses and saves digital inputs data.
 
 ::: workflow
 ![/workflows/hardware/breakout/digital-inputs.bonsai workflow](../../../workflows/hardware/breakout/digital-inputs.bonsai)
