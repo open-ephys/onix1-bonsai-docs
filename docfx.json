@@ -68,7 +68,8 @@
     "markdownEngineProperties": {
       "markdigExtensions": [
         "attributes",
-        "customcontainers"
+        "customcontainers",
+        "footnotes"
       ]
     },
     "xref": [
