@@ -110,7 +110,7 @@ This is summary of docfx-utils.ps1 list members. They are described above, but t
 > [!NOTE]  
 > The docfx-utils.ps1 script (.ps1 PowerShell scripts in general) must be run in PowerShell.
 
-These commands do not serve the docs. Serve them by running `dotnet docfx --serve`.
+These commands do not serve the docs. Serve them by running `dotnet docfx serve _site`. Note that this will not work if the documentation website has not been previously built. If the SVGs have been created, but the `_site` folder is empty and the only option that needs to be run is building the documentation pages, run `dotnet docfx --serve` to build the pages and automatically serve them.
 
 ## `dotnet docfx`
 
