@@ -26,7 +26,7 @@ jobs:
 
       # Check for missing / broken links in the *.md files prior to building the website
       - name: Check Documentation Links
-        run: dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config
+        run: .\docfx-utils.ps1 -d
 
       - name: Setup DocFX
         run: dotnet tool restore
@@ -36,7 +36,7 @@ jobs:
         run: .\Setup.ps1
 
       - name: Build Documentation
-        run: .\build.ps1 --logLevel Warning --warningsAsErrors
+        run: .\docfx-utils.ps1 -b
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
