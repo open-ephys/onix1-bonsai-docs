@@ -12,9 +12,9 @@ videoCaption: This visualizes analog IO data using Bonsai visualizers. The "Anal
     channel 0 is outputting the sawtooth waveform.
 ---
 
-The following excerpt from the Breakout Board [example workflow](xref:breakout) demonstrates analog
+The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow) demonstrates analog
 IO functionality by computing a ~1Hz sawtooth pattern, outputting it to the analog IO port, and
-reading it back from the analog IO port. It also saves analog inputs data.
+reading it back from the analog IO port. It also saves analog input data.
 
 ::: workflow
 ![/workflows/hardware/breakout/analog-io.bonsai workflow](../../../workflows/hardware/breakout/analog-io.bonsai)
@@ -43,21 +43,21 @@ this is the only channel that will be affected. If other channels are configured
 <xref:breakout_configuration>), they will also ramp their voltage. The `RampGenerator` is a
 [GroupWorkflow](https://bonsai-rx.org/docs/articles/editor.html#workflow) that contains multiple
 Bonsai operators. Examine `RampGenerator`'s internals by pressing <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
-when its node is selected:
+when the node is selected:
 
 :::workflow
 ![/workflows/hardware/breakout/ramp-generator.bonsai workflow](../../../workflows/hardware/breakout/ramp-generator.bonsai)
 :::
 
 > [!Tip]
-> To understand how the <code>RampGenerator</code> works, double click each nodes in the workflow
-> while its running to visualize how data is transformed as it flows through each operator.
+> To understand how the <code>RampGenerator</code> works, double click each node in the workflow
+> while it's running to visualize how data is transformed as it flows through each operator.
 
 ## Analog Inputs
 Analog input data is recorded from all analog IO channels, regardless of each channels'
 <code>AnalogIO</code> setting. Because analog inputs and outputs share pins on the breakout board,
 this enables a loopback of signals from the analog output through the analog input so that a copy of
-the output signal being sent to external hardwawre can be saved automatically. The example workflow
+the output signal being sent to external hardware can be saved automatically. The example workflow
 does exactly this on analog IO channel 0.
 
 :::workflow

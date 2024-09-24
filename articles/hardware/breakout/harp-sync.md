@@ -6,7 +6,7 @@ device: harp sync
 ---
 
 The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow)
-demonstrates the Harp sync functionality configuring a saving data from the Harp input port on the
+demonstrates the Harp sync functionality by configuring and saving data from the Harp input port on the
 Breakout Board.
 
 ::: workflow
