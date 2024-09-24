@@ -18,4 +18,4 @@ in the top right. This workflow:
 :::
 
 > [!TIP]
-> Visit the <xref:GettingStarted> pages if you are unfamiliar with Bonsai.
+> Visit the <xref:getting-started> pages if you are unfamiliar with Bonsai.
