@@ -81,7 +81,7 @@ dotnet DocLinkChecker -v -f .github/workflows/DocLinkChecker.config
 
 If the above command fails because "you must install or update .NET", follow the URL from the failed command's output or [this one](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64) to download and install .NET runtime 6. Dotnet supports simultaneous installation of several .NET runtime versions, and version 6 is required to run the DocLinkChecker.
 
-The above set of commands can also be run using the `docfx-util.ps1` Powershell script. Specifically, run `./docfx-util.ps1 -d` in the repo's root directory. 
+The above set of commands can also be run using the `docfx-utils.ps1` Powershell script. Specifically, run `./docfx-utils.ps1 -d` in the repo's root directory to run DocLinkChecker, and run `./docfx-utils.ps1 -b` to build the site. 
 
 To run the next command, install [Lychee](https://github.com/lycheeverse/lychee?tab=readme-ov-file) by following [these instructions](https://github.com/lycheeverse/lychee?tab=readme-ov-file#installation). If you are use Windows and download a Lychee executable, amend the below command according to the location and version of your Lychee executable, and run it.
 
@@ -91,9 +91,9 @@ To run the next command, install [Lychee](https://github.com/lycheeverse/lychee?
 
 If you use a different operating systems and a different methods of installation, the above command might require additional amendments. 
 
-The above command can also be run using the `docfx-util.ps1` Powershell script. Specifically, run `./docfx-util.ps1 -l <path/to/lychee.exe>` in the repo's root directory. 
+The above command can also be run using the `docfx-utils.ps1` Powershell script. Specifically, run `./docfx-utils.ps1 -l <path/to/lychee.exe>` in the repo's root directory. 
 
-All three link-checking commands can be run with the following command: `./docfx-util.ps1 -a` in the repo's root directory. This command additionally cleans remaining artifacts from past builds before performing all the link-checking commands. This is the most robust and expedient way to confirm that the repo will pass the link checks when pushed. 
+All three link-checking commands can be run with the following command: `./docfx-utils.ps1 -a` in the repo's root directory. This command additionally cleans remaining artifacts from past builds before performing all the link-checking commands. This is the most robust and expedient way to confirm that the repo will pass the link checks when pushed. 
 
 ### docfx-utils.ps1
 
@@ -101,7 +101,8 @@ This is summary of docfx-utils.ps1 list members. They are described above, but t
 
 - `docfx-utils.ps1 -c` cleans cached files/removes artifacts from previous builds.
 - `docfx-utils.ps1 -b` exports SVGs and builds the docs.
-- `docfx-utils.ps1 -l <path/to/lychee.exe>` checks for broken/missing links and references.
+- `docfx-utils.ps1 -d` check the markdown files for broken references using DocLinkChecker.
+- `docfx-utils.ps1 -l <path/to/lychee.exe>` checks for broken/missing links and references using lychee.
 - `docfx-utils.ps1 -a <path/to/lychee.exe>` performs all of the above steps.
 
 `docfx-utils.ps1 -l` and `docfx-utils.ps1 -a` will not run without a path to a lychee executable.   
@@ -109,7 +110,7 @@ This is summary of docfx-utils.ps1 list members. They are described above, but t
 > [!NOTE]  
 > The docfx-utils.ps1 script (.ps1 PowerShell scripts in general) must be run in PowerShell.
 
-These commands do not serve the docs. Serve them by running `dotnet docfx serve`.
+These commands do not serve the docs. Serve them by running `dotnet docfx serve _site`. Note that this will not work if the documentation website has not been previously built. If the SVGs have been created, but the `_site` folder is empty and the only option that needs to be run is building the documentation pages, run `dotnet docfx --serve` to build the pages and automatically serve them.
 
 ## `dotnet docfx`
 
@@ -172,7 +173,7 @@ If local html pages don't appear to be updating, hard refresh website pages in b
 If there are discrepancies between local and remote builds:
 
 * Confirm local and remote docfx versions are consistent. This inconsistency can occur when, for example, running `docfx` instead of `dotnet docfx` or running `dotnet tool restore --configfile <configfile>` on another config file other than the one in this repo.
-* Clear any locally cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory. Run `./docfx-util.ps1 -c` to clean artifacts from previous builds. 
+* Clear any locally cached files that aren't available remotely. Such files exist in the `api` directory (though care to not delete the `.gitignore` in that directory), the `_site` directory, and the workflows directory. Run `./docfx-utils.ps1 -c` to clean artifacts from previous builds. 
 
 ## Docs Maintainability
 
@@ -180,7 +181,7 @@ If there are discrepancies between local and remote builds:
 
 There are webpages with edited screenshots of Bonsai. The source material (.xcf GIMP files) belongs in the img-src directory for ease of maintenance. The headers below describe how you can quickly create a new screenshot.
 
-To take the screenshot (in Windows), use the `Windows+Shift+S` hotkey, select the `Window` option, and select the window you would like to screenshot. Cris's preference is to take a screenshot against a grey background (e.g. Cris creates a (R: 127, G: 127, B: 127) background in GIMP) because some of the background makes it into the screenshot.
+To take the screenshot (in Windows), use the `Windows+Shift+S` hotkey, select the `Window` option, and select the window you would like to screenshot. The preference is to take a screenshot against a grey background (e.g. create a (R: 127, G: 127, B: 127) background in GIMP) because some of the background makes it into the screenshot.
 
 #### Bonsai Package Manager Screenshot Edits
 
