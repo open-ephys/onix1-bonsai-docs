@@ -1,5 +1,5 @@
 ---
-uid: InitializeOniContext
+uid: initialize-onicontext
 title: Initialize the ONI Context
 ---
 

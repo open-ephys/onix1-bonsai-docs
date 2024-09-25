@@ -1,5 +1,5 @@
 ---
-uid: TipsAndTricks
+uid: tips-and-tricks
 title: Tips and Tricks
 ---
 
@@ -7,7 +7,7 @@ title: Tips and Tricks
 
 When running a workflow in Bonsai, operators are evaluated from left to right, and top to bottom. In a workflow, each node represents an operator defining an sequence of values. Nodes can be connected to other nodes, from left to right. Each connection indicates that the downstream operator on the right subscribes, or "listens", to the notifications of the upstream operator on the left. The table below provides some useful information to effectively use the workflow editor. It provides information on how to add connections between operators, remove connections, reordering operators horizontally and vertically, as well as some shortcuts to aid in placing operators more efficiently.
 
-Aside from determining the order of exceution, the order of operators within a workflow determines which editing actions can be taken. In the table below, the "first" operator is always the one that is on the left side, or on the bottom for multiple rows of operators. If the first operator clicked is on the right side, or on the top, these actions will not work.
+Aside from determining the order of execution, the order of operators within a workflow determines which editing actions can be taken. In the table below, the "first" operator is always the one that is on the left side, or on the bottom for multiple rows of operators. If the first operator clicked is on the right side, or on the top, these actions will not work.
 
 | Goal | Clicks / Keystrokes | Description |
 | ---- | ------------------- | ----------- |

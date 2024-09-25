@@ -3,9 +3,11 @@
 {{!master(layout/_master.tmpl)}}
 
 {{#isClass}}
-{{>partials/class}}
+  {{^inStruct}}
+    {{>partials/class}}
+  {{/inStruct}}
 {{/isClass}}
 
 {{#isEnum}}
-{{>partials/enum}}
+  {{>partials/enum}}
 {{/isEnum}}
