@@ -1,6 +1,7 @@
 ---
 uid: index
 title: OpenEphys.Onix1
+_disableBreadcrumb: true
 ---
 
 `OpenEphys.Onix1` is a [Bonsai](https://bonsai-rx.org/) library that can be used to control the [ONIX PCIe Acquisition System](https://open-ephys.org/onix/oeps-9006), which provides:
@@ -16,27 +17,25 @@ title: OpenEphys.Onix1
 <br>
 <div class="quick-links">
 
-| <xref:getting-started> | <xref:OpenEphys.Onix1> | <xref:tutorials> |
-|:--------------:|:-------------------:|:---------:|
-| [![User Guide](images/macbook.svg){width=200}](xref:getting-started) | [![Operator Guide](images/books.svg){width=200}](xref:OpenEphys.Onix1) | [![Tutorials](images/running.svg){width=200}](xref:tutorials) |
-| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:getting-started) | [Operator references here](xref:OpenEphys.Onix1) | [Check out our tutorials <br>for useful workflows](xref:tutorials) |
+| <xref:getting-started> | [Operator Reference](xref:OpenEphys.Onix1) | <xref:tutorials> | [Hardware Guide](https://open-ephys.github.io/onix-docs/) |
+|:----:|:----:|:----:|:----:|
+| [![User Guide](images/running.svg){width=150}](xref:getting-started) | [![Operator Reference](images/books.svg){width=150}](xref:OpenEphys.Onix1) | [![Tutorials](images/beaker.svg){width=150}](xref:tutorials) |[![Tutorials](images/screwdriver.svg){width=150}](https://open-ephys.github.io/onix-docs/)|
 
 </div>
 <br>
 
 ### Why Bonsai?
 
-ONIX is built on [standard](https://open-ephys.github.io/ONI/) that is software
+ONIX is built on the [ONI standard](https://open-ephys.github.io/ONI/), which is software
 agnostic. Bonsai is the first software target pursued by the Open Ephys team for
 ONIX hardware. There are three major reasons for this:
 
-1. **Performance.** ONIX is a universal interface for neural recording instruments. It
-can
+1. **Performance.** ONIX is a universal interface for neural recording instruments. It can
    capture data produced by neural probes, cameras, high-speed ADCs, etc. In
    general terms, ONIX can capture data from arbitrary mixtures of
    asynchronous[^1] data sources. Bonsai provides an extremely powerful,
    open-source software platform for elegantly collecting, combining, and
-   processing data from essentially any data source regardless of its  sample
+   processing data from essentially any data source regardless of its sample
    rate, sample regularity, packet size, and bandwidth. Bonsai accomplishes this
    task in a fundamental manner: it explicitly models each data source as an
    ordered temporal sequence with a start and end called an
@@ -49,8 +48,8 @@ can
    to operate on these arrays, Bonsai offers an analogous
    [toolkit](https://reactivex.io/documentation/operators.html)
    for operating on temporal sequences of data. Because Bonsai was created around this core
-   data model and operator library, capturing, processing and combining data
-   sequences from different hardware sources is natural in Bonsai, whereas it is
+   data model and operator library, it makes capturing, processing, and combining data
+   sequences from different hardware sources natural in Bonsai, whereas it is
    bug prone and difficult in other software options.
 1. **Code quality.** Open Ephys has been developing open source hardware and
    software for the Neuroscience community for over a decade. In terms of code
@@ -79,7 +78,7 @@ can
 > making these docs useful for everyone. If you have suggestions for making
 > them even better, please contribute by either [raising an
 > issue](https://github.com/bonsai-rx/docs/issues) or following the links saying
-> **Edit this page**. We welcome suggestions or criticisms. As always, our goals
+> **Edit this page**. We welcome all constructive feedback. As always, our goals
 > are better performing tools, less redundant development, and more reproducible
 > science.
 >
