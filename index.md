@@ -16,9 +16,11 @@ title: OpenEphys.Onix1
 <br>
 <div class="quick-links">
 
-| <xref:GettingStarted> | [Operator Reference](xref:OpenEphys.Onix1) | <xref:TutorialsLandingPage> | [Hardware Guide](https://open-ephys.github.io/onix-docs/) |
-|:-:|:-:|:-:|:-:|
-| [![User Guide](images/running.svg){width=150}](xref:GettingStarted) | [![Operator Guide](images/books.svg){width=150}](xref:OpenEphys.Onix1) | [![Tutorials](images/beaker.svg){width=150}](xref:TutorialsLandingPage) |[![Tutorials](images/screwdriver.svg){width=150}](xref:TutorialsLandingPage)|
+| <xref:getting-started> | <xref:OpenEphys.Onix1> | <xref:tutorials> |
+|:--------------:|:-------------------:|:---------:|
+| [![User Guide](images/macbook.svg){width=200}](xref:getting-started) | [![Operator Guide](images/books.svg){width=200}](xref:OpenEphys.Onix1) | [![Tutorials](images/running.svg){width=200}](xref:tutorials) |
+| [New to Bonsai or <br>OpenEphys.Onix? Start here!](xref:getting-started) | [Operator references here](xref:OpenEphys.Onix1) | [Check out our tutorials <br>for useful workflows](xref:tutorials) |
+
 </div>
 <br>
 

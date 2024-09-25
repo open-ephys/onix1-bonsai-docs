@@ -1,5 +1,5 @@
 ---
-uid: BonsaiUsage
+uid: bonsai-usage
 title: Bonsai Usage
 ---
 
