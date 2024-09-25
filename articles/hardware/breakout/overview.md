@@ -3,9 +3,9 @@ uid: breakout
 title: Breakout Board
 ---
 
-The breakout board is a main access point to the ONIX system. It acts as a central interface for
-headstages, miniscopes, and auxiliary IO to communicate with the computer. The Breakout Board
-provides the following features:
+The breakout board acts as the central interface for headstages, miniscopes, and
+auxiliary IO to communicate with the computer. It provides the following
+features:
 
 1. Headstage IO: 2x high-bandwidth, general-purpose headstage communication ports
 1. [Digital Input](xref:breakout_digital-inputs): 8 bits GPI and button state, 5V tolerant, 4 MHz/channel.
@@ -27,7 +27,11 @@ provides the following features:
 
 ![Image of Breakout Board schematic with call outs](../../../images/breakout-edited-callouts.png)
 
-The following pages in the Breakout Board Guide provide an example workflow, a breakdown of its components, and a Python script for loading data.
+The following pages in the Breakout Board Guide provide an example workflow, a
+breakdown of its components, and a Python script for loading data.
 
 > [!TIP]
-> Visit the [Breakout Board Hardware Guide](https://open-ephys.github.io/onix-docs/Hardware%20Guide/Breakout%20Board/index.html) to learn more about the hardware such as the LED indicators and various connectors.
+> Visit the [Breakout Board Hardware
+> Guide](https://open-ephys.github.io/onix-docs/Hardware%20Guide/Breakout%20Board/index.html)
+> to learn more about the hardware such as the LED indicators and various
+> connectors.

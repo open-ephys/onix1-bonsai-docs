@@ -12,7 +12,7 @@ videoCaption: This visualizes digital output data using Bonsai visualizers. The 
     each LED indicates the status of the corresponding digital output pin.
 ---
 
-The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow)
+The following excerpt from the breakout board [example workflow](xref:breakout_workflow)
 demonstrates digital outputs functionality by computing a ~10Hz binary digital counter and
 outputting that counter to the digital output port.
 
