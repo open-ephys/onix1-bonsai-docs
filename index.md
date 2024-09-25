@@ -52,7 +52,7 @@ can
    bug prone and difficult in other software options.
 1. **Code quality.** Open Ephys has been developing open source hardware and
    software for the Neuroscience community for over a decade. In terms of code
-   quality, Bonsai is a clear outlier. It uses a modern language and build system,
+   quality, Bonsai is excellent. Bonsai uses a modern language and build system,
    has integrated package management, and an extremely clean, featureful, and well
    maintained API. Given that Bonsai's development model perfectly aligns with our
    values, we are very proud to be able to contribute to its growth in the
