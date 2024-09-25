@@ -28,4 +28,4 @@ The example workflow below can by copy/pasted into the Bonsai editor using the c
 The following pages in the Neuropixels V1e Headstage Guide provide a breakdown of the above example workflow<!-- and a Python script for loading data-->.
 
 > [!TIP]
-> Visit the <xref:GettingStarted> pages if you are unfamiliar with Bonsai.
+> Visit the <xref:getting-started> pages if you are unfamiliar with Bonsai.

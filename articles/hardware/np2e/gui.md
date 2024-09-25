@@ -19,7 +19,7 @@ For `NeuropixelsV2eHeadstage`, the GUI allows for an easy way to change settings
     - Change the [reference](xref:OpenEphys.Onix1.NeuropixelsV2QuadShankReference) for all electrodes
     - Choose pre-defined channel presets or manually define within a constrained set of possible combinations
     - Easily visualize which electrodes are enabled
-- Enable and disable the <xref:OpenEphys.Onix1.NeuropixelsV2eBno055Data> stream
+- Enable and disable the [Bno055]<xref:OpenEphys.Onix1.PolledBno055Data> stream
 
 There are two ways to access configuration dialogs; 1) at the individual `NeuropixelsV2eProbeConfiguration` level where either `Probe A` or `Probe B` can be modified by itself, and 2) at the headstage level where both probes can be modified, as well as the `NeuropixelsV2eBno055` device.
 
@@ -195,6 +195,6 @@ Using the headstage configuration GUI is exactly the same as using the [probe co
 
 ### Configure Bno055
 
-At the headstage level, there is another device tab listed for a [Bno055](xref:OpenEphys.Onix1.NeuropixelsV2eBno055Data). From this tab, the device can be enabled or disabled by selecting the appropriate value from the drop-down menu next to `Enable`. While the `DeviceAddress` and `DeviceName` values are modifiable here, they have no affect on the underlying device configuration; only changes to the `Enable` property will be respected.
+At the headstage level, there is another device tab listed for a [Bno055](xref:OpenEphys.Onix1.PolledBno055Data). From this tab, the device can be enabled or disabled by selecting the appropriate value from the drop-down menu next to `Enable`. While the `DeviceAddress` and `DeviceName` values are modifiable here, they have no affect on the underlying device configuration; only changes to the `Enable` property will be respected.
 
 ![Headstage Configuration GUI with Bno055](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-bno055.png){width=700px}

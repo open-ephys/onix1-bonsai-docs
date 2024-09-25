@@ -30,4 +30,4 @@ The following pages in the Neuropixels V2e Headstage Guide provide a breakdown o
 > The Neuropixels V2e Beta Headstage example workflow (<a href="~/workflows/hardware/np2ebeta.bonsai" download>download</a>) is nearly identical to the Neuropixels V2e Headstage example workflow. Follow the pages in the Neuropixels V2e Headstage Guide to learn how it works.
 
 > [!TIP]
-> Visit the <xref:GettingStarted> pages if you are unfamiliar with using Onix hardware in Bonsai.
+> Visit the <xref:getting-started> pages if you are unfamiliar with using Onix hardware in Bonsai.
