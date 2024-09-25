@@ -3,6 +3,13 @@ uid: getting-started
 title: Getting Started
 ---
 
-Welcome to the user guide! The next few pages will teach you what ONIX is, how to download and install Bonsai, open a new file, place operators (and understand what an operator is), reorder a workflow, run a workflow, and visualize data.
+Welcome to the user guide! The next few pages are dedicated to users who are unfamiliar with ONIX
+and Bonsai, and will teach them what ONIX is, how to download and install Bonsai, open a new file,
+place operators (and understand what an operator is), reorder a workflow, run a workflow, and
+finally visualize data.
 
-Those who are already familiar with Bonsai and are looking for how to acquire data from particular Onix hardware, visit the <xref:hardware> page. These guides contain functional workflow that can be copy/pasted directly into Bonsai to aid in quickly setting up and collecting data from a system as well as explanations for those workflows and scripts for loading data.
+For those who are already familiar with Bonsai and are looking for a particular device or headstage
+to learn more about the hardware and how to utilize it, the table of contents on the left contains
+entries for each available device and headstage. Choose a page to learn more about the hardware and
+view a fully complete workflow that can be copied directly into Bonsai to aid in quickly setting up
+and collecting data from a system.

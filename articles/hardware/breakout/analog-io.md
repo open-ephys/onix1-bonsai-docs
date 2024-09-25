@@ -4,9 +4,9 @@ title: Breakout Board Analog IO
 device: analog io
 ---
 
-The following excerpt from the Breakout Board [example workflow](xref:breakout) demonstrates analog
+The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow) demonstrates analog
 IO functionality by computing a ~1Hz sawtooth pattern, outputting it to the analog IO port, and
-reading it back from the analog IO port. It also saves analog inputs data.
+reading it back from the analog IO port. It also saves analog input data.
 
 ::: workflow
 ![/workflows/hardware/breakout/analog-io.bonsai workflow](../../../workflows/hardware/breakout/analog-io.bonsai)
@@ -34,7 +34,7 @@ this is the only channel that will be affected. If other channels are configured
 <xref:breakout_configuration>), they will also ramp their voltage. The `RampGenerator` is a
 [GroupWorkflow](https://bonsai-rx.org/docs/articles/editor.html#workflow) that contains multiple
 Bonsai operators. Examine `RampGenerator`'s internals by pressing <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
-when its node is selected:
+when the node is selected:
 
 :::workflow
 ![/workflows/hardware/breakout/ramp-generator.bonsai workflow](../../../workflows/hardware/breakout/ramp-generator.bonsai)
