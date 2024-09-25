@@ -59,7 +59,9 @@
     "markdownEngineProperties": {
       "markdigExtensions": [
         "attributes",
-        "customcontainers"
+        "customcontainers",
+        "footnotes",
+        "figures"
       ],
       "alerts": {
         "TODO": "alert alert-secondary"
