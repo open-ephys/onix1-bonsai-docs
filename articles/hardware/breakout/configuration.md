@@ -18,7 +18,7 @@ property pane can be expanded to expose individual properties that govern their
 behavior. 
 
 > [!TIP] 
-> The `Properties` section of the <xref:OpenEphys.Onix1ConfigureBreakoutBoard>
+> The `Properties` section of the <xref:OpenEphys.Onix1.ConfigureBreakoutBoard>
 > operator provides documentation on the effect of all of the breakout board's
 > configuration settings.
 
