@@ -31,8 +31,8 @@
   determines the device driver, physical interface type, and host-computer index that the system
   communicates through. The
   <code>Driver</code> property is set to "riffa", which is the name of the PCIe device used by ONIX.
-  In our case, because we are using a single ONIX system, the <code>Index</code> property is set to
-  0. If a second system is used on the same computer, a second <code>CreateContext</code> operator
+  In our case, the <code>Index</code> property is set to 0 because we are using a single ONIX system. 
+  If a second system is used on the same computer, a second <code>CreateContext</code> operator
   would be required and its <code>Index</code> property set to 1.
 </p>
 
@@ -50,7 +50,7 @@
   operator then writes this
   <code>Timestamp</code> along with <code>ContextTask</code>'s properties (e.g.
   <code>AcquisitionClockHz</code>, <code>BlockReadSize</code>, <code>BlockWriteSize</code>) to a csv
-  file when the the workflow is started.
+  file with the following name format <code>start-time_&lt;timestamp&gt;.csv</code> when the the workflow is started.
 </p>
 
 <h2>Starting acquisition</h2>

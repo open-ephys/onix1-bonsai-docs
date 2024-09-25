@@ -12,20 +12,20 @@ workflowLocation: workflow
 ---
 
 ## Configuring the breakout board
-The <xref:OpenEphys.Onix1.ConfigureBreakoutBoard> operator groups the properties
+The `ConfigureBreakoutBoard` operator groups the properties
 for all the devices that the breakout board supports. Each device in the
 property pane can be expanded to expose individual properties that govern their
 behavior. 
 
 > [!TIP] 
-> The `Properties` section of the  <xref:OpenEphys.Onix1.ConfigureBreakoutBoard>
-> provides documentation on the effect of all of the breakout board's
+> The `Properties` section of the <xref:OpenEphys.Onix1ConfigureBreakoutBoard>
+> operator provides documentation on the effect of all of the breakout board's
 > configuration settings.
 
 To examine and edit the breakout board's properties, click on the `Breakout
 Board` node to select it. The properties pane will appear immediately right of
-the workflow editor. Expanding each of the Devices within the properties pane
-will provide access to their configuration settings. The following video
+the workflow editor. Expanding each of the devices within the properties pane
+provides access to their configuration settings. The following video
 demonstrates how properties were edited for the example workflow:
 
 <figure>

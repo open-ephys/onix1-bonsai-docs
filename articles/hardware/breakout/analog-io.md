@@ -42,7 +42,7 @@ when the node is selected:
 
 > [!Tip]
 > To understand how the <code>RampGenerator</code> works, double click each
-> nodes in the workflow > while its running to visualize how data is transformed
+> nodes in the workflow while its running to visualize how data is transformed
 > as it flows through each operator. Additionally, the <kdb>F1</kdb> key can be
 > pressed while a node is selected ot bring up its documentation.
 > <figure>

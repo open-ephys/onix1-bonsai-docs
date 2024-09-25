@@ -22,13 +22,14 @@ exposure). The output clock has the following physical properties:
 > reflections. The high output current drive makes this clock capable of driving
 > long cables.
 
+These can all be configured using the <xref:OpenEphys.Onix1.ConfigureBreakoutBoard> operator.
 In the example workflow, the output clock is configured to produce a 1 MHz, 50%
 duty cycle clock whose start time, phase, and frequency is hardware synchronized
 with with the ONIX [Acquisition
 Clock](xref:OpenEphys.Onix1.ContextTask.AcquisitionClockHz).
 
 Because the clock is generated using a simple frequency divider, not all
-configurations setting can be exactly realized in hardware. For this reason, the
+configuration settings can be exactly realized in hardware. For this reason, the
 following excerpt from the breakout board [example
 workflow](xref:breakout_workflow) demonstrates how to save the
 [hardware-realized clock parameters](xref:OpenEphys.Onix1.OutputClockParameters)

@@ -21,8 +21,8 @@ ecosystems. This means that all experimental events are timestamped on the same
 clock and no post-hoc alignment of timing is necessary.
 
 The following excerpt from the Breakout Board [example
-workflow](xref:breakout_workflow) demonstrates the Harp sync functionality
-configuring a saving data from the Harp input port on the breakout board.
+workflow](xref:breakout_workflow) demonstrates saving data from the Harp input 
+port on the breakout board.
 
 ::: workflow
 ![/workflows/hardware/breakout/harp-sync.bonsai workflow](../../../workflows/hardware/breakout/harp-sync.bonsai)
