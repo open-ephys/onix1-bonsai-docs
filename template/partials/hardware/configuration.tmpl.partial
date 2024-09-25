@@ -2,7 +2,7 @@
   The following excerpt from the {{{hardware}}} <a class="xref"
   href="~/articles/hardware/{{{oe.hardwareDirectory}}}/{{{workflowLocation}}}.html">
   example workflow</a> demonstrates how to create an ONIX acquisition context using <a class="xref"
-  href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, configures a breakout board
+  href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, configures a {{{hardware}}}
   using <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a>, and
   then starts acquisition using <a class="xref"
   href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each
@@ -45,7 +45,7 @@
   reason, a <a class="xref"
   href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator is
   used to tag the <a class="xref" href="~/api/OpenEphys.Onix1.ContextTask.html">ContextTask</a> that
-  is output from the <code>Breakout Board</code> operator with the computer's wall-clock time. The
+  is output from the <code>{{{operator}}}</code> operator with the computer's wall-clock time. The
   <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html">CsvWriter</a>
   operator then writes this
   <code>Timestamp</code> along with <code>ContextTask</code>'s properties (e.g.
@@ -59,14 +59,15 @@
   The <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>
   operator begins data acquisition after the hardware has been configured. In the {{{hardware}}}
   example workflow, data is collected from the {{{hardware}}} only, so the rate of data being
-  produced by the hardware will be relatively modest (~{{{dataRate}}} MB/s) and dominated by the
+  produced by the hardware will be ~{{{dataRate}}} MB/s and dominated by the
   analog input. The <code>StartAcquisition</code>'s <code>ReadSize</code> property is set to
   {{{blockReadSize}}} bytes. This means that the data collection thread will block until
   {{{blockReadSize}}} bytes of data have been produced by the hardware. At {{{dataRate}}} MB/s the
   hardware will produce {{{blockReadSize}}} bytes every ~{{{timeUntilFullBuffer}}}. This is a hard
   bound on the latency of the system. If lower latencies were required, the hardware would need to
-  produce data more quickly or the <code>ReadSize</code> would need to be reduced. The
-  <code>StartAcquisition</code>'s <code>WriteSize</code> property is set to 2048. bytes. This
+  produce data more quickly or the <code>ReadSize</code> would need to be reduced. 
+</p>
+<p>The <code>StartAcquisition</code>'s <code>WriteSize</code> property is set to 2048. bytes. This
   determines the amount of memory that is preallocated for temporarily holding data before it is
   sent to hardware. It is less critical to performance unless the rate that data be written to the
   hardware is comparable to the rate that the hardware produces data which is not a common scenario.

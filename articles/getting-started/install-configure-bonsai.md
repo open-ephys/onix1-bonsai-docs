@@ -29,18 +29,6 @@ The following packages required to run the workflows in this documentation are:
 > [!TIP]
 > Additional packages will allow you to extend the functionality of ONIX hardware beyond the scope of this documentation. There are packages that allow ONIX be combined with [visual psychophysics](https://bonsai-rx.org/docs/tutorials/vision-psychophysics.html), [markerless pose estimation](https://bonsai-rx.org/sleap/), [HARP behavioral devices](https://harp-tech.org/), and much more.
 
-### OpenEphys.Onix1
-
-To install the `OpenEphys.Onix1` package [open the package manager](#open-bonsai-package-manager) and:
-
-1.  Click the `Browse` tab.
-1.  Set `Package source` to `All` or `NuGet`.
-1.  Search `OpenEphys.Onix1`.
-1.  Click `Install`.
-1.  Click `I Accept` when the license agreement window appears.
-
-![Bonsai OpenEphys.Onix1 Install Screenshot](../../images/bonsai-install-OpenEphys.Onix1.webp){width=650px}
-
 ### OpenEphys.Onix1.Design
 
 To install the `OpenEphys.Onix1.Design` package [open the package manager](#open-bonsai-package-manager) and:
