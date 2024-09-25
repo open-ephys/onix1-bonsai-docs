@@ -1,7 +1,6 @@
 ---
 uid: index
 title: OpenEphys.Onix1
-_disableBreadcrumb: true
 ---
 
 `OpenEphys.Onix1` is a [Bonsai](https://bonsai-rx.org/) library that can be used to control the [ONIX PCIe Acquisition System](https://open-ephys.org/onix/oeps-9006), which provides:
