@@ -1,5 +1,5 @@
 ---
-uid: np2e_np2ve
+uid: np2e_npv2e
 title: NeuropixelsV2e
 hardware: NeuropixelsV2e Headstage
 device: true
