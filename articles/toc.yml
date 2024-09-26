@@ -40,8 +40,8 @@
       href: hardware/np1e/configuration.md
     - name: Port Status
       href: hardware/np1e/port-status.md
-    - name: Neuropixels 1.0
-      href: hardware/np1e/np1.md
+    - name: NeuropixelsV1e
+      href: hardware/np1e/npv1e.md
     - name: Bno055 & Commutation
       href: hardware/np1e/bno055.md
   - href: hardware/np2e/overview.md
@@ -50,8 +50,8 @@
       href: hardware/np2e/configuration.md
     - name: Port Status
       href: hardware/np2e/port-status.md
-    - name: Neuropixels 2.0
-      href: hardware/np2e/np2.md
+    - name: NeuropixelsV2e
+      href: hardware/np2e/npv2e.md
     - name: Bno055 & Commutation
       href: hardware/np2e/bno055.md
     - href: hardware/np2e/gui.md 

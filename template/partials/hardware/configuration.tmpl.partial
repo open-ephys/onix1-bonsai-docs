@@ -5,8 +5,7 @@
   href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a>, configures a {{{hardware}}}
   using <a class="xref" href="~/api/OpenEphys.Onix1.{{{operator}}}.html">{{{operator}}}</a>, and
   then starts acquisition using <a class="xref"
-  href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>. Here we break down each
-  of these operators. 
+  href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>.
 </p>
 
 <div class="workflow"> 
@@ -16,61 +15,57 @@
 <div class="NOTE alert alert-info">
     <h5>NOTE</h5>
     <p>
-        To learn about the hardware configuration motif that is present in every workflow involving
+        To learn about how to organize workflows involving
         Onix hardware, visit the <a class="xref"
         href="~/articles/getting-started/initialize-oni-context.html">Configuration Chain
         Tutorial</a>.
     </p>
 </div>
 
-<h2>Creating an acquisition context</h2>
+<h2>Creating an Acquisition Context</h2>
 
 <p>
   The <a class="xref" href="~/api/OpenEphys.Onix1.CreateContext.html">CreateContext</a> operator
   creates a <a class="xref" href="~/api/OpenEphys.Onix1.ContextTask.html">ContextTask</a> that
-  determines the device driver, physical interface type, and host-computer index that the system
-  communicates through. The
+  defines the device driver and index where the hardware exists. The
   <code>Driver</code> property is set to "riffa", which is the name of the PCIe device used by ONIX.
-  In our case, the <code>Index</code> property is set to 0 because we are using a single ONIX system. 
+  In this case, the <code>Index</code> property is set to 0 because there is only a single ONIX system. 
   If a second system is used on the same computer, a second <code>CreateContext</code> operator
-  would be required and its <code>Index</code> property set to 1.
+  would be required in its own configuration chain, with its <code>Index</code> property set to 1.
 </p>
 
 {{{conceptual}}}
 
 <p>
-  It is useful to capture the <a class="xref"
-  href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>
-  that a recording starts, along with global hardware parameters governing data-acquisition. For this
-  reason, a <a class="xref"
-  href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator is
-  used to tag the <a class="xref" href="~/api/OpenEphys.Onix1.ContextTask.html">ContextTask</a> that
-  is output from the <code>{{{operator}}}</code> operator with the computer's wall-clock time. The
-  <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html">CsvWriter</a>
-  operator then writes this
-  <code>Timestamp</code> along with <code>ContextTask</code>'s properties (e.g.
+  When the workflow is started, the current time (based on <a class="xref"
+  href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>)
+  is saved, along with global hardware parameters governing data acquisition. This is accomplished using a <a class="xref"
+  href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator 
+  to capture the computer's wall clock time. This
+  <code>Timestamp</code> is saved along with <code>ContextTask</code>'s properties (e.g.,
   <code>AcquisitionClockHz</code>, <code>BlockReadSize</code>, <code>BlockWriteSize</code>) to a csv
-  file with the following name format <code>start-time_&lt;timestamp&gt;.csv</code> when the the workflow is started.
+  file (<code>start-time_&lt;timestamp&gt;.csv</code>) when the the workflow is started.
 </p>
 
-<h2>Starting acquisition</h2>
+<h2>Starting Acquisition</h2>
 
 <p>
-  The <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>
-  operator begins data acquisition after the hardware has been configured. In the {{{hardware}}}
+  After starting a workflow, the <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>
+  operator begins data acquisition with the hardware that has been configured. In the {{{hardware}}}
   example workflow, data is collected from the {{{hardware}}} only, so the rate of data being
   produced by the hardware will be ~{{{dataRate}}} MB/s and dominated by the
   analog input. The <code>StartAcquisition</code>'s <code>ReadSize</code> property is set to
-  {{{blockReadSize}}} bytes. This means that the data collection thread will block until
+  {{{blockReadSize}}} bytes, meaning data collection will wait until
   {{{blockReadSize}}} bytes of data have been produced by the hardware. At {{{dataRate}}} MB/s the
   hardware will produce {{{blockReadSize}}} bytes every ~{{{timeUntilFullBuffer}}}. This is a hard
   bound on the latency of the system. If lower latencies were required, the hardware would need to
   produce data more quickly or the <code>ReadSize</code> would need to be reduced. 
 </p>
-<p>The <code>StartAcquisition</code>'s <code>WriteSize</code> property is set to 2048. bytes. This
+
+<p>The <code>StartAcquisition</code>'s <code>WriteSize</code> property is set to 2048 bytes. This
   determines the amount of memory that is preallocated for temporarily holding data before it is
   sent to hardware. It is less critical to performance unless the rate that data be written to the
-  hardware is comparable to the rate that the hardware produces data which is not a common scenario.
+  hardware is comparable to the rate that the hardware produces data, which is not a common scenario.
 </p>
 
 <div class="NOTE alert alert-info">

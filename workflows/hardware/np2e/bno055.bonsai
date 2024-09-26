@@ -7,8 +7,8 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="onix1:NeuropixelsV2eBno055Data">
-          <onix1:DeviceName>NeuropixelsV2eHeadstage/NeuropixelsV2eBno055</onix1:DeviceName>
+        <Combinator xsi:type="onix1:PolledBno055Data">
+          <onix1:DeviceName>NeuropixelsV2eHeadstage/PolledBno055</onix1:DeviceName>
         </Combinator>
       </Expression>
       <Expression xsi:type="io:CsvWriter">

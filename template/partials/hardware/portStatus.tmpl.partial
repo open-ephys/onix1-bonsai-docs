@@ -1,5 +1,5 @@
 <p>
-  The following excerpt from the <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/overview.html">{{{hardware}}} example workflow</a> demonstrates port status functionality and saves timestamped port status data.
+  The following excerpt from the {{{hardware}}} <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/overview.html">example workflow</a> demonstrates port status functionality and saves timestamped port status data.
 </p> 
 
 <div class="workflow"> 
@@ -7,11 +7,7 @@
 </div>
 
 <p>
-  The Breakout Board reports when a port connection enters or leaves an aberrant state. The <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatus</a> operator provides access to this functionality.
-</p>
-
-<p>
-  The <code>PortStatus</code> operator generates a sequence of <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatusFrame</a>s. Events that cause the <code>PortStatus</code> to emit a <code>PortStatusFrame</code> include the SERDES losing or gaining lock, SERDES failing or passing parity check, or the <a class="xref" href="~/api/OpenEphys.Onix1.PortStatusCode.html">port status code</a> changing value. The <code>PortStatus</code>'s <code>DeviceName</code> property is set to "{{{hardwareOperator}}}/PortController". This links the <code>PortStatus</code> operator to the corresponding configuration operator.
+  The {{{hardware}}} reports when a port connection enters or leaves an aberrant state via the <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatus</a> operator, which generates a sequence of <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatusFrame</a>s. Events that cause the <code>PortStatus</code> to emit a <code>PortStatusFrame</code> include the SERDES losing or gaining lock, SERDES failing or passing parity check, or the <a class="xref" href="~/api/OpenEphys.Onix1.PortStatusCode.html">PortStatusCode</a> changing value. The <code>DeviceName</code> is set to "{{{hardwareOperator}}}/PortController". This links the <code>PortStatus</code> operator to the corresponding configuration operator.
 </p>
 
 <p>
@@ -20,5 +16,5 @@
 
 <div class="NOTE alert alert-info">
   <h5>NOTE</h5>
-  <p>The <code>PortStatus</code> operator does not require enabling from the {{{hardwareOperator}}}'s properties. It is automatically always enabled.</p>
+  <p>The <code>PortStatus</code> operator cannot be enabled or disabled from the {{{hardwareOperator}}}'s properties. It is always enabled.</p>
 </div>

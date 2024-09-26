@@ -12,16 +12,16 @@
           <onix1:DeviceName>NeuropixelsV1eHeadstage/PortController</onix1:DeviceName>
         </Combinator>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timestamp" />
+      </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>memory-use_.csv</io:FileName>
+        <io:FileName>port-status_.csv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>Timestamp</io:Suffix>
         <io:IncludeHeader>false</io:IncludeHeader>
-        <io:Selector>Clock,BytesUsed,PercentUsed</io:Selector>
-      </Expression>
-      <Expression xsi:type="MemberSelector">
-        <Selector>PercentUsed</Selector>
+        <io:Selector>Timestamp,Value.Clock,Value.StatusCode,Value.SerdesLocked,Value.SerdesPass</io:Selector>
       </Expression>
     </Nodes>
     <Edges>

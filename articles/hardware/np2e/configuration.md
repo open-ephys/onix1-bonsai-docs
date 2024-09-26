@@ -1,6 +1,6 @@
 ---
 uid: np2e_configuration
-title: Neuropixels 2.0 Headstage Configuration
+title: NeuropixelsV2e Headstage Configuration
 hardware: NeuropixelsV2e Headstage
 configuration: true
 operator: ConfigureNeuropixelsV2eHeadstage
@@ -10,11 +10,19 @@ blockReadSize: 4096
 workflowLocation: overview
 ---
 
-## Configuring the NeuropixelsV2e headstage
-The `NeuropixelsV2eHeadstage` operator is set to configure the Neuropixels V2e Headstage to enable streaming electrophysiology data from a Neuropixels 2.0 probe and orientation data from a Bno055 IMU. This is accomplished in the Neuropixels V2e Headstage example workflow by leaving all of the `NeuropixelsV2eHeadstage` properties set to their default values.
-
-> [!TODO]
-> Add content about GUI
-
 > [!NOTE]
-> The Neuropixels V2e Beta Headstage functions nearly identically to the Neuropixels V2e Headstage. Simply replace `ConfigureNeuropixelsV2eHeadstage` with `ConfigureNeuropixelsV2eBetaHeadstage`.
+> The NeuropixelsV2eBeta Headstage functions nearly identically to the NeuropixelsV2e Headstage. Simply replace `ConfigureNeuropixelsV2eHeadstage` with `ConfigureNeuropixelsV2eBetaHeadstage`.
+
+## Configuring the NeuropixelsV2e headstage
+The `NeuropixelsV2eHeadstage` operator is set to configure the NeuropixelsV2e Headstage; this can enable streaming of electrophysiology data from a Neuropixels 2.0 probe and orientation data from a Bno055 IMU. This is accomplished in the NeuropixelsV2e Headstage example workflow by leaving all of the `NeuropixelsV2eHeadstage` properties set to their default values.
+
+Default values for the headstage are:
+- Enabling the first 384 electrodes of the first shank for streaming (shank 0, electrodes 0 through 383)
+    - This is also known as the **Shank 0 Bank A** `Channel Preset`
+- Setting the `Reference` to *External*
+
+> [!WARNING]
+> While the settings are left at the default values, the workflow will not run unless the gain correction files are provided to the `NeuropixelsV2e`. To select these files, click on the `NeuropixelsV2eHeadstage` operator, expand the `NeuropixelsV2e` menu in the property pane on the right, then choose the appropriate file by selecting `GainCalibrationFileA` or `GainCalibrationFileB` and clicking the <kbd>...</kbd> button. If only one probe is plugged in, only one file is required.
+
+> [!TIP]
+> For additional details on how to manually configure the headstage, such as enabling specific electrodes for recording, or modify AP / LFP gain, check out the <xref:np2e_gui> page.

@@ -1,5 +1,5 @@
 <p>
-  The following excerpt from the <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/overview.html">{{{hardware}}} example workflow</a> demonstrates Bno055 functionality, saves Bno055 data, and commutates the {{{hardware}}} if there is a proper commutator connection.
+  The following excerpt from the {{{hardware}}} <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/overview.html">example workflow</a> demonstrates Bno055 functionality, saves Bno055 data, and commutates the {{{hardware}}} if there is a proper commutator connection.
 </p> 
 
 <div class="workflow"> 
@@ -7,14 +7,18 @@
 </div>
 
 <p>
-  The <code>{{{bno055Operator}}}</code> operator generates a sequence of <a class="xref" href="~/api/OpenEphys.Onix1.html">Bno055DataFrame</a>s. The <code>PortStatus</code>'s <code>DeviceName</code> property is set to "{{{hardwareOperator}}}/{{{bno055Operator}}}". This links the <code>{{{bno055Operator}}}</code> operator to the corresponding configuration operator.
+  The <code>{{{bno055Operator}}}</code> operator generates a sequence of <a class="xref" href="~/api/OpenEphys.Onix1.Bno055DataFrame.html">Bno055DataFrame</a>s. The <code>DeviceName</code> property is set to "{{{hardwareOperator}}}/{{{bno055Operator}}}". This links the <code>{{{bno055Operator}}}</code> operator to the corresponding configuration operator.
 </p>
 
 <p>
-  The <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html">CsvWriter</a> operator writes the entire <code>Bno055DataFrame</code> to a file with the following format: <code>bno055_&lt;timestamp&gt;.csv</code>. Because <code>CsvWriter</code> is a <em>sink</em> operator, its output sequence is equivalent to its input sequence. In other words, its output is equivalent to <code>Bno055Data</code>'s output. Therefore, it's possible to use a <a class ="xref" href="https://bonsai-rx.org/docs/api/Bonsai.Expressions.MemberSelectorBuilder.html">MemberSelector</a> operator on the <code>CsvWriter</code> to select members from the <code>Bno055DataFrame</code>. This is most easily performed by selecting the relevant members that appear by hovering over the "Output" option that appears in the context menu that appears after right-clicking the <code>CsvWriter</code> node. The <code>MemberSelector</code> operator selects the <code>Quaternion</code> member from the <code>Bno055DataFrame</code>. The <code>AutoCommutator</code> operator automatically commutates the headstage when it receives a <code>Quaternion</code> from the upstream sequence provided that there is a proper commutator connection.
+  The <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html">CsvWriter</a> operator writes the entire <code>Bno055DataFrame</code> to a file with the following format: <code>bno055_&lt;timestamp&gt;.csv</code>.
+</p>
+
+<p>
+   Because <code>CsvWriter</code> is a <em>sink</em> operator, its output sequence is equivalent to its input sequence (i.e., <code>PolledBno055Data</code>'s output). This means that the <code>Quaternion</code> property (originally from <code>PolledBno055Data</code>) can be selected from the <code>CsvWriter</code> operator by right-clicking the operator and selecting the proper Output property. <code>Quaternion</code> values are passed to the <strong>Auto Commutator</strong> group workflow, which will automatically commutate the headstage sequence if there is a proper commutator connected.
 </p>
 
 <div class="NOTE alert alert-info">
   <h5>NOTE</h5>
-  <p>If you do not require or want automated commutation, simply delete the last node by selecting it and pressing <kbd>Delete</kbd>.</p>
+  <p>To remove automated commutation, simply delete the last node by selecting it and pressing <kbd>Delete</kbd>.</p>
 </div>
