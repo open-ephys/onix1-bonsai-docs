@@ -8,5 +8,5 @@ and Bonsai, and will teach them what ONIX is, how to download and install Bonsai
 place operators (and understand what an operator is), reorder a workflow, run a workflow, and
 finally visualize data.
 
-For those who are already familiar with Bonsai and Onix and are looking for a particular device or headstage
+For those who are already familiar with Bonsai and ONIX and are looking for a particular device or headstage
 to learn about and how to utilize, visit the <xref:hardware>.

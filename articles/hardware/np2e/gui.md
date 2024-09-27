@@ -19,7 +19,7 @@ For `NeuropixelsV2eHeadstage`, the GUI allows for an easy way to change settings
     - Change the [reference](xref:OpenEphys.Onix1.NeuropixelsV2QuadShankReference) for all electrodes
     - Choose pre-defined channel presets or manually define within a constrained set of possible combinations
     - Easily visualize which electrodes are enabled
-- Enable and disable the [Bno055]<xref:OpenEphys.Onix1.PolledBno055Data> stream
+- Enable and disable the [Bno055](xref:OpenEphys.Onix1.PolledBno055Data) stream
 
 There are two ways to access configuration dialogs; 1) at the individual `NeuropixelsV2eProbeConfiguration` level where either `Probe A` or `Probe B` can be modified by itself, and 2) at the headstage level where both probes can be modified, as well as the `NeuropixelsV2eBno055` device.
 
@@ -35,7 +35,7 @@ In addition to the absolute number of channels, there are other restrictions in 
 
 [Channel presets](#channel-presets) take this into account automatically and ensure that the rules are followed. When manually enabling electrodes, the indexing logic is applied in the order that electrodes are selected. If two (or more) electrodes are selected that share a `Channel` value, the highest indexed electrode is the only one that will be enabled.
 
-> [!CAUTION]
+> [!NOTE]
 > Due to these constraints, it is possible that a desired combination of electrodes is not feasible.
 
 ### Keeping or discarding configuration settings
