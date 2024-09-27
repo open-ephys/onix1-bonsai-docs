@@ -1,11 +1,10 @@
 ---
 uid: np2e_gui
+title: NeuropixelsV2e GUI
 ---
 
 > [!NOTE]
 > The Neuropixels V2e Beta Headstage GUI functions identically to the Neuropixels V2e Headstage. 
-
-# NeuropixelsV2e GUI
 
 In addition to the capabilities described in <xref:np2e>, the `NeuropixelsV2e` headstage has a graphical user interface when the `OpenEphys.Onix1.Design` package is downloaded. For more information on how to install that library, check out the <xref:install-configure-bonsai> page.
 
