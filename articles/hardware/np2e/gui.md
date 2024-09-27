@@ -50,16 +50,16 @@ When opening the GUI, there is a default probe configuration that is loaded and 
 
 ## Open Probe Configuration GUI
 
-![Open the GUI](../../..//images/neuropixelsv2e-gui-tut/bonsai-editor-where-to-click.png){width=700px}
+![Open the GUI](../../../images/neuropixelsv2e-gui-tut/bonsai-editor-where-to-click.png)
 
 Steps to open the Probe Configuration GUI:
 - Select the `NeuropixelsV2eHeadstage` node.
 - Click on the `NeuropixelsV2eProbeConfiguration` to edit (either `ProbeConfigurationA` or `ProbeConfigurationB`).
-- Select the button showing three dots (ellipsis) on the right-most part of the property pane (#1 above).
+- Select the <kbd>...</kbd> button on the right-most part of the property pane (#1 above).
 
 Once opened, if no probe calibration file has been selected the window should look like the image below. To view the probe, follow the steps [below](#choosing-a-probe-calibration-file).
 
-![Probe Configuration GUI](../../..//images/neuropixelsv2e-gui-tut/probeconfiguration-dialog.png){width=700px}
+![Probe Configuration GUI](../../../images/neuropixelsv2e-gui-tut/probeconfiguration-dialog.png)
 
 > [!TIP]
 > The controls shown for this GUI are the same as the ones shown for the `NeuropixelsV2e Headstage Configuration` below.
@@ -75,9 +75,9 @@ Upon opening the GUI for the first time, if no probe calibration file was set in
 > [!NOTE]
 > Files are expected to be named `XXXXXXXXXXX_gainCalValues.csv`, where "XXXXXXXXXXX" is the probe serial number.
 
-Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file, and enable visualization of the electrodes. Below is a view of the Probe Configuration GUI that has been opened for `Probe A` with a gain calibration file selected.
+Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file, and enable visualization of the electrodes. Below is a view of the Probe Configuration GUI that has been opened for `Probe A` with a gain calibration file selected. Note that the `Gain Correction` textbox and the `Gain Calibration SN: ` status strip are automatically filled in with values found in the calibration file.
 
-![Probe Configuration GUI with Probe shown](../../..//images/neuropixelsv2e-gui-tut/probeconfiguration-dialog-with-probe.png){width=700px,align="center"}
+![Probe Configuration GUI with Probe shown](../../../images/neuropixelsv2e-gui-tut/probeconfiguration-dialog-with-probe.png)
 
 ### Selecting channel reference
 
@@ -169,7 +169,7 @@ To load the default channel configuration at any time, navigate to the File drop
 
 ## Open Headstage Configuration GUI
 
-![Open the GUI](../../../images/neuropixelsv2e-gui-tut/bonsai-editor-where-to-click.png){width=700px}
+![Open the GUI](../../../images/neuropixelsv2e-gui-tut/bonsai-editor-where-to-click.png)
 
 Step to open the headstage configuration GUI
 
@@ -177,22 +177,22 @@ Step to open the headstage configuration GUI
 
 Once opened, if no probe calibration is selected for either `Probe A` or `Probe B`, then both tabs will only show their controls on the right and no probes (see below).
 
-![Headstage Configuration GUI](../../../images/neuropixelsv2e-gui-tut/headstage-dialog.png){width=700px}
+![Headstage Configuration GUI](../../../images/neuropixelsv2e-gui-tut/headstage-dialog.png)
 
 ### Configure Probe A
 
 Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui), and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe A` will be drawn in the corresponding tab (see below).
 
-![Headstage Configuration GUI with probe A](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-probe-a.png){width=700px}
+![Headstage Configuration GUI with probe A](../../../images/neuropixelsv2e-gui-tut/headstage-dialog-with-probe-a.png)
 
 ### Configure Probe B
 
 Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui), and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe B` will be drawn in the corresponding tab (see below).
 
-![Headstage Configuration GUI with probe B](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-probe-b.png){width=700px}
+![Headstage Configuration GUI with probe B](../../../images/neuropixelsv2e-gui-tut/headstage-dialog-with-probe-b.png)
 
 ### Configure Bno055
 
 At the headstage level, there is another device tab listed for a [Bno055](xref:OpenEphys.Onix1.PolledBno055Data). From this tab, the device can be enabled or disabled by selecting the appropriate value from the drop-down menu next to `Enable`. While the `DeviceAddress` and `DeviceName` values are modifiable here, they have no affect on the underlying device configuration; only changes to the `Enable` property will be respected.
 
-![Headstage Configuration GUI with Bno055](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-bno055.png){width=700px}
+![Headstage Configuration GUI with Bno055](../../../images/neuropixelsv2e-gui-tut/headstage-dialog-with-bno055.png)
