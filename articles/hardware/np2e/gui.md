@@ -6,7 +6,7 @@ title: NeuropixelsV2e GUI
 > [!NOTE]
 > The Neuropixels V2e Beta Headstage GUI functions identically to the Neuropixels V2e Headstage. 
 
-In addition to the capabilities described in <xref:np2e>, the `NeuropixelsV2e` headstage has a graphical user interface when the `OpenEphys.Onix1.Design` package is downloaded. For more information on how to install that library, check out the <xref:install-configure-bonsai> page.
+The `NeuropixelsV2e` headstage has a graphical user interface when the `OpenEphys.Onix1.Design` package is downloaded. For more information on how to install that library, check out the <xref:install-configure-bonsai> page.
 
 ## Overview
 
@@ -38,7 +38,10 @@ In addition to the absolute number of channels, there are other restrictions in 
 
 ### Keeping or discarding configuration settings
 
-While the GUI is open, any changes made to the configuration settings can be freely modified and will not affect the configuration unless `Okay` is pressed. This includes all aspects of the configuration, such as which electrodes are enabled, the chosen reference channel, and even the probe calibration file.
+While the GUI is open, any changes to the configuration settings can be freely modified and will not affect the configuration unless `Okay` is pressed. This includes all aspects of the configuration, such as which electrodes are enabled, the chosen reference channel, and the probe calibration file.
+
+> [!NOTE]
+> The hardware is not actually configured until the workflow starts.
 
 If the window is closed any other way (such as by pressing `Cancel`, or pressing the <kbd>X</kbd> to close the window), then any changes made *will not* be saved.
 
@@ -75,7 +78,7 @@ Upon opening the GUI for the first time, if no probe calibration file was set in
 > [!NOTE]
 > Files are expected to be named `XXXXXXXXXXX_gainCalValues.csv`, where "XXXXXXXXXXX" is the probe serial number.
 
-Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file, and enable visualization of the electrodes. Below is a view of the Probe Configuration GUI that has been opened for `Probe A` with a gain calibration file selected.
+Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file and enable visualization of the electrodes. Below is a view of the Probe Configuration GUI that has been opened for `Probe A` with a gain calibration file selected.
 
 ![Probe Configuration GUI with Probe shown](../../..//images/neuropixelsv2e-gui-tut/probeconfiguration-dialog-with-probe.png){width=700px,align="center"}
 
@@ -89,7 +92,7 @@ Underneath the probe calibration filepath, there is a dropdown menu for choosing
 
 ### Channel presets
 
-To save time, it is possible to select a preset channel combination from the `Channel Presets:` dropdown. These presets are defined to work within the constraints of `NeuropixelsV2e` channel combinations defined [above](#channel-constraints).
+To save time, it is possible to select a preset channel combination from the `Channel Presets` dropdown. These presets are defined to work within the constraints of `NeuropixelsV2e` channel combinations defined [above](#channel-constraints).
 
 <p align="center">
   <img src="../../../images/neuropixelsv2e-gui-tut/probeconfiguration-channelpresets.png">
@@ -102,11 +105,11 @@ Channel presets follow one of these patterns:
 - All Shanks N_M
     - Enables all electrodes starting at shank index N up to shank index M across all four shanks
 
-If electrodes are manually enabled, the `Channel Presets:` dropdown will change to **None**, indicating that a channel preset is no longer selected.
+If electrodes are manually enabled, the `Channel Presets` dropdown will change to **None**, indicating that a channel preset is no longer selected.
 
 ### Maneuvering along the probe
 
-Once a GUI has been [opened](#open-probe-configuration-gui), and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), the main panel on the left will be populated with a `NeuropixelsV2e` probe. Below are the buttons used to navigate within this panel to view and choose electrodes.
+Once a GUI has been [opened](#open-probe-configuration-gui) and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), the main panel on the left will be populated with a `NeuropixelsV2e` probe. Below are the buttons used to navigate within this panel to view and choose electrodes.
 
 - Mouse Controls
     - Mouse wheel zooms in/out towards the cursor
@@ -136,7 +139,7 @@ Electrodes can be selected at any zoom level, but it is often preferable to zoom
 
 To select, as described [above](#maneuvering-along-the-probe), either click-and-drag the cursor over the desired electrodes, or select individual electrodes by clicking on them one-by-one. Once the electrodes to enable are selected, click on the `Enable Selected Electrodes` button in the right panel. At this point the selected electrodes should turn blue, indicating that they are now enabled. It is important to note that when electrodes are enabled, a number of previously enabled electrodes will be disabled due to channel constraints. For more information, read the [Channel constraints](#channel-constraints) section above.
 
-The short video below shows how to select, clear selection, enable selected electrodes, and translate using the scroll bar. Note that once electrodes are manually enabled, the `Channel Presets:` drop-down changes from `Shank0BankA` to `None`. Then, once the selected electrodes match the preset, it is automatically changed back to `Shank0BankA`.
+The short video below shows how to select, clear selection, enable selected electrodes, and translate using the scroll bar. Note that once electrodes are manually enabled, the `Channel Presets` drop-down changes from `Shank0BankA` to `None`. Then, once the selected electrodes match the preset, it is automatically changed back to `Shank0BankA`.
 
 <div>
   <video width="650" height="365" controls muted loop>
@@ -146,7 +149,7 @@ The short video below shows how to select, clear selection, enable selected elec
 
 ### Loading and saving channel configurations
 
-When the GUI is first opened, and after a probe calibration file has been specified, the default [ProbeInterface](#probeinterface) configuration is loaded and drawn in the main panel. In this case, the default configuration is for a quad-shank `NeuropixelsV2e` probe, with the `Shank0BankA` channel preset selected. To load a new configuration, load the default configuration, or save the current configuration, go to the File drop-down menu (see below) and choose the relevant option.
+When the GUI is first opened and after a probe calibration file has been specified, the default [ProbeInterface](#probeinterface) configuration is loaded and drawn in the main panel. In this case, the default configuration is for a quad-shank `NeuropixelsV2e` probe, with the `Shank0BankA` channel preset selected. To load a new configuration, load the default configuration, or save the current configuration, go to the File drop-down menu (see below) and choose the relevant option.
 
 <p align="center">
   <img src="../../../images/neuropixelsv2e-gui-tut/probeconfiguration-filemenu.png">
@@ -181,13 +184,13 @@ Once opened, if no probe calibration is selected for either `Probe A` or `Probe 
 
 ### Configure Probe A
 
-Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui), and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe A` will be drawn in the corresponding tab (see below).
+Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui) and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe A` will be drawn in the corresponding tab (see below).
 
 ![Headstage Configuration GUI with probe A](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-probe-a.png){width=700px}
 
 ### Configure Probe B
 
-Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui), and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe B` will be drawn in the corresponding tab (see below).
+Using the headstage configuration GUI is exactly the same as using the [probe configuration GUI](#open-probe-configuration-gui). After the GUI has been [opened](#open-headstage-configuration-gui) and a probe calibration file has been [selected](#choosing-a-probe-calibration-file), `Probe B` will be drawn in the corresponding tab (see below).
 
 ![Headstage Configuration GUI with probe B](../../../images/neuropixelsv2e-gui-tut/neuropixelsv2e-headstage-dialog-with-probe-b.png){width=700px}
 

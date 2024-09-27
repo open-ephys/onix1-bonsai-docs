@@ -38,7 +38,7 @@ In addition to the absolute number of channels, there are other restrictions in 
 
 ### Keeping or discarding configuration settings
 
-While the GUI is open, any changes made to the configuration settings can be freely modified and will not affect the configuration unless `Okay` is pressed. This includes all aspects of the configuration, such as which electrodes are enabled, the chosen reference channel, and even the probe calibration file.
+While the GUI is open, any changes to the configuration settings can be freely modified and will not affect the configuration unless `Okay` is pressed. This includes all aspects of the configuration, such as which electrodes are enabled, the chosen reference channel, and the probe calibration file.
 
 If the window is closed any other way (such as by pressing `Cancel`, or pressing the <kbd>X</kbd> to close the window), then any changes made *will not* be saved.
 
@@ -60,13 +60,13 @@ Once opened, if the calibration files have not been selected the window should l
 
 ### Choosing probe calibration files
 
-Upon opening the GUI for the first time, if no probe calibration files were set in the Bonsai editor, the window will be mostly blank. To populate the window with a drawing of the probe, both calibration files must be selected. First, click on the <kbd>...</kbd> button to the right of the empty text box under "ADC Calibration File:" (see below). This will open a file dialog, where the ADC calibration file can be searched for and selected. Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file.
+Upon opening the GUI for the first time, if no probe calibration files were set in the Bonsai editor, the window will be mostly blank. To populate the window with a drawing of the probe, both calibration files must be selected. First, click on the <kbd>...</kbd> button to the right of the empty text box under "ADC Calibration File" (see below). This will open a file dialog, where the ADC calibration file can be searched for and selected. Once the file is selected, press `Open` or <kbd>Enter</kbd>. This will populate the text box with the filepath to the calibration file.
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-adc-calibration-choose-file.png">
 </p>
 
-This process is then repeated for the gain calibration file; click on the <kbd>...</kbd> button to the right of the empty text box under "Gain Calibration File:" (see below). This will open a file dialog, where the gain calibration file can be searched for and selected. 
+This process is then repeated for the gain calibration file; click on the <kbd>...</kbd> button to the right of the empty text box under `Gain Calibration File` (see below). This will open a file dialog, where the gain calibration file can be searched for and selected. 
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-gain-calibration-choose-file.png">
@@ -98,7 +98,7 @@ Once a valid ADC calibration file has been selected, the <kbd>View ADC Correctio
 
 ### Selecting AP gain
 
-The gain for the AP-band can be selected from the dropdown menu next to "AP Gain:". For a list of possible gain values, check out <xref:OpenEphys.Onix1.NeuropixelsV1Gain>. If a gain calibration file has been selected, and it is valid, the gain correction that will be applied is displayed in the textbox underneath the dropdown menu, and is updated based on the current gain selected.
+The gain for the AP-band can be selected from the dropdown menu next to `AP Gain`. For a list of possible gain values, check out <xref:OpenEphys.Onix1.NeuropixelsV1Gain>. If a gain calibration file has been selected and is valid, the gain correction that will be applied is displayed in the textbox underneath the dropdown menu and is updated based on the current gain selected.
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-ap-correction.png">
@@ -106,7 +106,7 @@ The gain for the AP-band can be selected from the dropdown menu next to "AP Gain
 
 ### Selecting LFP gain
 
-The gain for the LFP-band can be selected from the dropdown menu next to "LFP Gain:". For a list of possible gain values, check out <xref:OpenEphys.Onix1.NeuropixelsV1Gain>. If a gain calibration file has been selected, and it is valid, the gain correction that will be applied is displayed in the textbox underneath the dropdown menu, and is updated based on the current gain selected.
+The gain for the LFP-band can be selected from the dropdown menu next to `LFP Gain`. For a list of possible gain values, check out <xref:OpenEphys.Onix1.NeuropixelsV1Gain>. If a gain calibration file has been selected and is valid, the gain correction that will be applied is displayed in the textbox underneath the dropdown menu and is updated based on the current gain selected.
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-lfp-correction.png">
@@ -130,7 +130,7 @@ Underneath the probe calibration filepath, there is a dropdown menu for choosing
 
 ### Channel presets
 
-To save time, it is possible to select a preset channel combination from the `Channel Presets:` dropdown. These presets are defined to work within the constraints of `NeuropixelsV1e` channel combinations defined [above](#channel-constraints).
+To save time, it is possible to select a preset channel combination from the `Channel Presets` dropdown. These presets are defined to work within the constraints of `NeuropixelsV1e` channel combinations defined [above](#channel-constraints).
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-channel-presets.png">
@@ -145,11 +145,11 @@ Below is a list of available channel presets:
 - Tetrodes
     - Enables the first group of four electrodes for every eight electrodes (electrodes 0-3 but not 4-7) in Bank A, then enables the second group of four for every eight electrodes in Bank B (388-391, but not 384-387).
 
-If electrodes are manually enabled, the `Channel Presets:` dropdown will change to **None**, indicating that a channel preset is no longer selected.
+If electrodes are manually enabled, the `Channel Presets` dropdown will change to **None**, indicating that a channel preset is no longer selected.
 
 ### Maneuvering along the probe
 
-Once a GUI has been [opened](#open-headstage-configuration-gui), and a probe calibration file has been [selected](#choosing-probe-calibration-files), the main panel on the left will be populated with a `NeuropixelsV1e` probe. Below are the buttons used to navigate within this panel to view and choose electrodes.
+Once a GUI has been [opened](#open-headstage-configuration-gui) and a probe calibration file has been [selected](#choosing-probe-calibration-files), the main panel on the left will be populated with a `NeuropixelsV1e` probe. Below are the buttons used to navigate within this panel to view and choose electrodes.
 
 - Mouse Controls
     - Mouse wheel zooms in/out towards the cursor
@@ -179,7 +179,7 @@ Electrodes can be selected at any zoom level, but it is often preferable to zoom
 
 To select, as described [above](#maneuvering-along-the-probe), either click-and-drag the cursor over the desired electrodes, or select individual electrodes by clicking on them one-by-one. Once the electrodes to enable are selected, click on the `Enable Selected Electrodes` button in the right panel. At this point the selected electrodes should turn blue, indicating that they are now enabled. It is important to note that when electrodes are enabled, a number of previously enabled electrodes will be disabled due to channel constraints. For more information, read the [Channel constraints](#channel-constraints) section above.
 
-The short video below shows how to select, clear selection, enable selected electrodes, and translate using the scroll bar. Note that once electrodes are manually enabled, the `Channel Presets:` drop-down changes from `BankA` to `None`. Then, once the selected electrodes match the preset, it is automatically changed back to `BankA`.
+The short video below shows how to select, clear selection, enable selected electrodes, and translate using the scroll bar. Note that once electrodes are manually enabled, the `Channel Presets` drop-down changes from `BankA` to `None`. Then, once the selected electrodes match the preset, it is automatically changed back to `BankA`.
 
 <div>
   <video width="650" height="365" controls muted loop>
@@ -189,7 +189,7 @@ The short video below shows how to select, clear selection, enable selected elec
 
 ### Loading and saving channel configurations
 
-When the GUI is first opened, and after a probe calibration file has been specified, the default [ProbeInterface](#probeinterface) configuration is loaded and drawn in the main panel. In this case, the default configuration is for a single-shank `NeuropixelsV1e` probe, with the `BankA` channel preset selected. To load a new configuration, load the default configuration, or save the current configuration, go to the File drop-down menu (see below) and choose the relevant option.
+When the GUI is first opened and after a probe calibration file has been specified, the default [ProbeInterface](#probeinterface) configuration is loaded and drawn in the main panel. In this case, the default configuration is for a single-shank `NeuropixelsV1e` probe, with the `BankA` channel preset selected. To load a new configuration, load the default configuration, or save the current configuration, go to the File drop-down menu (see below) and choose the relevant option.
 
 <p align="center">
   <img src="../../../images/neuropixelsv1e-gui-tut/headstage-configuration-file-menu.png">
