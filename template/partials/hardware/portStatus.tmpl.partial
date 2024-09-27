@@ -1,0 +1,20 @@
+<p>
+  The following excerpt from the {{{hardware}}} <a class="xref" href="~/articles/hardware/{{{oe.hardwareDirectory}}}/overview.html">example workflow</a> demonstrates port status functionality and saves timestamped port status data.
+</p> 
+
+<div class="workflow"> 
+  <p><img src="~/workflows/{{{oe.path}}}.bonsai" alt="~/workflows/{{{oe.path}}}.bonsai workflow"></p>
+</div>
+
+<p>
+  The {{{hardware}}} reports when a port connection enters or leaves an aberrant state via the <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatus</a> operator, which generates a sequence of <a class="xref" href="~/api/OpenEphys.Onix1.PortStatus.html">PortStatusFrame</a>s. Events that cause the <code>PortStatus</code> to emit a <code>PortStatusFrame</code> include the SERDES losing or gaining lock, SERDES failing or passing parity check, or the <a class="xref" href="~/api/OpenEphys.Onix1.PortStatusCode.html">PortStatusCode</a> changing value. The <code>DeviceName</code> is set to "{{{hardwareOperator}}}/PortController". This links the <code>PortStatus</code> operator to the corresponding configuration operator.
+</p>
+
+<p>
+  The <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator generates a sequence of timestamped items from its input sequence. The <a class="xref" href="https://bonsai-rx.org/docs/api/Bonsai.IO.CsvWriter.html">CsvWriter</a> operator writes <code>Timestamp</code> as well as <code>Clock</code>, <code>StatusCode</code>, <code>SerdesLocked</code>, and <code>SerdesPass</code> members from <code>PortStatusFrame</code> to a file with the following name format: <code>port-status_&lt;timestamp&gt;.csv</code>.
+</p>
+
+<div class="NOTE alert alert-info">
+  <h5>NOTE</h5>
+  <p>The <code>PortStatus</code> operator cannot be enabled or disabled from the {{{hardwareOperator}}}'s properties. It is always enabled.</p>
+</div>
