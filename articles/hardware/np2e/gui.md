@@ -1,6 +1,5 @@
 ---
 uid: np2e_gui
-title: Neuropixels V2e Headstage GUI Reference
 ---
 
 > [!NOTE]

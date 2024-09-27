@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <code>Quaternion</code> values are passed to the "AutoCommutator" <code>IncludeWorkflow</code> operator, which will automatically commutate the headstage if there is a proper commutator connected. "AutoCommutator" comes from the <code>OpenEphys.Onix1.Commutator</code> Bonsai package. Its properties allow you to enable/disable the LED on the commutator using the <code>LedEnable</code> property, set the COM port using the <code>PortName</code> property, and set the orientation of the Bno055 orientation sensor using the headstage <code>RotationAxis</code> property. The <code>RotationAxis</code> is already correctly set for the {{{hardware}}}. However, the correct COM port value varies from system to system. You must find and set the correct COM port to which your commutator is connected in your system.
+  <code>Quaternion</code> values are passed to the "AutoCommutator" <code>IncludeWorkflow</code> operator, which will automatically commutate the headstage if there is a proper commutator connected. "AutoCommutator" comes from the <code>OpenEphys.Commutator</code> Bonsai package. Its properties allow you to enable/disable the LED on the commutator using the <code>LedEnable</code> property, set the COM port using the <code>PortName</code> property, and set the orientation of the Bno055 orientation sensor using the headstage <code>RotationAxis</code> property. The <code>RotationAxis</code> is already correctly set for the {{{hardware}}}. However, the correct COM port value varies from system to system. You must find and set the correct COM port to which your commutator is connected in your system.
 </p>
 
 <div class="NOTE alert alert-info">

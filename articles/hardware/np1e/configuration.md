@@ -22,7 +22,7 @@ Default values for the headstage are:
 - Setting the `Reference` to *External*
 
 > [!WARNING]
-> While the settings are left at the default values, the workflow will not run unless the gain calibration file and ADC calibration file are provided to the `NeuropixelsV1e`. To select these files, click on the `NeuropixelsV1eHeadstage` operator, expand the `NeuropixelsV1e` menu in the property pane on the right, then choose the appropriate file by selecting either `GainCalibrationFile` or `AdcCalibrationFile` and clicking the <kbd>...</kbd> button.
+> The workflow will not run unless gain calibration and ADC calibration files are provided. Click the `NeuropixelsV1eHeadstage` operator, expand `NeuropixelsV1e` in the property pane, then choose the appropriate files by selecting either `GainCalibrationFile` or `AdcCalibrationFile` and clicking the <kbd>...</kbd> button.
 
 > [!TIP]
 > For additional details on how to manually configure the headstage, such as enabling specific electrodes for recording, or modify AP / LFP gain, check out the xref:np1e_gui page.
