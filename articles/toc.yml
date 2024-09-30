@@ -44,6 +44,7 @@
       href: hardware/np1e/npv1e.md
     - name: Bno055 & Commutation
       href: hardware/np1e/bno055.md
+    - href: hardware/np1e/gui.md
   - href: hardware/np2e/overview.md
     items: 
     - name: Configuration
@@ -55,4 +56,3 @@
     - name: Bno055 & Commutation
       href: hardware/np2e/bno055.md
     - href: hardware/np2e/gui.md 
-
