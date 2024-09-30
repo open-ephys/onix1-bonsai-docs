@@ -40,6 +40,9 @@ In addition to the absolute number of channels, there are other restrictions in 
 
 While the GUI is open, any changes to the configuration settings can be freely modified and will not affect the configuration unless `Okay` is pressed. This includes all aspects of the configuration, such as which electrodes are enabled, the chosen reference channel, and the probe calibration file.
 
+> [!NOTE]
+> The hardware is not actually configured until the workflow starts.
+
 If the window is closed any other way (such as by pressing `Cancel`, or pressing the <kbd>X</kbd> to close the window), then any changes made *will not* be saved.
 
 ### ProbeInterface
