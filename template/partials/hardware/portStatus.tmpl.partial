@@ -16,5 +16,5 @@
 
 <div class="NOTE alert alert-info">
   <h5>NOTE</h5>
-  <p>The <code>PortStatus</code> operator cannot be enabled or disabled from the {{{hardwareOperator}}}'s properties. It is always enabled.</p>
+  <p>The <code>PortStatus</code> datastream is always enabled. <code>{{{hardwareOperator}}}</code> has no <code>Enable</code> property for the <code>PortStatus</code> operator like other Data I/O operators that can be used with the {{{hardware}}}.</p>
 </div>

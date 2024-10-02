@@ -4,7 +4,7 @@ title: Port Status
 hardware: NeuropixelsV2e Headstage
 device: true
 portStatus: true
-hardwareOperator: NeuropixelsV2eHeadstage
+hardwareOperator: ConfigureNeuropixelsV2eHeadstage
 ---
 
 > [!NOTE]
