@@ -21,7 +21,7 @@ Default values for the headstage are:
 - Enabling the `Spike Filter`
 - Setting the `Reference` to *External*
 
-> [!WARNING]
+> [!IMPORTANT]
 > The workflow will not run unless gain calibration and ADC calibration files are provided. Click the `NeuropixelsV1eHeadstage` operator, expand `NeuropixelsV1e` in the properties pane, then choose the appropriate files by selecting either `GainCalibrationFile` or `AdcCalibrationFile` and clicking the <kbd>...</kbd> button.
 
 > [!TIP]
