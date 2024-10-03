@@ -4,10 +4,10 @@ title: Headstage64 Configuration
 hardware: Headstage64
 configuration: true
 operator: ConfigureHeadstage64
-dataRate: 20.6
-timeUntilFullBuffer: 200 μs
+dataRate: 4.1
+timeUntilFullBuffer: 500 μs
 blockReadSize: 2048
-workflowLocation: overview
+workflowLocation: workflow
 ---
 
 ## Configuring the Breakout Board and Headstage64

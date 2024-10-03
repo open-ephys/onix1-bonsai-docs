@@ -12,7 +12,7 @@ These are the devices available on the Headstage64:
       - Upper cutoff configurable from 100 Hz to 20 kHz
     - Optional adjustable digital high-pass filter with cutoff configurable from 0.146 Hz to 3309 Hz
     - Three auxiliary ADC channels sampled at 30 kHz with 16 bit depth
-- [Bno055](xref:hs64_bno055): 9-axis IMU for real-time, 3D orientation tracking, and easy automated commutation with Open Ephys commutators
+- [Bno055](xref:hs64_bno055): 9-axis IMU for real-time, 3D orientation tracking sampled up to ~100 Hz for easy automated commutation with Open Ephys commutators
 - [Ts4231](xref:hs64_ts4231): For compatibility with HTC Vive Lighthouses for real-time, 3D position tracking
 - [Electrical Stimulation](xref:hs64_estim): Single current source with ±15V compliance voltage and automatic electrode discharge
     - The stimulation waveform is highly configurable via the <xref:OpenEphys.Onix1.Headstage64ElectricalStimulatorTrigger>'s properties.
@@ -25,5 +25,5 @@ These are the devices available on the Headstage64:
 > [!TIP]
 > Visit the [Headstage64 Hardware Guide](https://open-ephys.github.io/onix-docs/Hardware%20Guide/Headstages/headstage-64/index.html) to learn more about the hardware such as weight, dimensions, and proper power voltages.
 
-The following pages in the Headstage64 Guide provide an example workflow, a
-breakdown of its components, and a Python script for loading data.
+The following pages in the Headstage64 Guide provide an example workflow and a
+breakdown of its components.
