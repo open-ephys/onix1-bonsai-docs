@@ -2,7 +2,6 @@
 uid: np1e_npv1e
 title: NeuropixelsV1e
 hardware: NeuropixelsV1e Headstage
-device: true
 ---
 
 The following excerpt from the NeuropixelsV1e Headstage [example workflow](xref:np1e_npv1e-headstage) demonstrates NeuropixelsV1e functionality by streaming and saving probe data.

@@ -11,7 +11,7 @@ videoCaption:
 workflowLocation: workflow
 ---
 
-## Configuring the breakout board
+## Configuring the Breakout Board
 The `ConfigureBreakoutBoard` operator groups the properties
 for all the devices that the breakout board supports. Each device in the
 property pane can be expanded to expose individual properties that govern their
@@ -45,3 +45,5 @@ breakout board example workflow:
 - The `BreakoutBoard`'s `AnalogIO Direction0` property is set to `Output`.
 - The `BreakoutBoard`'s `MemoryMonitor Enable` property is set to `True`.
 - The `BreakoutBoard`'s `OutputClock Gate` property is set to `True`.
+
+[!INCLUDE [timestamp-info](../../../includes/configuration-timestamp.md)]

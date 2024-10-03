@@ -53,7 +53,8 @@
       "_enableSearch": true,
       "pdf": false,
       "_appFooter": "&copy; 2024 Open Ephys and Contributors. Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a>",
-      "_appFaviconPath": "favicon.png"
+      "_appFaviconPath": "favicon.png",
+      "_appLogoPath": "logo.svg"
     },
     "markdownEngineName": "markdig",
     "markdownEngineProperties": {
@@ -64,7 +65,7 @@
         "figures"
       ],
       "alerts": {
-        "TODO": "alert alert-secondary"
+        "IMPORTANT": "alert alert-warning"
       }
     },
     "xref": [

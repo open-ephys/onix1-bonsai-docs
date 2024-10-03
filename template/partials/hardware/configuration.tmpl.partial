@@ -36,25 +36,13 @@
 
 {{{conceptual}}}
 
-<p>
-  When the workflow is started, the current time (based on <a class="xref"
-  href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>)
-  is saved, along with global hardware parameters governing data acquisition. This is accomplished using a <a class="xref"
-  href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator 
-  to capture the computer's wall clock time. This
-  <code>Timestamp</code> is saved along with <code>ContextTask</code>'s properties (e.g.,
-  <code>AcquisitionClockHz</code>, <code>BlockReadSize</code>, <code>BlockWriteSize</code>) to a csv
-  file (<code>start-time_&lt;timestamp&gt;.csv</code>) when the the workflow is started.
-</p>
-
 <h2>Starting Acquisition</h2>
 
 <p>
   After starting a workflow, the <a class="xref" href="~/api/OpenEphys.Onix1.StartAcquisition.html">StartAcquisition</a>
   operator begins data acquisition with the hardware that has been configured. In the {{{hardware}}}
   example workflow, data is collected from the {{{hardware}}} only, so the rate of data being
-  produced by the hardware will be ~{{{dataRate}}} MB/s and dominated by the
-  analog input. The <code>StartAcquisition</code>'s <code>ReadSize</code> property is set to
+  produced by the hardware will be ~{{{dataRate}}} MB/s. The <code>StartAcquisition</code>'s <code>ReadSize</code> property is set to
   {{{blockReadSize}}} bytes, meaning data collection will wait until
   {{{blockReadSize}}} bytes of data have been produced by the hardware. At {{{dataRate}}} MB/s the
   hardware will produce {{{blockReadSize}}} bytes every ~{{{timeUntilFullBuffer}}}. This is a hard

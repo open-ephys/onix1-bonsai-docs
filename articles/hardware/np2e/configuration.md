@@ -21,8 +21,10 @@ Default values for the headstage are:
     - This is also known as the **Shank 0 Bank A** `Channel Preset`
 - Setting the `Reference` to *External*
 
-> [!WARNING]
+> [!IMPORTANT]
 > The workflow will not run unless gain correction files are provided. Click the `NeuropixelsV2eHeadstage` operator, expand `NeuropixelsV2e` in the property pane, then choose the appropriate files by selecting either `GainCalibrationFileA` or `GainCalibrationFileB` and clicking the <kbd>...</kbd> button. If only one probe is plugged in, only one file is required.
 
 > [!TIP]
 > For additional details on how to manually configure the headstage, such as enabling specific electrodes for recording, or modify AP / LFP gain, check out the <xref:np2e_gui> page.
+
+[!INCLUDE [timestamp-info](../../../includes/configuration-timestamp.md)]
