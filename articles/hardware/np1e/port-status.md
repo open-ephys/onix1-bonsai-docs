@@ -1,8 +1,8 @@
 ---
 uid: np1e_port-status
-title: Port Status
+title: NeuropixelsV1e Headstage Port Status
 hardware: NeuropixelsV1e Headstage
-device: true
 portStatus: true
-hardwareOperator: ConfigureNeuropixelsV2eHeadstage
+configureHardwareOperator: ConfigureNeuropixelsV1eHeadstage
+hardwareOperator: NeuropixelsV1eHeadstage
 ---

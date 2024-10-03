@@ -1,7 +1,6 @@
 ---
-uid: breakout_memory-monitor
-title: Breakout Board Memory Monitor
-device: memory monitor
+uid: hs64_memory-monitor
+title: Headstage64 Memory Monitor
 ---
 
 The following excerpt from the Breakout Board [example workflow](xref:breakout_workflow) demonstrates memory monitor functionality and saves memory monitor data.

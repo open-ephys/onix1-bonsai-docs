@@ -36,17 +36,6 @@
 
 {{{conceptual}}}
 
-<p>
-  When the workflow is started, the current time (based on <a class="xref"
-  href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>)
-  is saved, along with global hardware parameters governing data acquisition. This is accomplished using a <a class="xref"
-  href="https://bonsai-rx.org/docs/api/Bonsai.Reactive.Timestamp.html">TimeStamp</a> operator 
-  to capture the computer's wall clock time. This
-  <code>Timestamp</code> is saved along with <code>ContextTask</code>'s properties (e.g.,
-  <code>AcquisitionClockHz</code>, <code>BlockReadSize</code>, <code>BlockWriteSize</code>) to a csv
-  file (<code>start-time_&lt;timestamp&gt;.csv</code>) when the the workflow is started.
-</p>
-
 <h2>Starting Acquisition</h2>
 
 <p>

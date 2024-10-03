@@ -2,15 +2,18 @@
 
 <h1>{{{title}}}</h1>
 
-{{#hardware}}
-  {{#configuration}}
-    {{>partials/hardware/configuration}}
-  {{/configuration}}
-  {{#device}}
-    {{>partials/hardware/device}}
-  {{/device}}
-{{/hardware}}
+{{#configuration}}
+  {{>partials/hardware/configuration}}
+{{/configuration}}
 
-{{^hardware}}
+{{#portStatus}}
+  {{>partials/hardware/portStatus}}
+{{/portStatus}}
+
+{{#bno055}}
+  {{>partials/hardware/bno055}}
+{{/bno055}}
+  
+{{^configuration}}
   {{{conceptual}}}
-{{/hardware}}
+{{/configuration}}
