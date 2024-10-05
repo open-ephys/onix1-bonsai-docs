@@ -1,6 +1,6 @@
 ---
 uid: install-configure-bonsai
-title: Bonsai Installation and Configuration
+title: Installation
 ---
 
 ## Install Bonsai

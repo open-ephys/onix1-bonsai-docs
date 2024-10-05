@@ -3,7 +3,7 @@ uid: index
 title: OpenEphys.Onix1
 ---
 
-`OpenEphys.Onix1` is a [Bonsai](https://bonsai-rx.org/) library that can be used to control the [ONIX PCIe Acquisition System](https://open-ephys.org/onix/oeps-9006), which provides:
+`OpenEphys.Onix1` is a [Bonsai](https://bonsai-rx.org/) library that can be used to control the [ONIX PCIe Acquisition System](https://open-ephys.org/onix/oeps-9006). It provides:
 
 * Support for a variety of tools such as [Neuropixels (all
   variants)](https://www.neuropixels.org/),
@@ -11,14 +11,15 @@ title: OpenEphys.Onix1
   headstages](https://open-ephys.org/onix/oeps-7741), and more
 * Automatic hardware synchronization of all data streams.
 * Torque-free commutation of ultra-thin (down to ~0.2mm diameter) tethers
-* High performance closed-loop control (100 usec feedback loop times)
+* High performance closed-loop performance (100 usec feedback loop times)
 
 <br>
 <div class="quick-links">
 
-| <xref:getting-started> | [Operator Reference](xref:OpenEphys.Onix1) | <xref:tutorials> | [Hardware Guide](https://open-ephys.github.io/onix-docs/) |
+| [User Guide](xref:getting-started) | [Operator Reference](xref:OpenEphys.Onix1) | <xref:tutorials> | [Hardware Guide](https://open-ephys.github.io/onix-docs/) |
 |:----:|:----:|:----:|:----:|
 | [![User Guide](images/running.svg){width=150}](xref:getting-started) | [![Operator Reference](images/books.svg){width=150}](xref:OpenEphys.Onix1) | [![Tutorials](images/beaker.svg){width=150}](xref:tutorials) |[![Tutorials](images/screwdriver.svg){width=150}](https://open-ephys.github.io/onix-docs/)|
+| Start here for usage instructions. | Detailed information on library components. | How to make the most of ONIX in Bonsai. | Go to the hardware documentation site. |
 
 </div>
 <br>
