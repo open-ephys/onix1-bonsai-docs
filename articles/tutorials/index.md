@@ -3,5 +3,7 @@ uid: tutorials
 title: Tutorials
 ---
 
-This section of the docs contains tutorials that extend beyond using specific Open Ephys hardware, including:
-- How to manage memory and latencies
+> [!Note]
+> This section will contains tutorials that demonstrate how to make the most of
+> the Bonsai library by combining ONIX with third party tools, tuning closed loop
+> response times, etc.
